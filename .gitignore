@@ -30,3 +30,6 @@ modelos/*
 Thumbs.db
 .vscode/
 .idea/
+
+# Cache de imagens pré-processadas (gerado por src/dados_imagens.py)
+dados/cache/
