@@ -1,0 +1,92 @@
+{
+  "arquitetura": "MLP-B-128",
+  "camadas": {
+    "ocultas": [
+      512,
+      256,
+      128,
+      64
+    ],
+    "dropout": 0.5
+  },
+  "entrada": "RGB 128x128 achatado (49152 valores)",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "pre_processamento": "RGB, resize bilinear a partir do original, /255, padronização por canal (stats do treino)",
+  "normalizacao": {
+    "media": [
+      0.40089884400367737,
+      0.40729090571403503,
+      0.3541330397129059
+    ],
+    "desvio": [
+      0.2234679013490677,
+      0.18603582680225372,
+      0.17244668304920197
+    ]
+  },
+  "aumento_de_dados": "nenhum",
+  "perda": "CrossEntropyLoss",
+  "config_treino": {
+    "nome_execucao": "MLP-B-128_preliminar",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.0001,
+    "weight_decay": 0.0001,
+    "tamanho_lote": 64,
+    "max_epocas": 60,
+    "paciencia": 10,
+    "semente": 42,
+    "tipo_execucao": "preliminar",
+    "extras": {
+      "arquitetura": "MLP-B-128",
+      "ocultas": [
+        512,
+        256,
+        128,
+        64
+      ],
+      "dropout": 0.5
+    }
+  },
+  "resultado": {
+    "nome_execucao": "MLP-B-128_preliminar",
+    "tipo_execucao": "preliminar",
+    "parametros": 25341386,
+    "tamanho_modelo_mb": 96.69,
+    "epocas_executadas": 52,
+    "epoca_checkpoint": 42,
+    "f1_macro_validacao": 0.5249,
+    "acuracia_validacao": 0.5352,
+    "perda_validacao": 1.4161,
+    "tempo_total_s": 470.3,
+    "tempo_medio_epoca_s": 9.04,
+    "hardware": "CPU Intel64 Family 6 Model 197 Stepping 2, GenuineIntel (14 núcleos lógicos)",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.0001,
+    "weight_decay": 0.0001,
+    "tamanho_lote": 64,
+    "max_epocas": 60,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.15.0+cpu",
+    "extras": "{\"arquitetura\": \"MLP-B-128\", \"ocultas\": [512, 256, 128, 64], \"dropout\": 0.5}"
+  },
+  "versoes": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "pillow": "13.0.0"
+  }
+}

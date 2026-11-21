@@ -37,6 +37,8 @@ Investigação de como a arquitetura (MLP vs. CNN) e a resolução das imagens (
 
 ## Instalação e ambiente
 
+O projeto utiliza **PyTorch** tanto para experimentação local (Windows/macOS) quanto para a reprodução padronizada dos treinos finais em GPU no **Google Colab** (garantindo mesmo hardware e isolamento na comparação entre resoluções).
+
 ```bash
 python -m venv .venv
 # Windows (PowerShell)
@@ -46,6 +48,12 @@ python -m venv .venv
 
 pip install -r requirements.txt
 ```
+
+> **Nota (GPU NVIDIA no Windows/Linux):** o comando deve ser executado em cada máquina com GPU NVIDIA que criar seu próprio `.venv` (no **macOS** e no **Google Colab** não é necessário, pois `pip install -r requirements.txt` já atende o MacBook e o Colab já traz PyTorch com CUDA pré-instalado). Após ativar o `.venv` e **antes** de `pip install -r requirements.txt`, rode o comando indicado em [pytorch.org](https://pytorch.org/get-started/locally/) conforme a versão de CUDA do seu driver (`nvidia-smi`), por exemplo:
+>
+> ```bash
+> pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+> ```
 
 ## Dados e obtenção
 
@@ -62,6 +70,8 @@ python src/setup_dataset.py
 ## Ordem de execução
 
 1. Baixar e extrair o dataset em `dados/raw/NWPU-RESISC45/` e filtrar as 10 classes com `python src/setup_dataset.py`.
-2. Análise exploratória e geração das partições estratificadas (`70%` treino, `15%` validação, `15%` teste, semente `42`) em `dados/splits/`.
-3. Treinamento dos 6 modelos obrigatórios (`MLP-A-128`, `MLP-B-128`, `CNN-A-128`, `CNN-B-128`, `CNN-A-256`, `CNN-B-256`) salvando checkpoints em `modelos/` e históricos.
-4. Avaliação no conjunto de teste e geração das métricas, tabelas e figuras em `resultados/`.
+2. Auditar integridade, canais RGB e duplicatas com `python src/check_integrity.py` (gera `resultados/inventario_dados.csv`).
+3. Análise exploratória e geração das partições estratificadas (`70%` treino, `15%` validação, `15%` teste, semente `42`) em `dados/splits/`.
+4. MLP preliminar (validação apenas): `python src/treinar_mlp.py --variante A` ou `notebooks/02_mlp_preliminar.ipynb`. Gera `modelos/MLP-A-128_preliminar.pt`, `resultados/historicos/`, `resultados/configs/`, `resultados/figuras/MLP-A-128_preliminar_curvas.png` e uma linha em `resultados/experimentos.csv`. Use `--variante B` para a MLP-B e `--tipo final` para as execuções finais.
+5. Experimentos preliminares locais e treinamento padronizado dos 6 modelos obrigatórios (`MLP-A-128`, `MLP-B-128`, `CNN-A-128`, `CNN-B-128`, `CNN-A-256`, `CNN-B-256`) no Google Colab, salvando checkpoints em `modelos/` e históricos.
+6. Avaliação no conjunto de teste e geração das métricas, tabelas e figuras em `resultados/`.
