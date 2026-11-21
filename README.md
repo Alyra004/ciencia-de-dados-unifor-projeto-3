@@ -72,5 +72,6 @@ python src/setup_dataset.py
 1. Baixar e extrair o dataset em `dados/raw/NWPU-RESISC45/` e filtrar as 10 classes com `python src/setup_dataset.py`.
 2. Auditar integridade, canais RGB e duplicatas com `python src/check_integrity.py` (gera `resultados/inventario_dados.csv`).
 3. Análise exploratória e geração das partições estratificadas (`70%` treino, `15%` validação, `15%` teste, semente `42`) em `dados/splits/`.
-4. Experimentos preliminares locais e treinamento padronizado dos 6 modelos obrigatórios (`MLP-A-128`, `MLP-B-128`, `CNN-A-128`, `CNN-B-128`, `CNN-A-256`, `CNN-B-256`) no Google Colab, salvando checkpoints em `modelos/` e históricos.
-5. Avaliação no conjunto de teste e geração das métricas, tabelas e figuras em `resultados/`.
+4. MLP preliminar (validação apenas): `python src/treinar_mlp.py --variante A` ou `notebooks/02_mlp_preliminar.ipynb`. Gera `modelos/MLP-A-128_preliminar.pt`, `resultados/historicos/`, `resultados/configs/`, `resultados/figuras/MLP-A-128_preliminar_curvas.png` e uma linha em `resultados/experimentos.csv`. Use `--variante B` para a MLP-B e `--tipo final` para as execuções finais.
+5. Experimentos preliminares locais e treinamento padronizado dos 6 modelos obrigatórios (`MLP-A-128`, `MLP-B-128`, `CNN-A-128`, `CNN-B-128`, `CNN-A-256`, `CNN-B-256`) no Google Colab, salvando checkpoints em `modelos/` e históricos.
+6. Avaliação no conjunto de teste e geração das métricas, tabelas e figuras em `resultados/`.
