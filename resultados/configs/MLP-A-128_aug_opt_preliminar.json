@@ -34,12 +34,12 @@
     "tamanho_modelo_mb": 96.27,
     "epocas_executadas": 65,
     "epoca_checkpoint": 55,
-    "f1_macro_validacao": 0.6751,
-    "acuracia_validacao": 0.679,
-    "perda_validacao": 0.9349,
-    "tempo_total_s": 108.2,
-    "tempo_medio_epoca_s": 1.66,
-    "hardware": "Apple MPS",
+    "f1_macro_validacao": 0.6818,
+    "acuracia_validacao": 0.6857,
+    "perda_validacao": 0.8861,
+    "tempo_total_s": 41.1,
+    "tempo_medio_epoca_s": 0.63,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
     "otimizador": "adam",
     "taxa_aprendizagem": 0.0011536162338241388,
     "weight_decay": 7.068974950624607e-06,
@@ -48,7 +48,7 @@
     "paciencia": 10,
     "criterio_parada": "F1 macro de validação",
     "semente": 42,
-    "torch": "2.15.0",
+    "torch": "2.14.1+cu130",
     "extras": "{\"arquitetura\": \"MLP-A-128_aug_opt\", \"classe\": \"MLPA_HP\", \"aumento_de_dados\": \"espelhamentos e rotações de 90° (só no treino)\", \"busca\": \"optuna\", \"dropout\": 0.3, \"estudo\": \"MLP-A-128\"}"
   }
 }

@@ -34,12 +34,12 @@
     "tamanho_modelo_mb": 96.27,
     "epocas_executadas": 75,
     "epoca_checkpoint": 65,
-    "f1_macro_validacao": 0.6363,
-    "acuracia_validacao": 0.6476,
-    "perda_validacao": 1.036,
-    "tempo_total_s": 181.2,
-    "tempo_medio_epoca_s": 2.42,
-    "hardware": "Apple MPS",
+    "f1_macro_validacao": 0.6474,
+    "acuracia_validacao": 0.661,
+    "perda_validacao": 1.0172,
+    "tempo_total_s": 60.4,
+    "tempo_medio_epoca_s": 0.8,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
     "otimizador": "adam",
     "taxa_aprendizagem": 0.0001,
     "weight_decay": 0.0001,
@@ -48,7 +48,7 @@
     "paciencia": 10,
     "criterio_parada": "F1 macro de validação",
     "semente": 42,
-    "torch": "2.15.0",
+    "torch": "2.14.1+cu130",
     "extras": "{\"arquitetura\": \"MLP-A-128_aug\", \"classe\": \"MLPA\", \"aumento_de_dados\": \"espelhamentos e rotações de 90° (só no treino)\"}"
   }
 }

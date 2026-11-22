@@ -1,0 +1,54 @@
+{
+  "arquitetura": "ResNet18",
+  "entrada": "RGB 256x256 (3x256x256), sem achatar",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "normalizacao": {
+    "media": [
+      0.40040945216750773,
+      0.4068007578530557,
+      0.35364333264078607
+    ],
+    "desvio": [
+      0.2308570612043676,
+      0.19471659045820144,
+      0.1816614638115609
+    ]
+  },
+  "aumento_de_dados": "espelhamentos e rotações de 90° (só no treino)",
+  "perda": "CrossEntropyLoss",
+  "resultado": {
+    "nome_execucao": "ResNet18-256_preliminar",
+    "tipo_execucao": "preliminar",
+    "parametros": 11181642,
+    "tamanho_modelo_mb": 42.73,
+    "epocas_executadas": 52,
+    "epoca_checkpoint": 42,
+    "f1_macro_validacao": 0.9426,
+    "acuracia_validacao": 0.9429,
+    "perda_validacao": 0.1938,
+    "tempo_total_s": 149.4,
+    "tempo_medio_epoca_s": 2.87,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.0001,
+    "weight_decay": 0.0001,
+    "tamanho_lote": 64,
+    "max_epocas": 200,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.14.1+cu130",
+    "extras": "{\"arquitetura\": \"ResNet18\", \"classe\": \"ResNet18\", \"resolucao\": 256, \"aumento_de_dados\": \"espelhamentos e rotações de 90° (só no treino)\", \"familia\": \"ResNet18\", \"busca\": \"hiperparâmetros iniciais\"}"
+  }
+}

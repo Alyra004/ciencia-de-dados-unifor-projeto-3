@@ -1,0 +1,13 @@
+{
+  "nome_execucao": "YOLO26n-cls-256_bonus",
+  "f1_macro_validacao": 0.9895,
+  "acuracia_validacao": 0.9895,
+  "parametros": 1543914,
+  "tamanho_modelo_mb": 3.06,
+  "epocas_executadas": 34,
+  "epoca_melhor_acuracia": 24,
+  "tempo_total_s": 242.7,
+  "tempo_medio_epoca_s": 7.14,
+  "hardware": "GPU NVIDIA A100-SXM4-40GB",
+  "torch": "2.14.1+cu130"
+}

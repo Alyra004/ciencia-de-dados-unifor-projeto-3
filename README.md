@@ -25,16 +25,23 @@ Investigação de como a arquitetura (MLP vs. CNN) e a resolução das imagens (
 ├── dados/
 │   ├── raw/              # Originais (não versionados) ou instruções de obtenção
 │   └── splits/           # Partições (arquivo, classe e partição)
-├── notebooks/            # Exploração, treino e avaliação
-├── src/                  # Funções reutilizáveis
-├── modelos/              # Checkpoints ou instruções de download
+├── notebooks/            # Exploração, treino e avaliação (01 dados, 02 MLPs, 03 CNNs e YOLO)
+├── src/                  # Scripts reutilizáveis (treino na GPU, avaliação na validação, gráficos)
+├── modelos/              # Checkpoints (não versionados; ver docs/PROGRESSO.md)
 ├── resultados/
-│   ├── experimentos.csv
-│   ├── previsoes_teste.csv
+│   ├── experimentos.csv  # Uma linha por treino (MLPs, CNNs e YOLO)
+│   ├── historicos/       # Métricas por época de cada treino
+│   ├── configs/          # Configuração de cada treino
+│   ├── matrizes_confusao/, metricas_por_classe/   # Avaliação na validação, por modelo
+│   ├── previsoes_validacao_{mlp,cnn}.csv
+│   ├── optuna/           # Busca de hiperparâmetros
+│   ├── yolo/             # Bônus YOLO (execução do Ultralytics e avaliação)
 │   └── figuras/          # Gráficos, curvas e matrizes de confusão
-│       ├── mlp/          # Figuras dos treinos de MLP
-│       └── cnn/          # Figuras dos treinos de CNN
-└── docs/                 # Documentos do projeto (acompanhamento, artigo, pitch)
+│       ├── mlp/  cnn/  yolo/
+└── docs/
+    ├── PROGRESSO.md      # Até onde fomos, o que falta e como retomar
+    ├── MLP.md  CNN.md  YOLO.md   # Documentação de cada família de modelos
+    └── (artigo, pitch e acompanhamento ainda não feitos)
 ```
 
 ## Instalação e ambiente
@@ -103,11 +110,23 @@ Todas as classes têm `490 / 105 / 105`, exceto `airport`, que tem `489 / 105 / 
 
 **Limitação:** o MD5 detecta apenas cópias idênticas byte a byte. Versões da mesma imagem recortadas, rotacionadas, redimensionadas ou recomprimidas teriam hashes diferentes e não são detectadas.
 
+## Resultados até agora (validação, uma execução por modelo; o teste não foi usado)
+
+| Família | Melhor modelo | F1 macro | Acurácia | Documento |
+|---|---|---|---|---|
+| YOLO (bônus, pré-treinado) | YOLO26n-cls, 256 × 256 | 0,9895 | 0,9895 | `docs/YOLO.md` |
+| CNN (VGG16) | VGG16SE, 256 × 256, Optuna | 0,9645 | 0,9648 | `docs/CNN.md` |
+| CNN (ResNet18) | ResNet18SE, 256 × 256, inicial | 0,9481 | 0,9486 | `docs/CNN.md` |
+| MLP | MLP-B, 128 × 128, aumento leve, Optuna | 0,7000 | 0,7067 | `docs/MLP.md` |
+
+MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. O estado detalhado, o que falta (inclusive as variações de aumento de dados das CNNs, ainda parciais) e como retomar estão em **`docs/PROGRESSO.md`**.
+
 ## Ordem de execução
 
 1. Baixar e extrair o dataset em `dados/raw/NWPU-RESISC45/` e filtrar as 10 classes com `python src/setup_dataset.py`.
 2. Auditar integridade, canais RGB e duplicatas com `python src/check_integrity.py` (gera `resultados/inventario_dados.csv`).
 3. Análise exploratória e geração das partições estratificadas (`70%` treino, `15%` validação, `15%` teste, semente `42`) em `dados/splits/`.
-4. MLP preliminar (validação apenas): `python src/treinar_mlp.py --variante A` ou `notebooks/02_mlp_preliminar.ipynb`. Gera `modelos/MLP-A-128_preliminar.pt`, `resultados/historicos/`, `resultados/configs/`, `resultados/figuras/MLP-A-128_preliminar_curvas.png` e uma linha em `resultados/experimentos.csv`. Use `--variante B` para a MLP-B e `--tipo final` para as execuções finais.
-5. Experimentos preliminares locais e treinamento padronizado dos 6 modelos obrigatórios (`MLP-A-128`, `MLP-B-128`, `CNN-A-128`, `CNN-B-128`, `CNN-A-256`, `CNN-B-256`) no Google Colab, salvando checkpoints em `modelos/` e históricos.
-6. Avaliação no conjunto de teste e geração das métricas, tabelas e figuras em `resultados/`.
+4. MLPs: `notebooks/02_mlp_preliminar.ipynb` (código e Optuna) e, para refazer os 12 treinos numa GPU e avaliar na validação, `python src/rodar_mlps_a100.py` (gera matrizes de confusão, métricas por classe e previsões).
+5. CNNs: `notebooks/03_CNNs.ipynb` (8 arquiteturas com aumento leve, Optuna, bônus YOLO) e `python src/rodar_cnns_aumentos.py <128|256>` (receitas sem aumento e aumento forte; retomável). Depois `python src/avaliar_cnn_validacao.py` e `python src/avaliar_yolo_validacao.py`.
+6. Gráficos: `python src/graficos_mlp.py`, `python src/graficos_cnn.py`, `python src/graficos_cnn_aumentos.py` e `python src/graficos_yolo.py`.
+7. Avaliação no conjunto de teste (ainda não feita) e geração das métricas, tabelas e figuras em `resultados/`.

@@ -1,0 +1,1117 @@
+torch 2.14.1+cu130 | GPU NVIDIA A100-SXM4-40GB
+Treino   : (4899, 49152) float32
+Validação: (1050, 49152)
+Média por canal (treino) : [0.4009 0.4073 0.3541]
+Desvio por canal (treino): [0.2235 0.186  0.1724]
+airport              489
+beach                490
+circular_farmland    490
+dense_residential    490
+desert               490
+forest               490
+harbor               490
+mountain             490
+river                490
+storage_tank         490
+Name: count, dtype: int64
+MLPA 25,234,570 parâmetros torch.Size([2, 10])
+MLPB 25,341,386 parâmetros torch.Size([2, 10])
+[MLP-A-128_preliminar] época   1/200 | treino: perda 1.9781 acc 0.2915 P 0.2526 R 0.2914 F1 0.2562 | val: perda 1.7739 acc 0.3962 P 0.3764 R 0.3962 F1 0.3213 |   1.6s  *checkpoint*
+[MLP-A-128_preliminar] época   2/200 | treino: perda 1.7582 acc 0.4062 P 0.3704 R 0.4061 F1 0.3660 | val: perda 1.6452 acc 0.4619 P 0.4310 R 0.4619 F1 0.4001 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   3/200 | treino: perda 1.6538 acc 0.4668 P 0.4421 R 0.4668 F1 0.4356 | val: perda 1.5671 acc 0.4876 P 0.4710 R 0.4876 F1 0.4424 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   4/200 | treino: perda 1.5551 acc 0.5028 P 0.4796 R 0.5027 F1 0.4799 | val: perda 1.5059 acc 0.5162 P 0.4827 R 0.5162 F1 0.4782 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   5/200 | treino: perda 1.4903 acc 0.5244 P 0.5050 R 0.5243 F1 0.5051 | val: perda 1.4490 acc 0.5305 P 0.5002 R 0.5305 F1 0.5019 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   6/200 | treino: perda 1.4115 acc 0.5571 P 0.5395 R 0.5570 F1 0.5420 | val: perda 1.4333 acc 0.5343 P 0.5108 R 0.5343 F1 0.5052 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   7/200 | treino: perda 1.3546 acc 0.5681 P 0.5519 R 0.5680 F1 0.5548 | val: perda 1.3940 acc 0.5381 P 0.5060 R 0.5381 F1 0.5113 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   8/200 | treino: perda 1.2953 acc 0.5979 P 0.5827 R 0.5978 F1 0.5835 | val: perda 1.3658 acc 0.5400 P 0.5128 R 0.5400 F1 0.5145 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época   9/200 | treino: perda 1.2545 acc 0.6271 P 0.6145 R 0.6270 F1 0.6166 | val: perda 1.3596 acc 0.5552 P 0.5315 R 0.5552 F1 0.5336 |   0.9s  *checkpoint*
+[MLP-A-128_preliminar] época  10/200 | treino: perda 1.2169 acc 0.6316 P 0.6206 R 0.6315 F1 0.6217 | val: perda 1.3379 acc 0.5486 P 0.5310 R 0.5486 F1 0.5317 |   0.8s
+[MLP-A-128_preliminar] época  11/200 | treino: perda 1.1511 acc 0.6522 P 0.6412 R 0.6521 F1 0.6431 | val: perda 1.3335 acc 0.5571 P 0.5431 R 0.5571 F1 0.5436 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época  12/200 | treino: perda 1.1129 acc 0.6665 P 0.6554 R 0.6664 F1 0.6571 | val: perda 1.3270 acc 0.5524 P 0.5367 R 0.5524 F1 0.5376 |   0.8s
+[MLP-A-128_preliminar] época  13/200 | treino: perda 1.0519 acc 0.6885 P 0.6806 R 0.6885 F1 0.6809 | val: perda 1.3310 acc 0.5533 P 0.5430 R 0.5533 F1 0.5433 |   0.8s
+[MLP-A-128_preliminar] época  14/200 | treino: perda 1.0126 acc 0.7003 P 0.6917 R 0.7003 F1 0.6932 | val: perda 1.3279 acc 0.5371 P 0.5290 R 0.5371 F1 0.5240 |   0.8s
+[MLP-A-128_preliminar] época  15/200 | treino: perda 0.9631 acc 0.7108 P 0.7033 R 0.7107 F1 0.7047 | val: perda 1.3235 acc 0.5381 P 0.5258 R 0.5381 F1 0.5241 |   0.8s
+[MLP-A-128_preliminar] época  16/200 | treino: perda 0.9244 acc 0.7306 P 0.7243 R 0.7305 F1 0.7241 | val: perda 1.3189 acc 0.5410 P 0.5312 R 0.5410 F1 0.5325 |   0.8s
+[MLP-A-128_preliminar] época  17/200 | treino: perda 0.8988 acc 0.7385 P 0.7334 R 0.7385 F1 0.7344 | val: perda 1.3271 acc 0.5543 P 0.5444 R 0.5543 F1 0.5461 |   0.8s  *checkpoint*
+[MLP-A-128_preliminar] época  18/200 | treino: perda 0.8602 acc 0.7457 P 0.7389 R 0.7456 F1 0.7401 | val: perda 1.3449 acc 0.5257 P 0.5157 R 0.5257 F1 0.5118 |   0.8s
+[MLP-A-128_preliminar] época  19/200 | treino: perda 0.8265 acc 0.7667 P 0.7623 R 0.7667 F1 0.7627 | val: perda 1.3250 acc 0.5457 P 0.5324 R 0.5457 F1 0.5355 |   0.8s
+[MLP-A-128_preliminar] época  20/200 | treino: perda 0.7998 acc 0.7681 P 0.7640 R 0.7681 F1 0.7648 | val: perda 1.3268 acc 0.5476 P 0.5407 R 0.5476 F1 0.5372 |   0.8s
+[MLP-A-128_preliminar] época  21/200 | treino: perda 0.7593 acc 0.7883 P 0.7853 R 0.7883 F1 0.7851 | val: perda 1.3440 acc 0.5352 P 0.5307 R 0.5352 F1 0.5268 |   0.8s
+[MLP-A-128_preliminar] época  22/200 | treino: perda 0.7321 acc 0.7893 P 0.7860 R 0.7893 F1 0.7862 | val: perda 1.3486 acc 0.5400 P 0.5247 R 0.5400 F1 0.5272 |   0.8s
+[MLP-A-128_preliminar] época  23/200 | treino: perda 0.7217 acc 0.7928 P 0.7905 R 0.7928 F1 0.7903 | val: perda 1.3840 acc 0.5324 P 0.5298 R 0.5324 F1 0.5203 |   0.8s
+[MLP-A-128_preliminar] época  24/200 | treino: perda 0.6878 acc 0.8004 P 0.7983 R 0.8004 F1 0.7985 | val: perda 1.3686 acc 0.5219 P 0.5135 R 0.5219 F1 0.5095 |   0.8s
+[MLP-A-128_preliminar] época  25/200 | treino: perda 0.6623 acc 0.8091 P 0.8065 R 0.8091 F1 0.8068 | val: perda 1.3566 acc 0.5438 P 0.5322 R 0.5438 F1 0.5337 |   0.8s
+[MLP-A-128_preliminar] época  26/200 | treino: perda 0.6482 acc 0.8147 P 0.8135 R 0.8146 F1 0.8133 | val: perda 1.3946 acc 0.5295 P 0.5144 R 0.5295 F1 0.5160 |   0.8s
+[MLP-A-128_preliminar] época  27/200 | treino: perda 0.6266 acc 0.8220 P 0.8213 R 0.8220 F1 0.8211 | val: perda 1.4126 acc 0.5238 P 0.5131 R 0.5238 F1 0.5126 |   0.7s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_preliminar: checkpoint na época 17 de 27 | 25,234,570 parâmetros | 21.9s no total (0.81s/época)
+  treino    : perda 0.8988 | acurácia 0.7385 | precisão macro 0.7334 | recall macro 0.7385 | F1 macro 0.7344
+  validação : perda 1.3271 | acurácia 0.5543 | precisão macro 0.5444 | recall macro 0.5543 | F1 macro 0.5461
+  diferença treino − validação (F1 macro): +0.1883
+
+Relatório por classe (validação, checkpoint da época 17):
+                   precision    recall  f1-score   support
+
+          airport     0.3673    0.3429    0.3547       105
+            beach     0.6863    0.6667    0.6763       105
+circular_farmland     0.5000    0.5524    0.5249       105
+dense_residential     0.4685    0.4952    0.4815       105
+           desert     0.7750    0.8857    0.8267       105
+           forest     0.6957    0.9143    0.7901       105
+           harbor     0.6386    0.5048    0.5638       105
+         mountain     0.2903    0.2571    0.2727       105
+            river     0.5556    0.5238    0.5392       105
+     storage_tank     0.4667    0.4000    0.4308       105
+
+         accuracy                         0.5543      1050
+        macro avg     0.5444    0.5543    0.5461      1050
+     weighted avg     0.5444    0.5543    0.5461      1050
+
+[MLP-B-128_preliminar] época   1/200 | treino: perda 2.3271 acc 0.1304 P 0.1306 R 0.1304 F1 0.1234 | val: perda 2.1350 acc 0.2952 P 0.1415 R 0.2952 F1 0.1843 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época   2/200 | treino: perda 2.2144 acc 0.1876 P 0.1683 R 0.1876 F1 0.1688 | val: perda 2.0479 acc 0.3267 P 0.2113 R 0.3267 F1 0.2129 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época   3/200 | treino: perda 2.1145 acc 0.2452 P 0.2069 R 0.2451 F1 0.2097 | val: perda 2.0011 acc 0.3438 P 0.2161 R 0.3438 F1 0.2326 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época   4/200 | treino: perda 2.0511 acc 0.2801 P 0.2305 R 0.2800 F1 0.2351 | val: perda 1.9325 acc 0.3524 P 0.3305 R 0.3524 F1 0.2465 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época   5/200 | treino: perda 2.0120 acc 0.2966 P 0.2506 R 0.2965 F1 0.2515 | val: perda 1.8800 acc 0.3638 P 0.2892 R 0.3638 F1 0.2688 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época   6/200 | treino: perda 1.9692 acc 0.3103 P 0.2652 R 0.3102 F1 0.2670 | val: perda 1.8459 acc 0.4019 P 0.3117 R 0.4019 F1 0.3094 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época   7/200 | treino: perda 1.9221 acc 0.3399 P 0.2975 R 0.3398 F1 0.2997 | val: perda 1.8082 acc 0.4324 P 0.3196 R 0.4324 F1 0.3524 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época   8/200 | treino: perda 1.8736 acc 0.3644 P 0.3153 R 0.3643 F1 0.3219 | val: perda 1.7719 acc 0.4457 P 0.4505 R 0.4457 F1 0.3705 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época   9/200 | treino: perda 1.8313 acc 0.3823 P 0.3362 R 0.3823 F1 0.3404 | val: perda 1.7320 acc 0.4657 P 0.4592 R 0.4657 F1 0.3978 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  10/200 | treino: perda 1.8056 acc 0.3893 P 0.3457 R 0.3892 F1 0.3480 | val: perda 1.6808 acc 0.4733 P 0.4509 R 0.4733 F1 0.4049 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  11/200 | treino: perda 1.7566 acc 0.4064 P 0.3667 R 0.4063 F1 0.3709 | val: perda 1.6386 acc 0.4829 P 0.4606 R 0.4829 F1 0.4114 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  12/200 | treino: perda 1.7263 acc 0.4211 P 0.3848 R 0.4210 F1 0.3894 | val: perda 1.6185 acc 0.4952 P 0.4874 R 0.4952 F1 0.4290 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  13/200 | treino: perda 1.6911 acc 0.4221 P 0.3868 R 0.4221 F1 0.3897 | val: perda 1.5948 acc 0.5048 P 0.4788 R 0.5048 F1 0.4513 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  14/200 | treino: perda 1.6505 acc 0.4452 P 0.4103 R 0.4451 F1 0.4144 | val: perda 1.5601 acc 0.5067 P 0.4955 R 0.5067 F1 0.4553 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  15/200 | treino: perda 1.6221 acc 0.4550 P 0.4280 R 0.4549 F1 0.4301 | val: perda 1.5421 acc 0.5133 P 0.4863 R 0.5133 F1 0.4735 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  16/200 | treino: perda 1.5866 acc 0.4668 P 0.4367 R 0.4668 F1 0.4403 | val: perda 1.5176 acc 0.5124 P 0.4838 R 0.5124 F1 0.4750 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  17/200 | treino: perda 1.5632 acc 0.4774 P 0.4531 R 0.4774 F1 0.4556 | val: perda 1.4939 acc 0.5162 P 0.4893 R 0.5162 F1 0.4780 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  18/200 | treino: perda 1.5115 acc 0.4942 P 0.4705 R 0.4941 F1 0.4739 | val: perda 1.4569 acc 0.5286 P 0.5093 R 0.5286 F1 0.4923 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  19/200 | treino: perda 1.5081 acc 0.4877 P 0.4597 R 0.4876 F1 0.4653 | val: perda 1.4568 acc 0.5324 P 0.5090 R 0.5324 F1 0.4951 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  20/200 | treino: perda 1.4696 acc 0.5209 P 0.4969 R 0.5209 F1 0.5001 | val: perda 1.4180 acc 0.5333 P 0.4980 R 0.5333 F1 0.5006 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  21/200 | treino: perda 1.4305 acc 0.5193 P 0.4929 R 0.5192 F1 0.4969 | val: perda 1.4203 acc 0.5305 P 0.5028 R 0.5305 F1 0.4995 |   0.9s
+[MLP-B-128_preliminar] época  22/200 | treino: perda 1.4070 acc 0.5336 P 0.5126 R 0.5335 F1 0.5151 | val: perda 1.4074 acc 0.5429 P 0.5113 R 0.5429 F1 0.5114 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  23/200 | treino: perda 1.4102 acc 0.5275 P 0.5035 R 0.5274 F1 0.5080 | val: perda 1.3930 acc 0.5314 P 0.5028 R 0.5314 F1 0.5019 |   0.8s
+[MLP-B-128_preliminar] época  24/200 | treino: perda 1.3639 acc 0.5519 P 0.5331 R 0.5519 F1 0.5334 | val: perda 1.3897 acc 0.5238 P 0.5093 R 0.5238 F1 0.4976 |   0.8s
+[MLP-B-128_preliminar] época  25/200 | treino: perda 1.3499 acc 0.5501 P 0.5275 R 0.5500 F1 0.5320 | val: perda 1.3771 acc 0.5438 P 0.5145 R 0.5438 F1 0.5177 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  26/200 | treino: perda 1.3049 acc 0.5650 P 0.5447 R 0.5649 F1 0.5489 | val: perda 1.3659 acc 0.5352 P 0.5125 R 0.5352 F1 0.5100 |   0.9s
+[MLP-B-128_preliminar] época  27/200 | treino: perda 1.2752 acc 0.5879 P 0.5671 R 0.5878 F1 0.5703 | val: perda 1.3689 acc 0.5362 P 0.5099 R 0.5362 F1 0.5118 |   0.9s
+[MLP-B-128_preliminar] época  28/200 | treino: perda 1.2752 acc 0.5807 P 0.5602 R 0.5806 F1 0.5638 | val: perda 1.3665 acc 0.5438 P 0.5168 R 0.5438 F1 0.5201 |   0.8s  *checkpoint*
+[MLP-B-128_preliminar] época  29/200 | treino: perda 1.2470 acc 0.5969 P 0.5777 R 0.5968 F1 0.5810 | val: perda 1.3572 acc 0.5181 P 0.4945 R 0.5181 F1 0.4963 |   0.8s
+[MLP-B-128_preliminar] época  30/200 | treino: perda 1.2176 acc 0.5936 P 0.5720 R 0.5935 F1 0.5759 | val: perda 1.3623 acc 0.5438 P 0.5289 R 0.5438 F1 0.5200 |   0.8s
+[MLP-B-128_preliminar] época  31/200 | treino: perda 1.2056 acc 0.6013 P 0.5837 R 0.6013 F1 0.5865 | val: perda 1.3569 acc 0.5505 P 0.5289 R 0.5505 F1 0.5305 |   0.9s  *checkpoint*
+[MLP-B-128_preliminar] época  32/200 | treino: perda 1.1600 acc 0.6126 P 0.5917 R 0.6125 F1 0.5943 | val: perda 1.3657 acc 0.5400 P 0.5277 R 0.5400 F1 0.5200 |   0.9s
+[MLP-B-128_preliminar] época  33/200 | treino: perda 1.1364 acc 0.6246 P 0.6054 R 0.6245 F1 0.6073 | val: perda 1.3577 acc 0.5352 P 0.5119 R 0.5352 F1 0.5155 |   0.8s
+[MLP-B-128_preliminar] época  34/200 | treino: perda 1.1161 acc 0.6301 P 0.6136 R 0.6300 F1 0.6162 | val: perda 1.3496 acc 0.5390 P 0.5156 R 0.5390 F1 0.5177 |   0.8s
+[MLP-B-128_preliminar] época  35/200 | treino: perda 1.0881 acc 0.6514 P 0.6386 R 0.6513 F1 0.6399 | val: perda 1.4028 acc 0.5124 P 0.5126 R 0.5124 F1 0.4991 |   0.9s
+[MLP-B-128_preliminar] época  36/200 | treino: perda 1.0913 acc 0.6434 P 0.6302 R 0.6433 F1 0.6320 | val: perda 1.3831 acc 0.5276 P 0.5086 R 0.5276 F1 0.5112 |   0.9s
+[MLP-B-128_preliminar] época  37/200 | treino: perda 1.0487 acc 0.6556 P 0.6442 R 0.6556 F1 0.6441 | val: perda 1.3856 acc 0.5257 P 0.5159 R 0.5257 F1 0.5134 |   0.8s
+[MLP-B-128_preliminar] época  38/200 | treino: perda 1.0394 acc 0.6550 P 0.6434 R 0.6549 F1 0.6423 | val: perda 1.3847 acc 0.5276 P 0.5133 R 0.5276 F1 0.5139 |   0.8s
+[MLP-B-128_preliminar] época  39/200 | treino: perda 1.0276 acc 0.6675 P 0.6557 R 0.6674 F1 0.6573 | val: perda 1.3984 acc 0.5248 P 0.5078 R 0.5248 F1 0.5035 |   0.9s
+[MLP-B-128_preliminar] época  40/200 | treino: perda 1.0213 acc 0.6669 P 0.6540 R 0.6668 F1 0.6564 | val: perda 1.3997 acc 0.5286 P 0.5233 R 0.5286 F1 0.5122 |   0.8s
+[MLP-B-128_preliminar] época  41/200 | treino: perda 1.0032 acc 0.6681 P 0.6565 R 0.6680 F1 0.6579 | val: perda 1.4060 acc 0.5152 P 0.4962 R 0.5152 F1 0.4939 |   0.9s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_preliminar: checkpoint na época 31 de 41 | 25,341,386 parâmetros | 34.9s no total (0.85s/época)
+  treino    : perda 1.2056 | acurácia 0.6013 | precisão macro 0.5837 | recall macro 0.6013 | F1 macro 0.5865
+  validação : perda 1.3569 | acurácia 0.5505 | precisão macro 0.5289 | recall macro 0.5505 | F1 macro 0.5305
+  diferença treino − validação (F1 macro): +0.0560
+
+Relatório por classe (validação, checkpoint da época 31):
+                   precision    recall  f1-score   support
+
+          airport     0.2667    0.1143    0.1600       105
+            beach     0.6417    0.7333    0.6844       105
+circular_farmland     0.4627    0.5905    0.5188       105
+dense_residential     0.4423    0.4381    0.4402       105
+           desert     0.8073    0.8381    0.8224       105
+           forest     0.6944    0.9524    0.8032       105
+           harbor     0.6867    0.5429    0.6064       105
+         mountain     0.3571    0.2381    0.2857       105
+            river     0.4951    0.4857    0.4904       105
+     storage_tank     0.4348    0.5714    0.4938       105
+
+         accuracy                         0.5505      1050
+        macro avg     0.5289    0.5505    0.5305      1050
+     weighted avg     0.5289    0.5505    0.5305      1050
+
+[MLP-A-128_aug_preliminar] época   1/200 | treino: perda 1.9798 acc 0.2986 P 0.2635 R 0.2986 F1 0.2649 | val: perda 1.7653 acc 0.4143 P 0.3701 R 0.4143 F1 0.3450 |   0.9s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   2/200 | treino: perda 1.7818 acc 0.3909 P 0.3571 R 0.3909 F1 0.3515 | val: perda 1.6550 acc 0.4657 P 0.4136 R 0.4657 F1 0.4111 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   3/200 | treino: perda 1.6947 acc 0.4285 P 0.3977 R 0.4284 F1 0.3945 | val: perda 1.5725 acc 0.5038 P 0.4993 R 0.5038 F1 0.4628 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   4/200 | treino: perda 1.6219 acc 0.4529 P 0.4280 R 0.4529 F1 0.4261 | val: perda 1.5238 acc 0.5267 P 0.5047 R 0.5267 F1 0.4868 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   5/200 | treino: perda 1.5755 acc 0.4705 P 0.4432 R 0.4704 F1 0.4445 | val: perda 1.4671 acc 0.5362 P 0.5233 R 0.5362 F1 0.5105 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   6/200 | treino: perda 1.5358 acc 0.4795 P 0.4558 R 0.4794 F1 0.4600 | val: perda 1.4327 acc 0.5457 P 0.5174 R 0.5457 F1 0.5137 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   7/200 | treino: perda 1.5019 acc 0.4950 P 0.4730 R 0.4949 F1 0.4771 | val: perda 1.4061 acc 0.5533 P 0.5229 R 0.5533 F1 0.5246 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época   8/200 | treino: perda 1.4760 acc 0.5115 P 0.4936 R 0.5115 F1 0.4959 | val: perda 1.3767 acc 0.5543 P 0.5284 R 0.5543 F1 0.5197 |   0.8s
+[MLP-A-128_aug_preliminar] época   9/200 | treino: perda 1.4414 acc 0.5107 P 0.4906 R 0.5107 F1 0.4929 | val: perda 1.3477 acc 0.5476 P 0.5183 R 0.5476 F1 0.5143 |   0.8s
+[MLP-A-128_aug_preliminar] época  10/200 | treino: perda 1.4316 acc 0.5175 P 0.5006 R 0.5174 F1 0.5033 | val: perda 1.3295 acc 0.5562 P 0.5334 R 0.5562 F1 0.5253 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  11/200 | treino: perda 1.4044 acc 0.5256 P 0.5086 R 0.5256 F1 0.5124 | val: perda 1.3198 acc 0.5648 P 0.5473 R 0.5648 F1 0.5369 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  12/200 | treino: perda 1.3827 acc 0.5326 P 0.5141 R 0.5325 F1 0.5181 | val: perda 1.3044 acc 0.5552 P 0.5302 R 0.5552 F1 0.5278 |   0.8s
+[MLP-A-128_aug_preliminar] época  13/200 | treino: perda 1.3750 acc 0.5297 P 0.5111 R 0.5296 F1 0.5147 | val: perda 1.2791 acc 0.5705 P 0.5513 R 0.5705 F1 0.5502 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  14/200 | treino: perda 1.3606 acc 0.5397 P 0.5222 R 0.5396 F1 0.5266 | val: perda 1.2630 acc 0.5867 P 0.5705 R 0.5867 F1 0.5714 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  15/200 | treino: perda 1.3390 acc 0.5321 P 0.5145 R 0.5321 F1 0.5195 | val: perda 1.2572 acc 0.5829 P 0.5626 R 0.5829 F1 0.5650 |   0.8s
+[MLP-A-128_aug_preliminar] época  16/200 | treino: perda 1.3397 acc 0.5409 P 0.5250 R 0.5409 F1 0.5276 | val: perda 1.2617 acc 0.5810 P 0.5653 R 0.5810 F1 0.5650 |   0.8s
+[MLP-A-128_aug_preliminar] época  17/200 | treino: perda 1.3199 acc 0.5511 P 0.5362 R 0.5511 F1 0.5408 | val: perda 1.2403 acc 0.5905 P 0.5727 R 0.5905 F1 0.5714 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  18/200 | treino: perda 1.3115 acc 0.5601 P 0.5448 R 0.5601 F1 0.5480 | val: perda 1.2196 acc 0.5933 P 0.5750 R 0.5933 F1 0.5752 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  19/200 | treino: perda 1.3124 acc 0.5471 P 0.5296 R 0.5470 F1 0.5341 | val: perda 1.2233 acc 0.5810 P 0.5571 R 0.5810 F1 0.5568 |   0.8s
+[MLP-A-128_aug_preliminar] época  20/200 | treino: perda 1.2775 acc 0.5630 P 0.5474 R 0.5629 F1 0.5511 | val: perda 1.2079 acc 0.5867 P 0.5680 R 0.5867 F1 0.5685 |   0.8s
+[MLP-A-128_aug_preliminar] época  21/200 | treino: perda 1.2781 acc 0.5546 P 0.5388 R 0.5545 F1 0.5430 | val: perda 1.2076 acc 0.5943 P 0.5753 R 0.5943 F1 0.5777 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  22/200 | treino: perda 1.2646 acc 0.5652 P 0.5498 R 0.5652 F1 0.5537 | val: perda 1.2082 acc 0.5819 P 0.5624 R 0.5819 F1 0.5643 |   0.8s
+[MLP-A-128_aug_preliminar] época  23/200 | treino: perda 1.2833 acc 0.5552 P 0.5416 R 0.5552 F1 0.5450 | val: perda 1.1912 acc 0.5952 P 0.5728 R 0.5952 F1 0.5756 |   0.8s
+[MLP-A-128_aug_preliminar] época  24/200 | treino: perda 1.2606 acc 0.5609 P 0.5476 R 0.5609 F1 0.5508 | val: perda 1.1898 acc 0.6000 P 0.5864 R 0.6000 F1 0.5875 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  25/200 | treino: perda 1.2521 acc 0.5717 P 0.5578 R 0.5717 F1 0.5613 | val: perda 1.1892 acc 0.5962 P 0.5788 R 0.5962 F1 0.5827 |   0.8s
+[MLP-A-128_aug_preliminar] época  26/200 | treino: perda 1.2553 acc 0.5717 P 0.5580 R 0.5717 F1 0.5619 | val: perda 1.1849 acc 0.5867 P 0.5681 R 0.5867 F1 0.5701 |   0.8s
+[MLP-A-128_aug_preliminar] época  27/200 | treino: perda 1.2375 acc 0.5740 P 0.5595 R 0.5739 F1 0.5629 | val: perda 1.1795 acc 0.6010 P 0.5832 R 0.6010 F1 0.5874 |   0.8s
+[MLP-A-128_aug_preliminar] época  28/200 | treino: perda 1.2382 acc 0.5705 P 0.5555 R 0.5705 F1 0.5594 | val: perda 1.1574 acc 0.6076 P 0.5929 R 0.6076 F1 0.5945 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  29/200 | treino: perda 1.2234 acc 0.5818 P 0.5700 R 0.5817 F1 0.5733 | val: perda 1.1632 acc 0.5914 P 0.5765 R 0.5914 F1 0.5760 |   0.8s
+[MLP-A-128_aug_preliminar] época  30/200 | treino: perda 1.1936 acc 0.5858 P 0.5707 R 0.5858 F1 0.5745 | val: perda 1.1522 acc 0.5886 P 0.5684 R 0.5886 F1 0.5729 |   0.8s
+[MLP-A-128_aug_preliminar] época  31/200 | treino: perda 1.2089 acc 0.5871 P 0.5755 R 0.5870 F1 0.5786 | val: perda 1.1538 acc 0.6019 P 0.5845 R 0.6019 F1 0.5874 |   0.8s
+[MLP-A-128_aug_preliminar] época  32/200 | treino: perda 1.2011 acc 0.5842 P 0.5716 R 0.5842 F1 0.5751 | val: perda 1.1509 acc 0.5962 P 0.5839 R 0.5962 F1 0.5852 |   0.8s
+[MLP-A-128_aug_preliminar] época  33/200 | treino: perda 1.1884 acc 0.5901 P 0.5780 R 0.5901 F1 0.5815 | val: perda 1.1492 acc 0.5962 P 0.5788 R 0.5962 F1 0.5810 |   0.8s
+[MLP-A-128_aug_preliminar] época  34/200 | treino: perda 1.1821 acc 0.5985 P 0.5864 R 0.5984 F1 0.5898 | val: perda 1.1502 acc 0.5981 P 0.5838 R 0.5981 F1 0.5828 |   0.8s
+[MLP-A-128_aug_preliminar] época  35/200 | treino: perda 1.1747 acc 0.5969 P 0.5839 R 0.5968 F1 0.5875 | val: perda 1.1281 acc 0.6095 P 0.5972 R 0.6095 F1 0.5965 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  36/200 | treino: perda 1.1602 acc 0.5922 P 0.5813 R 0.5921 F1 0.5842 | val: perda 1.1363 acc 0.5990 P 0.5841 R 0.5990 F1 0.5856 |   0.8s
+[MLP-A-128_aug_preliminar] época  37/200 | treino: perda 1.1467 acc 0.5997 P 0.5866 R 0.5997 F1 0.5902 | val: perda 1.1194 acc 0.6048 P 0.5882 R 0.6048 F1 0.5913 |   0.8s
+[MLP-A-128_aug_preliminar] época  38/200 | treino: perda 1.1544 acc 0.6050 P 0.5918 R 0.6050 F1 0.5958 | val: perda 1.1202 acc 0.5971 P 0.5812 R 0.5971 F1 0.5851 |   0.8s
+[MLP-A-128_aug_preliminar] época  39/200 | treino: perda 1.1438 acc 0.6091 P 0.5962 R 0.6090 F1 0.6001 | val: perda 1.1084 acc 0.6124 P 0.5942 R 0.6124 F1 0.5971 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  40/200 | treino: perda 1.1483 acc 0.6073 P 0.5944 R 0.6072 F1 0.5977 | val: perda 1.1076 acc 0.6076 P 0.5923 R 0.6076 F1 0.5962 |   0.8s
+[MLP-A-128_aug_preliminar] época  41/200 | treino: perda 1.1361 acc 0.6122 P 0.5999 R 0.6121 F1 0.6032 | val: perda 1.1045 acc 0.6010 P 0.5828 R 0.6010 F1 0.5885 |   0.8s
+[MLP-A-128_aug_preliminar] época  42/200 | treino: perda 1.1343 acc 0.6095 P 0.5970 R 0.6095 F1 0.6000 | val: perda 1.1123 acc 0.6048 P 0.5915 R 0.6048 F1 0.5920 |   0.8s
+[MLP-A-128_aug_preliminar] época  43/200 | treino: perda 1.1359 acc 0.6077 P 0.5940 R 0.6076 F1 0.5978 | val: perda 1.1060 acc 0.6162 P 0.6021 R 0.6162 F1 0.6024 |   0.9s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  44/200 | treino: perda 1.1114 acc 0.6158 P 0.6028 R 0.6158 F1 0.6063 | val: perda 1.1033 acc 0.5981 P 0.5795 R 0.5981 F1 0.5835 |   0.8s
+[MLP-A-128_aug_preliminar] época  45/200 | treino: perda 1.1081 acc 0.6142 P 0.6042 R 0.6142 F1 0.6077 | val: perda 1.1030 acc 0.6076 P 0.5950 R 0.6076 F1 0.5958 |   0.8s
+[MLP-A-128_aug_preliminar] época  46/200 | treino: perda 1.1121 acc 0.6209 P 0.6092 R 0.6209 F1 0.6125 | val: perda 1.1090 acc 0.6076 P 0.5932 R 0.6076 F1 0.5931 |   0.8s
+[MLP-A-128_aug_preliminar] época  47/200 | treino: perda 1.0967 acc 0.6187 P 0.6074 R 0.6186 F1 0.6111 | val: perda 1.0864 acc 0.6190 P 0.5992 R 0.6190 F1 0.6035 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  48/200 | treino: perda 1.0898 acc 0.6316 P 0.6205 R 0.6315 F1 0.6228 | val: perda 1.0945 acc 0.6067 P 0.5870 R 0.6067 F1 0.5908 |   0.8s
+[MLP-A-128_aug_preliminar] época  49/200 | treino: perda 1.1082 acc 0.6201 P 0.6069 R 0.6201 F1 0.6106 | val: perda 1.0912 acc 0.6152 P 0.6009 R 0.6152 F1 0.6023 |   0.8s
+[MLP-A-128_aug_preliminar] época  50/200 | treino: perda 1.0865 acc 0.6201 P 0.6080 R 0.6201 F1 0.6112 | val: perda 1.0825 acc 0.6133 P 0.6035 R 0.6133 F1 0.6046 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  51/200 | treino: perda 1.0786 acc 0.6354 P 0.6242 R 0.6354 F1 0.6276 | val: perda 1.0728 acc 0.6248 P 0.6157 R 0.6248 F1 0.6140 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  52/200 | treino: perda 1.0783 acc 0.6283 P 0.6161 R 0.6282 F1 0.6198 | val: perda 1.0800 acc 0.6114 P 0.5969 R 0.6114 F1 0.5984 |   0.8s
+[MLP-A-128_aug_preliminar] época  53/200 | treino: perda 1.0743 acc 0.6311 P 0.6194 R 0.6311 F1 0.6230 | val: perda 1.0529 acc 0.6276 P 0.6173 R 0.6276 F1 0.6192 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  54/200 | treino: perda 1.0573 acc 0.6383 P 0.6287 R 0.6382 F1 0.6313 | val: perda 1.0546 acc 0.6152 P 0.5955 R 0.6152 F1 0.5982 |   0.8s
+[MLP-A-128_aug_preliminar] época  55/200 | treino: perda 1.0617 acc 0.6395 P 0.6269 R 0.6395 F1 0.6307 | val: perda 1.0575 acc 0.6343 P 0.6237 R 0.6343 F1 0.6240 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  56/200 | treino: perda 1.0677 acc 0.6346 P 0.6248 R 0.6346 F1 0.6272 | val: perda 1.0550 acc 0.6276 P 0.6124 R 0.6276 F1 0.6152 |   0.9s
+[MLP-A-128_aug_preliminar] época  57/200 | treino: perda 1.0349 acc 0.6434 P 0.6310 R 0.6433 F1 0.6350 | val: perda 1.0518 acc 0.6305 P 0.6174 R 0.6305 F1 0.6194 |   0.8s
+[MLP-A-128_aug_preliminar] época  58/200 | treino: perda 1.0584 acc 0.6299 P 0.6170 R 0.6299 F1 0.6203 | val: perda 1.0487 acc 0.6229 P 0.6120 R 0.6229 F1 0.6131 |   0.8s
+[MLP-A-128_aug_preliminar] época  59/200 | treino: perda 1.0320 acc 0.6434 P 0.6321 R 0.6433 F1 0.6357 | val: perda 1.0430 acc 0.6324 P 0.6194 R 0.6324 F1 0.6227 |   0.8s
+[MLP-A-128_aug_preliminar] época  60/200 | treino: perda 1.0113 acc 0.6475 P 0.6370 R 0.6474 F1 0.6402 | val: perda 1.0687 acc 0.6181 P 0.6058 R 0.6181 F1 0.6068 |   0.8s
+[MLP-A-128_aug_preliminar] época  61/200 | treino: perda 1.0429 acc 0.6430 P 0.6339 R 0.6429 F1 0.6369 | val: perda 1.0643 acc 0.6295 P 0.6162 R 0.6295 F1 0.6147 |   0.8s
+[MLP-A-128_aug_preliminar] época  62/200 | treino: perda 1.0262 acc 0.6489 P 0.6379 R 0.6489 F1 0.6407 | val: perda 1.0328 acc 0.6438 P 0.6364 R 0.6438 F1 0.6366 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  63/200 | treino: perda 1.0161 acc 0.6540 P 0.6441 R 0.6540 F1 0.6472 | val: perda 1.0153 acc 0.6381 P 0.6253 R 0.6381 F1 0.6295 |   0.8s
+[MLP-A-128_aug_preliminar] época  64/200 | treino: perda 1.0136 acc 0.6479 P 0.6372 R 0.6478 F1 0.6401 | val: perda 1.0251 acc 0.6438 P 0.6339 R 0.6438 F1 0.6341 |   0.8s
+[MLP-A-128_aug_preliminar] época  65/200 | treino: perda 0.9973 acc 0.6624 P 0.6533 R 0.6623 F1 0.6560 | val: perda 1.0172 acc 0.6610 P 0.6456 R 0.6610 F1 0.6474 |   0.8s  *checkpoint*
+[MLP-A-128_aug_preliminar] época  66/200 | treino: perda 1.0294 acc 0.6463 P 0.6352 R 0.6462 F1 0.6383 | val: perda 1.0285 acc 0.6210 P 0.6077 R 0.6210 F1 0.6084 |   0.8s
+[MLP-A-128_aug_preliminar] época  67/200 | treino: perda 0.9995 acc 0.6538 P 0.6445 R 0.6538 F1 0.6471 | val: perda 1.0197 acc 0.6324 P 0.6223 R 0.6324 F1 0.6232 |   0.8s
+[MLP-A-128_aug_preliminar] época  68/200 | treino: perda 1.0036 acc 0.6597 P 0.6502 R 0.6597 F1 0.6530 | val: perda 1.0159 acc 0.6371 P 0.6276 R 0.6371 F1 0.6275 |   0.8s
+[MLP-A-128_aug_preliminar] época  69/200 | treino: perda 1.0012 acc 0.6546 P 0.6452 R 0.6546 F1 0.6479 | val: perda 1.0177 acc 0.6438 P 0.6324 R 0.6438 F1 0.6342 |   0.8s
+[MLP-A-128_aug_preliminar] época  70/200 | treino: perda 0.9932 acc 0.6607 P 0.6514 R 0.6607 F1 0.6540 | val: perda 1.0318 acc 0.6324 P 0.6222 R 0.6324 F1 0.6226 |   0.8s
+[MLP-A-128_aug_preliminar] época  71/200 | treino: perda 0.9942 acc 0.6579 P 0.6494 R 0.6578 F1 0.6520 | val: perda 1.0319 acc 0.6295 P 0.6202 R 0.6295 F1 0.6205 |   0.8s
+[MLP-A-128_aug_preliminar] época  72/200 | treino: perda 0.9883 acc 0.6595 P 0.6502 R 0.6595 F1 0.6531 | val: perda 1.0224 acc 0.6362 P 0.6263 R 0.6362 F1 0.6273 |   0.8s
+[MLP-A-128_aug_preliminar] época  73/200 | treino: perda 0.9898 acc 0.6530 P 0.6441 R 0.6529 F1 0.6469 | val: perda 1.0174 acc 0.6295 P 0.6170 R 0.6295 F1 0.6168 |   0.8s
+[MLP-A-128_aug_preliminar] época  74/200 | treino: perda 0.9793 acc 0.6630 P 0.6538 R 0.6629 F1 0.6565 | val: perda 1.0156 acc 0.6467 P 0.6354 R 0.6467 F1 0.6369 |   0.8s
+[MLP-A-128_aug_preliminar] época  75/200 | treino: perda 0.9734 acc 0.6593 P 0.6491 R 0.6593 F1 0.6523 | val: perda 1.0362 acc 0.6305 P 0.6192 R 0.6305 F1 0.6199 |   0.8s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_aug_preliminar: checkpoint na época 65 de 75 | 25,234,570 parâmetros | 60.4s no total (0.80s/época)
+  treino    : perda 0.9973 | acurácia 0.6624 | precisão macro 0.6533 | recall macro 0.6623 | F1 macro 0.6560
+  validação : perda 1.0172 | acurácia 0.6610 | precisão macro 0.6456 | recall macro 0.6610 | F1 macro 0.6474
+  diferença treino − validação (F1 macro): +0.0086
+
+Relatório por classe (validação, checkpoint da época 65):
+                   precision    recall  f1-score   support
+
+          airport     0.4571    0.3048    0.3657       105
+            beach     0.7946    0.8476    0.8203       105
+circular_farmland     0.6321    0.6381    0.6351       105
+dense_residential     0.6422    0.6667    0.6542       105
+           desert     0.8519    0.8762    0.8638       105
+           forest     0.6986    0.9714    0.8127       105
+           harbor     0.7184    0.7048    0.7115       105
+         mountain     0.4493    0.2952    0.3563       105
+            river     0.6346    0.6286    0.6316       105
+     storage_tank     0.5772    0.6762    0.6228       105
+
+         accuracy                         0.6610      1050
+        macro avg     0.6456    0.6610    0.6474      1050
+     weighted avg     0.6456    0.6610    0.6474      1050
+
+[MLP-B-128_aug_preliminar] época   1/200 | treino: perda 2.3182 acc 0.1455 P 0.1502 R 0.1455 F1 0.1433 | val: perda 2.1381 acc 0.3257 P 0.2363 R 0.3257 F1 0.2484 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   2/200 | treino: perda 2.1771 acc 0.1970 P 0.1867 R 0.1970 F1 0.1867 | val: perda 2.0446 acc 0.3181 P 0.2929 R 0.3181 F1 0.2290 |   0.9s
+[MLP-B-128_aug_preliminar] época   3/200 | treino: perda 2.0785 acc 0.2521 P 0.2235 R 0.2521 F1 0.2288 | val: perda 1.9574 acc 0.3457 P 0.2456 R 0.3457 F1 0.2526 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   4/200 | treino: perda 2.0143 acc 0.2929 P 0.2591 R 0.2929 F1 0.2647 | val: perda 1.9093 acc 0.3781 P 0.4183 R 0.3781 F1 0.3085 |   0.8s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   5/200 | treino: perda 1.9727 acc 0.3060 P 0.2656 R 0.3059 F1 0.2737 | val: perda 1.8534 acc 0.4057 P 0.4338 R 0.4057 F1 0.3352 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   6/200 | treino: perda 1.9371 acc 0.3225 P 0.2826 R 0.3225 F1 0.2924 | val: perda 1.8240 acc 0.4248 P 0.4133 R 0.4248 F1 0.3680 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   7/200 | treino: perda 1.8962 acc 0.3409 P 0.3052 R 0.3408 F1 0.3126 | val: perda 1.7881 acc 0.4448 P 0.4997 R 0.4448 F1 0.3904 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   8/200 | treino: perda 1.8772 acc 0.3480 P 0.3117 R 0.3480 F1 0.3189 | val: perda 1.7671 acc 0.4590 P 0.4700 R 0.4590 F1 0.4103 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época   9/200 | treino: perda 1.8484 acc 0.3574 P 0.3221 R 0.3574 F1 0.3292 | val: perda 1.7234 acc 0.4581 P 0.4617 R 0.4581 F1 0.4096 |   0.9s
+[MLP-B-128_aug_preliminar] época  10/200 | treino: perda 1.8103 acc 0.3805 P 0.3456 R 0.3804 F1 0.3526 | val: perda 1.6742 acc 0.4724 P 0.4671 R 0.4724 F1 0.4281 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  11/200 | treino: perda 1.7749 acc 0.3903 P 0.3564 R 0.3902 F1 0.3640 | val: perda 1.6464 acc 0.4838 P 0.4763 R 0.4838 F1 0.4453 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  12/200 | treino: perda 1.7457 acc 0.4027 P 0.3704 R 0.4027 F1 0.3776 | val: perda 1.6252 acc 0.4895 P 0.5166 R 0.4895 F1 0.4534 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  13/200 | treino: perda 1.7085 acc 0.4160 P 0.3834 R 0.4159 F1 0.3882 | val: perda 1.5904 acc 0.5133 P 0.5134 R 0.5133 F1 0.4804 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  14/200 | treino: perda 1.6855 acc 0.4323 P 0.4003 R 0.4323 F1 0.4054 | val: perda 1.5614 acc 0.5152 P 0.5072 R 0.5152 F1 0.4834 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  15/200 | treino: perda 1.6581 acc 0.4317 P 0.4009 R 0.4317 F1 0.4072 | val: perda 1.5297 acc 0.5190 P 0.5126 R 0.5190 F1 0.4875 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  16/200 | treino: perda 1.6432 acc 0.4442 P 0.4134 R 0.4441 F1 0.4197 | val: perda 1.5077 acc 0.5267 P 0.5053 R 0.5267 F1 0.4943 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  17/200 | treino: perda 1.6192 acc 0.4515 P 0.4258 R 0.4515 F1 0.4291 | val: perda 1.4638 acc 0.5362 P 0.5252 R 0.5362 F1 0.5081 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  18/200 | treino: perda 1.6118 acc 0.4452 P 0.4200 R 0.4451 F1 0.4259 | val: perda 1.4400 acc 0.5467 P 0.5241 R 0.5467 F1 0.5156 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  19/200 | treino: perda 1.5893 acc 0.4572 P 0.4298 R 0.4572 F1 0.4348 | val: perda 1.4244 acc 0.5552 P 0.5469 R 0.5552 F1 0.5260 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  20/200 | treino: perda 1.5811 acc 0.4529 P 0.4299 R 0.4529 F1 0.4341 | val: perda 1.4009 acc 0.5590 P 0.5420 R 0.5590 F1 0.5320 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  21/200 | treino: perda 1.5549 acc 0.4689 P 0.4462 R 0.4688 F1 0.4488 | val: perda 1.3954 acc 0.5514 P 0.5386 R 0.5514 F1 0.5238 |   0.9s
+[MLP-B-128_aug_preliminar] época  22/200 | treino: perda 1.5446 acc 0.4807 P 0.4574 R 0.4807 F1 0.4610 | val: perda 1.3780 acc 0.5486 P 0.5237 R 0.5486 F1 0.5197 |   0.9s
+[MLP-B-128_aug_preliminar] época  23/200 | treino: perda 1.5649 acc 0.4674 P 0.4423 R 0.4674 F1 0.4489 | val: perda 1.3597 acc 0.5410 P 0.5248 R 0.5410 F1 0.5154 |   0.9s
+[MLP-B-128_aug_preliminar] época  24/200 | treino: perda 1.5358 acc 0.4717 P 0.4496 R 0.4717 F1 0.4541 | val: perda 1.3635 acc 0.5419 P 0.5331 R 0.5419 F1 0.5163 |   0.9s
+[MLP-B-128_aug_preliminar] época  25/200 | treino: perda 1.5126 acc 0.4738 P 0.4526 R 0.4737 F1 0.4560 | val: perda 1.3483 acc 0.5457 P 0.5244 R 0.5457 F1 0.5204 |   0.9s
+[MLP-B-128_aug_preliminar] época  26/200 | treino: perda 1.5096 acc 0.4860 P 0.4637 R 0.4860 F1 0.4693 | val: perda 1.3334 acc 0.5562 P 0.5352 R 0.5562 F1 0.5294 |   0.9s
+[MLP-B-128_aug_preliminar] época  27/200 | treino: perda 1.4922 acc 0.5042 P 0.4836 R 0.5041 F1 0.4871 | val: perda 1.3325 acc 0.5505 P 0.5338 R 0.5505 F1 0.5232 |   0.9s
+[MLP-B-128_aug_preliminar] época  28/200 | treino: perda 1.4794 acc 0.4911 P 0.4697 R 0.4911 F1 0.4742 | val: perda 1.3034 acc 0.5629 P 0.5427 R 0.5629 F1 0.5381 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  29/200 | treino: perda 1.4724 acc 0.4942 P 0.4729 R 0.4941 F1 0.4769 | val: perda 1.3070 acc 0.5610 P 0.5441 R 0.5610 F1 0.5355 |   0.9s
+[MLP-B-128_aug_preliminar] época  30/200 | treino: perda 1.4606 acc 0.5066 P 0.4832 R 0.5066 F1 0.4886 | val: perda 1.3060 acc 0.5495 P 0.5315 R 0.5495 F1 0.5248 |   0.9s
+[MLP-B-128_aug_preliminar] época  31/200 | treino: perda 1.4619 acc 0.5011 P 0.4819 R 0.5011 F1 0.4854 | val: perda 1.2874 acc 0.5686 P 0.5528 R 0.5686 F1 0.5437 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  32/200 | treino: perda 1.4694 acc 0.5026 P 0.4800 R 0.5025 F1 0.4858 | val: perda 1.2655 acc 0.5695 P 0.5457 R 0.5695 F1 0.5433 |   0.9s
+[MLP-B-128_aug_preliminar] época  33/200 | treino: perda 1.4280 acc 0.5050 P 0.4842 R 0.5049 F1 0.4891 | val: perda 1.2698 acc 0.5571 P 0.5273 R 0.5571 F1 0.5271 |   0.9s
+[MLP-B-128_aug_preliminar] época  34/200 | treino: perda 1.4222 acc 0.5142 P 0.4910 R 0.5141 F1 0.4967 | val: perda 1.2560 acc 0.5610 P 0.5364 R 0.5610 F1 0.5319 |   0.9s
+[MLP-B-128_aug_preliminar] época  35/200 | treino: perda 1.4197 acc 0.5077 P 0.4852 R 0.5076 F1 0.4902 | val: perda 1.2599 acc 0.5705 P 0.5529 R 0.5705 F1 0.5464 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  36/200 | treino: perda 1.4077 acc 0.5148 P 0.4935 R 0.5147 F1 0.4986 | val: perda 1.2641 acc 0.5714 P 0.5599 R 0.5714 F1 0.5499 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  37/200 | treino: perda 1.4028 acc 0.5250 P 0.5048 R 0.5249 F1 0.5088 | val: perda 1.2345 acc 0.5724 P 0.5532 R 0.5724 F1 0.5474 |   0.9s
+[MLP-B-128_aug_preliminar] época  38/200 | treino: perda 1.3984 acc 0.5217 P 0.5024 R 0.5217 F1 0.5071 | val: perda 1.2342 acc 0.5667 P 0.5478 R 0.5667 F1 0.5457 |   0.9s
+[MLP-B-128_aug_preliminar] época  39/200 | treino: perda 1.3909 acc 0.5224 P 0.5019 R 0.5223 F1 0.5062 | val: perda 1.2361 acc 0.5705 P 0.5447 R 0.5705 F1 0.5450 |   0.9s
+[MLP-B-128_aug_preliminar] época  40/200 | treino: perda 1.3865 acc 0.5236 P 0.4988 R 0.5235 F1 0.5056 | val: perda 1.2345 acc 0.5724 P 0.5533 R 0.5724 F1 0.5513 |   0.8s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  41/200 | treino: perda 1.3968 acc 0.5226 P 0.5025 R 0.5225 F1 0.5072 | val: perda 1.2313 acc 0.5762 P 0.5590 R 0.5762 F1 0.5563 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  42/200 | treino: perda 1.3983 acc 0.5193 P 0.4992 R 0.5192 F1 0.5041 | val: perda 1.2246 acc 0.5676 P 0.5503 R 0.5676 F1 0.5469 |   0.9s
+[MLP-B-128_aug_preliminar] época  43/200 | treino: perda 1.3821 acc 0.5354 P 0.5136 R 0.5353 F1 0.5187 | val: perda 1.2309 acc 0.5648 P 0.5500 R 0.5648 F1 0.5410 |   0.9s
+[MLP-B-128_aug_preliminar] época  44/200 | treino: perda 1.3747 acc 0.5277 P 0.5073 R 0.5276 F1 0.5115 | val: perda 1.2169 acc 0.5771 P 0.5599 R 0.5771 F1 0.5548 |   0.9s
+[MLP-B-128_aug_preliminar] época  45/200 | treino: perda 1.3600 acc 0.5305 P 0.5106 R 0.5304 F1 0.5154 | val: perda 1.2293 acc 0.5800 P 0.5653 R 0.5800 F1 0.5584 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  46/200 | treino: perda 1.3591 acc 0.5260 P 0.5051 R 0.5260 F1 0.5103 | val: perda 1.2105 acc 0.5790 P 0.5631 R 0.5790 F1 0.5574 |   0.9s
+[MLP-B-128_aug_preliminar] época  47/200 | treino: perda 1.3454 acc 0.5401 P 0.5186 R 0.5400 F1 0.5242 | val: perda 1.2058 acc 0.5752 P 0.5566 R 0.5752 F1 0.5534 |   0.9s
+[MLP-B-128_aug_preliminar] época  48/200 | treino: perda 1.3583 acc 0.5317 P 0.5130 R 0.5317 F1 0.5174 | val: perda 1.2040 acc 0.5743 P 0.5524 R 0.5743 F1 0.5515 |   0.9s
+[MLP-B-128_aug_preliminar] época  49/200 | treino: perda 1.3402 acc 0.5436 P 0.5224 R 0.5435 F1 0.5270 | val: perda 1.2165 acc 0.5800 P 0.5629 R 0.5800 F1 0.5578 |   0.9s
+[MLP-B-128_aug_preliminar] época  50/200 | treino: perda 1.3387 acc 0.5434 P 0.5214 R 0.5433 F1 0.5263 | val: perda 1.2064 acc 0.5762 P 0.5549 R 0.5762 F1 0.5568 |   0.9s
+[MLP-B-128_aug_preliminar] época  51/200 | treino: perda 1.3390 acc 0.5462 P 0.5268 R 0.5462 F1 0.5311 | val: perda 1.1953 acc 0.5905 P 0.5794 R 0.5905 F1 0.5718 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  52/200 | treino: perda 1.3389 acc 0.5444 P 0.5293 R 0.5443 F1 0.5326 | val: perda 1.1855 acc 0.5867 P 0.5664 R 0.5867 F1 0.5658 |   0.9s
+[MLP-B-128_aug_preliminar] época  53/200 | treino: perda 1.3227 acc 0.5436 P 0.5253 R 0.5435 F1 0.5304 | val: perda 1.1827 acc 0.5924 P 0.5748 R 0.5924 F1 0.5747 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  54/200 | treino: perda 1.3095 acc 0.5509 P 0.5312 R 0.5509 F1 0.5367 | val: perda 1.1814 acc 0.5886 P 0.5655 R 0.5886 F1 0.5667 |   0.9s
+[MLP-B-128_aug_preliminar] época  55/200 | treino: perda 1.3270 acc 0.5564 P 0.5354 R 0.5564 F1 0.5402 | val: perda 1.1818 acc 0.5867 P 0.5701 R 0.5867 F1 0.5660 |   0.9s
+[MLP-B-128_aug_preliminar] época  56/200 | treino: perda 1.3059 acc 0.5581 P 0.5412 R 0.5580 F1 0.5441 | val: perda 1.1679 acc 0.5886 P 0.5660 R 0.5886 F1 0.5672 |   0.9s
+[MLP-B-128_aug_preliminar] época  57/200 | treino: perda 1.3108 acc 0.5507 P 0.5310 R 0.5507 F1 0.5363 | val: perda 1.1638 acc 0.5838 P 0.5617 R 0.5838 F1 0.5647 |   0.9s
+[MLP-B-128_aug_preliminar] época  58/200 | treino: perda 1.2973 acc 0.5566 P 0.5359 R 0.5566 F1 0.5415 | val: perda 1.1714 acc 0.5829 P 0.5631 R 0.5829 F1 0.5624 |   0.9s
+[MLP-B-128_aug_preliminar] época  59/200 | treino: perda 1.2961 acc 0.5513 P 0.5335 R 0.5513 F1 0.5378 | val: perda 1.1684 acc 0.5895 P 0.5736 R 0.5895 F1 0.5706 |   0.9s
+[MLP-B-128_aug_preliminar] época  60/200 | treino: perda 1.2792 acc 0.5636 P 0.5463 R 0.5635 F1 0.5505 | val: perda 1.1780 acc 0.5829 P 0.5642 R 0.5829 F1 0.5629 |   0.9s
+[MLP-B-128_aug_preliminar] época  61/200 | treino: perda 1.2736 acc 0.5611 P 0.5424 R 0.5611 F1 0.5480 | val: perda 1.1608 acc 0.6000 P 0.5798 R 0.6000 F1 0.5808 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  62/200 | treino: perda 1.2842 acc 0.5652 P 0.5450 R 0.5652 F1 0.5501 | val: perda 1.1548 acc 0.5943 P 0.5801 R 0.5943 F1 0.5814 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  63/200 | treino: perda 1.2881 acc 0.5558 P 0.5346 R 0.5558 F1 0.5402 | val: perda 1.1433 acc 0.5990 P 0.5831 R 0.5990 F1 0.5830 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  64/200 | treino: perda 1.2584 acc 0.5713 P 0.5515 R 0.5713 F1 0.5570 | val: perda 1.1469 acc 0.5943 P 0.5704 R 0.5943 F1 0.5743 |   0.9s
+[MLP-B-128_aug_preliminar] época  65/200 | treino: perda 1.2618 acc 0.5713 P 0.5548 R 0.5713 F1 0.5592 | val: perda 1.1616 acc 0.5943 P 0.5777 R 0.5943 F1 0.5753 |   0.9s
+[MLP-B-128_aug_preliminar] época  66/200 | treino: perda 1.2765 acc 0.5728 P 0.5546 R 0.5727 F1 0.5595 | val: perda 1.1528 acc 0.5867 P 0.5639 R 0.5867 F1 0.5618 |   0.9s
+[MLP-B-128_aug_preliminar] época  67/200 | treino: perda 1.2691 acc 0.5652 P 0.5466 R 0.5651 F1 0.5516 | val: perda 1.1459 acc 0.5943 P 0.5818 R 0.5943 F1 0.5798 |   0.9s
+[MLP-B-128_aug_preliminar] época  68/200 | treino: perda 1.2658 acc 0.5658 P 0.5468 R 0.5658 F1 0.5519 | val: perda 1.1314 acc 0.5971 P 0.5793 R 0.5971 F1 0.5805 |   0.9s
+[MLP-B-128_aug_preliminar] época  69/200 | treino: perda 1.2400 acc 0.5726 P 0.5536 R 0.5725 F1 0.5571 | val: perda 1.1443 acc 0.5933 P 0.5718 R 0.5933 F1 0.5742 |   0.9s
+[MLP-B-128_aug_preliminar] época  70/200 | treino: perda 1.2497 acc 0.5728 P 0.5557 R 0.5727 F1 0.5602 | val: perda 1.1234 acc 0.6019 P 0.5834 R 0.6019 F1 0.5836 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  71/200 | treino: perda 1.2363 acc 0.5832 P 0.5659 R 0.5831 F1 0.5708 | val: perda 1.1449 acc 0.5933 P 0.5798 R 0.5933 F1 0.5756 |   0.9s
+[MLP-B-128_aug_preliminar] época  72/200 | treino: perda 1.2356 acc 0.5805 P 0.5633 R 0.5805 F1 0.5678 | val: perda 1.1244 acc 0.6010 P 0.5842 R 0.6010 F1 0.5828 |   0.9s
+[MLP-B-128_aug_preliminar] época  73/200 | treino: perda 1.2536 acc 0.5789 P 0.5632 R 0.5788 F1 0.5667 | val: perda 1.1273 acc 0.6038 P 0.5854 R 0.6038 F1 0.5863 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  74/200 | treino: perda 1.2643 acc 0.5777 P 0.5577 R 0.5776 F1 0.5635 | val: perda 1.1298 acc 0.6000 P 0.5816 R 0.6000 F1 0.5832 |   0.9s
+[MLP-B-128_aug_preliminar] época  75/200 | treino: perda 1.2348 acc 0.5760 P 0.5572 R 0.5760 F1 0.5622 | val: perda 1.1301 acc 0.5962 P 0.5790 R 0.5962 F1 0.5816 |   0.9s
+[MLP-B-128_aug_preliminar] época  76/200 | treino: perda 1.2406 acc 0.5828 P 0.5648 R 0.5827 F1 0.5699 | val: perda 1.1088 acc 0.6019 P 0.5834 R 0.6019 F1 0.5876 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  77/200 | treino: perda 1.2147 acc 0.5867 P 0.5681 R 0.5866 F1 0.5733 | val: perda 1.1166 acc 0.6000 P 0.5798 R 0.6000 F1 0.5848 |   0.9s
+[MLP-B-128_aug_preliminar] época  78/200 | treino: perda 1.2317 acc 0.5828 P 0.5651 R 0.5827 F1 0.5703 | val: perda 1.1155 acc 0.6029 P 0.5844 R 0.6029 F1 0.5891 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  79/200 | treino: perda 1.2213 acc 0.5911 P 0.5732 R 0.5911 F1 0.5776 | val: perda 1.1224 acc 0.6067 P 0.5890 R 0.6067 F1 0.5914 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  80/200 | treino: perda 1.1857 acc 0.6024 P 0.5860 R 0.6023 F1 0.5897 | val: perda 1.1102 acc 0.6067 P 0.5903 R 0.6067 F1 0.5926 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  81/200 | treino: perda 1.2073 acc 0.5909 P 0.5735 R 0.5909 F1 0.5782 | val: perda 1.1143 acc 0.6038 P 0.5888 R 0.6038 F1 0.5896 |   0.9s
+[MLP-B-128_aug_preliminar] época  82/200 | treino: perda 1.2309 acc 0.5803 P 0.5641 R 0.5803 F1 0.5686 | val: perda 1.1072 acc 0.6124 P 0.6005 R 0.6124 F1 0.6020 |   0.9s  *checkpoint*
+[MLP-B-128_aug_preliminar] época  83/200 | treino: perda 1.1962 acc 0.5922 P 0.5747 R 0.5921 F1 0.5793 | val: perda 1.1201 acc 0.5971 P 0.5824 R 0.5971 F1 0.5800 |   0.9s
+[MLP-B-128_aug_preliminar] época  84/200 | treino: perda 1.1739 acc 0.5989 P 0.5816 R 0.5988 F1 0.5863 | val: perda 1.0921 acc 0.6133 P 0.5955 R 0.6133 F1 0.5983 |   0.9s
+[MLP-B-128_aug_preliminar] época  85/200 | treino: perda 1.2028 acc 0.5930 P 0.5760 R 0.5929 F1 0.5800 | val: perda 1.1188 acc 0.6067 P 0.5840 R 0.6067 F1 0.5870 |   0.9s
+[MLP-B-128_aug_preliminar] época  86/200 | treino: perda 1.1983 acc 0.5907 P 0.5721 R 0.5907 F1 0.5767 | val: perda 1.1128 acc 0.6114 P 0.5973 R 0.6114 F1 0.5970 |   0.9s
+[MLP-B-128_aug_preliminar] época  87/200 | treino: perda 1.1727 acc 0.6038 P 0.5868 R 0.6037 F1 0.5913 | val: perda 1.1039 acc 0.6095 P 0.5952 R 0.6095 F1 0.5967 |   0.9s
+[MLP-B-128_aug_preliminar] época  88/200 | treino: perda 1.2005 acc 0.5907 P 0.5758 R 0.5907 F1 0.5790 | val: perda 1.1001 acc 0.6010 P 0.5824 R 0.6010 F1 0.5858 |   0.9s
+[MLP-B-128_aug_preliminar] época  89/200 | treino: perda 1.1963 acc 0.5971 P 0.5795 R 0.5970 F1 0.5838 | val: perda 1.1074 acc 0.5962 P 0.5763 R 0.5962 F1 0.5793 |   0.9s
+[MLP-B-128_aug_preliminar] época  90/200 | treino: perda 1.1873 acc 0.5967 P 0.5777 R 0.5966 F1 0.5835 | val: perda 1.1128 acc 0.6019 P 0.5851 R 0.6019 F1 0.5863 |   0.9s
+[MLP-B-128_aug_preliminar] época  91/200 | treino: perda 1.1597 acc 0.6048 P 0.5880 R 0.6048 F1 0.5921 | val: perda 1.1013 acc 0.6010 P 0.5922 R 0.6010 F1 0.5917 |   0.9s
+[MLP-B-128_aug_preliminar] época  92/200 | treino: perda 1.1879 acc 0.5936 P 0.5760 R 0.5935 F1 0.5812 | val: perda 1.0968 acc 0.6019 P 0.5846 R 0.6019 F1 0.5860 |   0.9s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_aug_preliminar: checkpoint na época 82 de 92 | 25,341,386 parâmetros | 81.5s no total (0.89s/época)
+  treino    : perda 1.2309 | acurácia 0.5803 | precisão macro 0.5641 | recall macro 0.5803 | F1 macro 0.5686
+  validação : perda 1.1072 | acurácia 0.6124 | precisão macro 0.6005 | recall macro 0.6124 | F1 macro 0.6020
+  diferença treino − validação (F1 macro): -0.0334
+
+Relatório por classe (validação, checkpoint da época 82):
+                   precision    recall  f1-score   support
+
+          airport     0.3671    0.2762    0.3152       105
+            beach     0.8404    0.7524    0.7940       105
+circular_farmland     0.5446    0.5810    0.5622       105
+dense_residential     0.5538    0.6857    0.6128       105
+           desert     0.8365    0.8286    0.8325       105
+           forest     0.7388    0.9429    0.8285       105
+           harbor     0.6947    0.6286    0.6600       105
+         mountain     0.3380    0.2286    0.2727       105
+            river     0.5463    0.5619    0.5540       105
+     storage_tank     0.5447    0.6381    0.5877       105
+
+         accuracy                         0.6124      1050
+        macro avg     0.6005    0.6124    0.6020      1050
+     weighted avg     0.6005    0.6124    0.6020      1050
+
+[MLP-A-128_aug2_preliminar] época   1/200 | treino: perda 2.0608 acc 0.2554 P 0.2517 R 0.2553 F1 0.2165 | val: perda 1.8192 acc 0.3657 P 0.3053 R 0.3657 F1 0.2773 |   1.3s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   2/200 | treino: perda 1.8925 acc 0.3458 P 0.3196 R 0.3457 F1 0.3015 | val: perda 1.7231 acc 0.4257 P 0.4198 R 0.4257 F1 0.3567 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   3/200 | treino: perda 1.8025 acc 0.3752 P 0.3483 R 0.3751 F1 0.3396 | val: perda 1.6270 acc 0.4676 P 0.4506 R 0.4676 F1 0.4156 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   4/200 | treino: perda 1.7492 acc 0.3897 P 0.3639 R 0.3896 F1 0.3590 | val: perda 1.5830 acc 0.5019 P 0.4823 R 0.5019 F1 0.4533 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   5/200 | treino: perda 1.7013 acc 0.4246 P 0.4034 R 0.4245 F1 0.3998 | val: perda 1.5221 acc 0.5143 P 0.5023 R 0.5143 F1 0.4844 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   6/200 | treino: perda 1.6541 acc 0.4170 P 0.3954 R 0.4170 F1 0.3971 | val: perda 1.4850 acc 0.5343 P 0.5198 R 0.5343 F1 0.5001 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   7/200 | treino: perda 1.6246 acc 0.4352 P 0.4087 R 0.4351 F1 0.4135 | val: perda 1.4625 acc 0.5324 P 0.5060 R 0.5324 F1 0.4928 |   1.0s
+[MLP-A-128_aug2_preliminar] época   8/200 | treino: perda 1.6038 acc 0.4413 P 0.4167 R 0.4413 F1 0.4212 | val: perda 1.4377 acc 0.5505 P 0.5427 R 0.5505 F1 0.5201 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época   9/200 | treino: perda 1.5927 acc 0.4476 P 0.4234 R 0.4476 F1 0.4268 | val: perda 1.4082 acc 0.5600 P 0.5398 R 0.5600 F1 0.5245 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  10/200 | treino: perda 1.5722 acc 0.4507 P 0.4292 R 0.4507 F1 0.4331 | val: perda 1.3942 acc 0.5400 P 0.5064 R 0.5400 F1 0.5080 |   1.0s
+[MLP-A-128_aug2_preliminar] época  11/200 | treino: perda 1.5486 acc 0.4570 P 0.4336 R 0.4570 F1 0.4387 | val: perda 1.3817 acc 0.5552 P 0.5348 R 0.5552 F1 0.5274 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  12/200 | treino: perda 1.5388 acc 0.4662 P 0.4438 R 0.4662 F1 0.4498 | val: perda 1.3571 acc 0.5667 P 0.5508 R 0.5667 F1 0.5411 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  13/200 | treino: perda 1.5200 acc 0.4703 P 0.4481 R 0.4702 F1 0.4526 | val: perda 1.3522 acc 0.5705 P 0.5533 R 0.5705 F1 0.5488 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  14/200 | treino: perda 1.5130 acc 0.4652 P 0.4407 R 0.4651 F1 0.4470 | val: perda 1.3410 acc 0.5590 P 0.5502 R 0.5590 F1 0.5350 |   1.0s
+[MLP-A-128_aug2_preliminar] época  15/200 | treino: perda 1.5017 acc 0.4754 P 0.4571 R 0.4754 F1 0.4609 | val: perda 1.3383 acc 0.5714 P 0.5502 R 0.5714 F1 0.5465 |   1.0s
+[MLP-A-128_aug2_preliminar] época  16/200 | treino: perda 1.4870 acc 0.4813 P 0.4599 R 0.4813 F1 0.4649 | val: perda 1.3106 acc 0.5838 P 0.5702 R 0.5838 F1 0.5651 |   0.9s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  17/200 | treino: perda 1.4852 acc 0.4764 P 0.4561 R 0.4764 F1 0.4621 | val: perda 1.2989 acc 0.5838 P 0.5664 R 0.5838 F1 0.5653 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  18/200 | treino: perda 1.4832 acc 0.4764 P 0.4567 R 0.4764 F1 0.4621 | val: perda 1.2971 acc 0.5838 P 0.5701 R 0.5838 F1 0.5636 |   1.0s
+[MLP-A-128_aug2_preliminar] época  19/200 | treino: perda 1.4830 acc 0.4791 P 0.4613 R 0.4790 F1 0.4647 | val: perda 1.2948 acc 0.5829 P 0.5670 R 0.5829 F1 0.5627 |   1.0s
+[MLP-A-128_aug2_preliminar] época  20/200 | treino: perda 1.4699 acc 0.4817 P 0.4579 R 0.4817 F1 0.4633 | val: perda 1.2720 acc 0.5829 P 0.5672 R 0.5829 F1 0.5621 |   1.0s
+[MLP-A-128_aug2_preliminar] época  21/200 | treino: perda 1.4585 acc 0.4846 P 0.4629 R 0.4845 F1 0.4689 | val: perda 1.2669 acc 0.5943 P 0.5746 R 0.5943 F1 0.5748 |   0.9s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  22/200 | treino: perda 1.4425 acc 0.4905 P 0.4713 R 0.4905 F1 0.4768 | val: perda 1.2705 acc 0.5810 P 0.5589 R 0.5810 F1 0.5617 |   1.0s
+[MLP-A-128_aug2_preliminar] época  23/200 | treino: perda 1.4609 acc 0.4858 P 0.4661 R 0.4858 F1 0.4715 | val: perda 1.2571 acc 0.5905 P 0.5723 R 0.5905 F1 0.5722 |   1.0s
+[MLP-A-128_aug2_preliminar] época  24/200 | treino: perda 1.4505 acc 0.4856 P 0.4648 R 0.4856 F1 0.4689 | val: perda 1.2489 acc 0.6019 P 0.5884 R 0.6019 F1 0.5842 |   0.9s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  25/200 | treino: perda 1.4403 acc 0.4985 P 0.4752 R 0.4984 F1 0.4808 | val: perda 1.2538 acc 0.5800 P 0.5608 R 0.5800 F1 0.5625 |   1.0s
+[MLP-A-128_aug2_preliminar] época  26/200 | treino: perda 1.4345 acc 0.4905 P 0.4713 R 0.4905 F1 0.4765 | val: perda 1.2447 acc 0.5743 P 0.5577 R 0.5743 F1 0.5558 |   1.0s
+[MLP-A-128_aug2_preliminar] época  27/200 | treino: perda 1.4282 acc 0.4958 P 0.4761 R 0.4958 F1 0.4816 | val: perda 1.2412 acc 0.6029 P 0.5870 R 0.6029 F1 0.5857 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  28/200 | treino: perda 1.4214 acc 0.4983 P 0.4808 R 0.4982 F1 0.4848 | val: perda 1.2396 acc 0.5905 P 0.5781 R 0.5905 F1 0.5729 |   0.9s
+[MLP-A-128_aug2_preliminar] época  29/200 | treino: perda 1.4216 acc 0.4950 P 0.4774 R 0.4949 F1 0.4808 | val: perda 1.2368 acc 0.5838 P 0.5654 R 0.5838 F1 0.5633 |   1.0s
+[MLP-A-128_aug2_preliminar] época  30/200 | treino: perda 1.4124 acc 0.4942 P 0.4792 R 0.4941 F1 0.4831 | val: perda 1.2220 acc 0.5962 P 0.5760 R 0.5962 F1 0.5751 |   1.0s
+[MLP-A-128_aug2_preliminar] época  31/200 | treino: perda 1.4172 acc 0.4979 P 0.4768 R 0.4978 F1 0.4826 | val: perda 1.2156 acc 0.6000 P 0.5801 R 0.6000 F1 0.5794 |   1.0s
+[MLP-A-128_aug2_preliminar] época  32/200 | treino: perda 1.4073 acc 0.4956 P 0.4767 R 0.4956 F1 0.4824 | val: perda 1.2059 acc 0.5952 P 0.5804 R 0.5952 F1 0.5785 |   1.0s
+[MLP-A-128_aug2_preliminar] época  33/200 | treino: perda 1.4055 acc 0.5091 P 0.4921 R 0.5090 F1 0.4955 | val: perda 1.2141 acc 0.5886 P 0.5750 R 0.5886 F1 0.5675 |   1.0s
+[MLP-A-128_aug2_preliminar] época  34/200 | treino: perda 1.3803 acc 0.5160 P 0.4965 R 0.5160 F1 0.5017 | val: perda 1.1963 acc 0.6010 P 0.5833 R 0.6010 F1 0.5852 |   1.0s
+[MLP-A-128_aug2_preliminar] época  35/200 | treino: perda 1.3879 acc 0.5097 P 0.4910 R 0.5096 F1 0.4955 | val: perda 1.2043 acc 0.5971 P 0.5822 R 0.5971 F1 0.5808 |   1.0s
+[MLP-A-128_aug2_preliminar] época  36/200 | treino: perda 1.4045 acc 0.4989 P 0.4803 R 0.4988 F1 0.4855 | val: perda 1.1969 acc 0.6076 P 0.5891 R 0.6076 F1 0.5893 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  37/200 | treino: perda 1.3968 acc 0.5083 P 0.4898 R 0.5082 F1 0.4951 | val: perda 1.1957 acc 0.6105 P 0.5930 R 0.6105 F1 0.5930 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  38/200 | treino: perda 1.3691 acc 0.5126 P 0.4919 R 0.5125 F1 0.4973 | val: perda 1.1807 acc 0.5933 P 0.5728 R 0.5933 F1 0.5759 |   1.0s
+[MLP-A-128_aug2_preliminar] época  39/200 | treino: perda 1.3737 acc 0.5111 P 0.4940 R 0.5111 F1 0.4989 | val: perda 1.1827 acc 0.6076 P 0.5894 R 0.6076 F1 0.5882 |   0.9s
+[MLP-A-128_aug2_preliminar] época  40/200 | treino: perda 1.3700 acc 0.5130 P 0.4946 R 0.5129 F1 0.4996 | val: perda 1.1794 acc 0.6057 P 0.5821 R 0.6057 F1 0.5875 |   0.9s
+[MLP-A-128_aug2_preliminar] época  41/200 | treino: perda 1.3824 acc 0.5093 P 0.4904 R 0.5092 F1 0.4953 | val: perda 1.1748 acc 0.6010 P 0.5825 R 0.6010 F1 0.5861 |   1.0s
+[MLP-A-128_aug2_preliminar] época  42/200 | treino: perda 1.3762 acc 0.5177 P 0.4990 R 0.5176 F1 0.5041 | val: perda 1.1691 acc 0.5933 P 0.5758 R 0.5933 F1 0.5761 |   1.0s
+[MLP-A-128_aug2_preliminar] época  43/200 | treino: perda 1.3779 acc 0.5075 P 0.4892 R 0.5074 F1 0.4940 | val: perda 1.1678 acc 0.6105 P 0.5890 R 0.6105 F1 0.5897 |   1.0s
+[MLP-A-128_aug2_preliminar] época  44/200 | treino: perda 1.3690 acc 0.5195 P 0.5010 R 0.5194 F1 0.5064 | val: perda 1.1655 acc 0.6048 P 0.5872 R 0.6048 F1 0.5848 |   1.0s
+[MLP-A-128_aug2_preliminar] época  45/200 | treino: perda 1.3603 acc 0.5221 P 0.5071 R 0.5221 F1 0.5099 | val: perda 1.1728 acc 0.5990 P 0.5793 R 0.5990 F1 0.5802 |   1.0s
+[MLP-A-128_aug2_preliminar] época  46/200 | treino: perda 1.3709 acc 0.5117 P 0.4921 R 0.5117 F1 0.4982 | val: perda 1.1717 acc 0.6076 P 0.5887 R 0.6076 F1 0.5887 |   1.0s
+[MLP-A-128_aug2_preliminar] época  47/200 | treino: perda 1.3732 acc 0.5181 P 0.5005 R 0.5180 F1 0.5052 | val: perda 1.1613 acc 0.6229 P 0.5997 R 0.6229 F1 0.6015 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  48/200 | treino: perda 1.3516 acc 0.5205 P 0.5033 R 0.5205 F1 0.5075 | val: perda 1.1649 acc 0.6114 P 0.5928 R 0.6114 F1 0.5928 |   1.0s
+[MLP-A-128_aug2_preliminar] época  49/200 | treino: perda 1.3533 acc 0.5236 P 0.5047 R 0.5235 F1 0.5089 | val: perda 1.1550 acc 0.6190 P 0.6020 R 0.6190 F1 0.5999 |   1.0s
+[MLP-A-128_aug2_preliminar] época  50/200 | treino: perda 1.3564 acc 0.5195 P 0.5018 R 0.5194 F1 0.5064 | val: perda 1.1424 acc 0.6210 P 0.6020 R 0.6210 F1 0.6051 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  51/200 | treino: perda 1.3456 acc 0.5334 P 0.5152 R 0.5333 F1 0.5201 | val: perda 1.1543 acc 0.6210 P 0.6107 R 0.6210 F1 0.6029 |   1.0s
+[MLP-A-128_aug2_preliminar] época  52/200 | treino: perda 1.3475 acc 0.5277 P 0.5078 R 0.5276 F1 0.5122 | val: perda 1.1404 acc 0.6171 P 0.6040 R 0.6171 F1 0.6005 |   1.0s
+[MLP-A-128_aug2_preliminar] época  53/200 | treino: perda 1.3471 acc 0.5195 P 0.5006 R 0.5194 F1 0.5064 | val: perda 1.1397 acc 0.6095 P 0.5930 R 0.6095 F1 0.5926 |   1.0s
+[MLP-A-128_aug2_preliminar] época  54/200 | treino: perda 1.3497 acc 0.5270 P 0.5096 R 0.5270 F1 0.5142 | val: perda 1.1222 acc 0.6190 P 0.5957 R 0.6190 F1 0.5978 |   1.0s
+[MLP-A-128_aug2_preliminar] época  55/200 | treino: perda 1.3267 acc 0.5334 P 0.5148 R 0.5333 F1 0.5193 | val: perda 1.1251 acc 0.6181 P 0.6006 R 0.6181 F1 0.6042 |   1.0s
+[MLP-A-128_aug2_preliminar] época  56/200 | treino: perda 1.3320 acc 0.5268 P 0.5074 R 0.5268 F1 0.5128 | val: perda 1.1292 acc 0.6152 P 0.5929 R 0.6152 F1 0.5946 |   1.0s
+[MLP-A-128_aug2_preliminar] época  57/200 | treino: perda 1.3251 acc 0.5295 P 0.5069 R 0.5294 F1 0.5135 | val: perda 1.1200 acc 0.6286 P 0.6081 R 0.6286 F1 0.6100 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  58/200 | treino: perda 1.3290 acc 0.5183 P 0.4984 R 0.5182 F1 0.5043 | val: perda 1.1131 acc 0.6200 P 0.6034 R 0.6200 F1 0.5994 |   0.9s
+[MLP-A-128_aug2_preliminar] época  59/200 | treino: perda 1.3180 acc 0.5285 P 0.5113 R 0.5284 F1 0.5165 | val: perda 1.1140 acc 0.6257 P 0.6077 R 0.6257 F1 0.6085 |   0.9s
+[MLP-A-128_aug2_preliminar] época  60/200 | treino: perda 1.3400 acc 0.5240 P 0.5062 R 0.5239 F1 0.5110 | val: perda 1.1284 acc 0.6257 P 0.5998 R 0.6257 F1 0.6058 |   1.0s
+[MLP-A-128_aug2_preliminar] época  61/200 | treino: perda 1.3382 acc 0.5258 P 0.5054 R 0.5258 F1 0.5118 | val: perda 1.1315 acc 0.6229 P 0.6017 R 0.6229 F1 0.6031 |   1.0s
+[MLP-A-128_aug2_preliminar] época  62/200 | treino: perda 1.3262 acc 0.5287 P 0.5110 R 0.5286 F1 0.5158 | val: perda 1.1147 acc 0.6229 P 0.6063 R 0.6229 F1 0.6078 |   1.0s
+[MLP-A-128_aug2_preliminar] época  63/200 | treino: perda 1.3222 acc 0.5364 P 0.5190 R 0.5364 F1 0.5235 | val: perda 1.1132 acc 0.6181 P 0.5973 R 0.6181 F1 0.5990 |   1.0s
+[MLP-A-128_aug2_preliminar] época  64/200 | treino: perda 1.3289 acc 0.5293 P 0.5101 R 0.5292 F1 0.5159 | val: perda 1.1114 acc 0.6114 P 0.5927 R 0.6114 F1 0.5919 |   0.9s
+[MLP-A-128_aug2_preliminar] época  65/200 | treino: perda 1.3134 acc 0.5324 P 0.5168 R 0.5323 F1 0.5198 | val: perda 1.1022 acc 0.6314 P 0.6102 R 0.6314 F1 0.6116 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  66/200 | treino: perda 1.3145 acc 0.5340 P 0.5111 R 0.5339 F1 0.5172 | val: perda 1.0905 acc 0.6286 P 0.6048 R 0.6286 F1 0.6080 |   1.0s
+[MLP-A-128_aug2_preliminar] época  67/200 | treino: perda 1.3106 acc 0.5338 P 0.5162 R 0.5337 F1 0.5215 | val: perda 1.0963 acc 0.6429 P 0.6225 R 0.6429 F1 0.6256 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  68/200 | treino: perda 1.2968 acc 0.5409 P 0.5227 R 0.5409 F1 0.5281 | val: perda 1.0890 acc 0.6429 P 0.6234 R 0.6429 F1 0.6257 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  69/200 | treino: perda 1.2794 acc 0.5507 P 0.5332 R 0.5507 F1 0.5382 | val: perda 1.0960 acc 0.6333 P 0.6151 R 0.6333 F1 0.6143 |   1.0s
+[MLP-A-128_aug2_preliminar] época  70/200 | treino: perda 1.3075 acc 0.5356 P 0.5154 R 0.5356 F1 0.5214 | val: perda 1.1091 acc 0.6295 P 0.6091 R 0.6295 F1 0.6119 |   1.0s
+[MLP-A-128_aug2_preliminar] época  71/200 | treino: perda 1.2937 acc 0.5434 P 0.5259 R 0.5433 F1 0.5302 | val: perda 1.0875 acc 0.6333 P 0.6119 R 0.6333 F1 0.6158 |   1.0s
+[MLP-A-128_aug2_preliminar] época  72/200 | treino: perda 1.2814 acc 0.5481 P 0.5288 R 0.5480 F1 0.5337 | val: perda 1.0824 acc 0.6352 P 0.6117 R 0.6352 F1 0.6149 |   1.0s
+[MLP-A-128_aug2_preliminar] época  73/200 | treino: perda 1.2990 acc 0.5377 P 0.5189 R 0.5376 F1 0.5238 | val: perda 1.0844 acc 0.6333 P 0.6127 R 0.6333 F1 0.6147 |   1.0s
+[MLP-A-128_aug2_preliminar] época  74/200 | treino: perda 1.3142 acc 0.5356 P 0.5160 R 0.5356 F1 0.5218 | val: perda 1.0691 acc 0.6457 P 0.6244 R 0.6457 F1 0.6279 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  75/200 | treino: perda 1.3090 acc 0.5350 P 0.5171 R 0.5350 F1 0.5215 | val: perda 1.0729 acc 0.6371 P 0.6209 R 0.6371 F1 0.6228 |   1.0s
+[MLP-A-128_aug2_preliminar] época  76/200 | treino: perda 1.3106 acc 0.5352 P 0.5175 R 0.5352 F1 0.5224 | val: perda 1.0798 acc 0.6295 P 0.6075 R 0.6295 F1 0.6122 |   1.0s
+[MLP-A-128_aug2_preliminar] época  77/200 | treino: perda 1.2714 acc 0.5524 P 0.5358 R 0.5523 F1 0.5397 | val: perda 1.0664 acc 0.6400 P 0.6170 R 0.6400 F1 0.6216 |   1.0s
+[MLP-A-128_aug2_preliminar] época  78/200 | treino: perda 1.2926 acc 0.5411 P 0.5215 R 0.5411 F1 0.5267 | val: perda 1.0760 acc 0.6343 P 0.6144 R 0.6343 F1 0.6153 |   1.0s
+[MLP-A-128_aug2_preliminar] época  79/200 | treino: perda 1.2915 acc 0.5379 P 0.5184 R 0.5378 F1 0.5238 | val: perda 1.0738 acc 0.6457 P 0.6292 R 0.6457 F1 0.6277 |   1.0s
+[MLP-A-128_aug2_preliminar] época  80/200 | treino: perda 1.2740 acc 0.5464 P 0.5301 R 0.5464 F1 0.5341 | val: perda 1.0676 acc 0.6438 P 0.6172 R 0.6438 F1 0.6236 |   1.0s
+[MLP-A-128_aug2_preliminar] época  81/200 | treino: perda 1.2818 acc 0.5471 P 0.5296 R 0.5470 F1 0.5346 | val: perda 1.0799 acc 0.6457 P 0.6294 R 0.6457 F1 0.6300 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  82/200 | treino: perda 1.2908 acc 0.5440 P 0.5271 R 0.5439 F1 0.5311 | val: perda 1.0737 acc 0.6448 P 0.6243 R 0.6448 F1 0.6287 |   1.0s
+[MLP-A-128_aug2_preliminar] época  83/200 | treino: perda 1.2631 acc 0.5591 P 0.5402 R 0.5590 F1 0.5440 | val: perda 1.0590 acc 0.6400 P 0.6140 R 0.6400 F1 0.6213 |   1.0s
+[MLP-A-128_aug2_preliminar] época  84/200 | treino: perda 1.2798 acc 0.5377 P 0.5201 R 0.5376 F1 0.5252 | val: perda 1.0675 acc 0.6495 P 0.6317 R 0.6495 F1 0.6316 |   1.0s  *checkpoint*
+[MLP-A-128_aug2_preliminar] época  85/200 | treino: perda 1.2776 acc 0.5568 P 0.5399 R 0.5568 F1 0.5439 | val: perda 1.0628 acc 0.6438 P 0.6255 R 0.6438 F1 0.6258 |   1.0s
+[MLP-A-128_aug2_preliminar] época  86/200 | treino: perda 1.2644 acc 0.5517 P 0.5347 R 0.5517 F1 0.5398 | val: perda 1.0659 acc 0.6343 P 0.6147 R 0.6343 F1 0.6155 |   1.0s
+[MLP-A-128_aug2_preliminar] época  87/200 | treino: perda 1.2681 acc 0.5536 P 0.5381 R 0.5535 F1 0.5419 | val: perda 1.0570 acc 0.6371 P 0.6183 R 0.6371 F1 0.6192 |   1.0s
+[MLP-A-128_aug2_preliminar] época  88/200 | treino: perda 1.2643 acc 0.5579 P 0.5371 R 0.5578 F1 0.5429 | val: perda 1.0550 acc 0.6429 P 0.6272 R 0.6429 F1 0.6269 |   1.0s
+[MLP-A-128_aug2_preliminar] época  89/200 | treino: perda 1.2772 acc 0.5528 P 0.5355 R 0.5527 F1 0.5398 | val: perda 1.0663 acc 0.6343 P 0.6161 R 0.6343 F1 0.6142 |   1.0s
+[MLP-A-128_aug2_preliminar] época  90/200 | treino: perda 1.2575 acc 0.5593 P 0.5397 R 0.5593 F1 0.5451 | val: perda 1.0591 acc 0.6467 P 0.6279 R 0.6467 F1 0.6278 |   1.0s
+[MLP-A-128_aug2_preliminar] época  91/200 | treino: perda 1.2523 acc 0.5599 P 0.5417 R 0.5599 F1 0.5461 | val: perda 1.0512 acc 0.6448 P 0.6291 R 0.6448 F1 0.6300 |   1.0s
+[MLP-A-128_aug2_preliminar] época  92/200 | treino: perda 1.2758 acc 0.5409 P 0.5215 R 0.5409 F1 0.5265 | val: perda 1.0490 acc 0.6448 P 0.6223 R 0.6448 F1 0.6232 |   1.0s
+[MLP-A-128_aug2_preliminar] época  93/200 | treino: perda 1.2663 acc 0.5426 P 0.5231 R 0.5425 F1 0.5294 | val: perda 1.0493 acc 0.6429 P 0.6244 R 0.6429 F1 0.6261 |   1.0s
+[MLP-A-128_aug2_preliminar] época  94/200 | treino: perda 1.2519 acc 0.5554 P 0.5381 R 0.5554 F1 0.5430 | val: perda 1.0425 acc 0.6476 P 0.6299 R 0.6476 F1 0.6315 |   1.0s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_aug2_preliminar: checkpoint na época 84 de 94 | 25,234,570 parâmetros | 91.3s no total (0.97s/época)
+  treino    : perda 1.2798 | acurácia 0.5377 | precisão macro 0.5201 | recall macro 0.5376 | F1 macro 0.5252
+  validação : perda 1.0675 | acurácia 0.6495 | precisão macro 0.6317 | recall macro 0.6495 | F1 macro 0.6316
+  diferença treino − validação (F1 macro): -0.1065
+
+Relatório por classe (validação, checkpoint da época 84):
+                   precision    recall  f1-score   support
+
+          airport     0.4079    0.2952    0.3425       105
+            beach     0.8350    0.8190    0.8269       105
+circular_farmland     0.6216    0.6571    0.6389       105
+dense_residential     0.6727    0.7048    0.6884       105
+           desert     0.8214    0.8762    0.8479       105
+           forest     0.6821    0.9810    0.8047       105
+           harbor     0.7660    0.6857    0.7236       105
+         mountain     0.3774    0.1905    0.2532       105
+            river     0.5851    0.5238    0.5528       105
+     storage_tank     0.5479    0.7619    0.6375       105
+
+         accuracy                         0.6495      1050
+        macro avg     0.6317    0.6495    0.6316      1050
+     weighted avg     0.6317    0.6495    0.6316      1050
+
+[MLP-B-128_aug2_preliminar] época   1/200 | treino: perda 2.3325 acc 0.1288 P 0.1257 R 0.1288 F1 0.1214 | val: perda 2.1213 acc 0.3124 P 0.3645 R 0.3124 F1 0.2375 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   2/200 | treino: perda 2.1995 acc 0.1851 P 0.1698 R 0.1851 F1 0.1709 | val: perda 2.0318 acc 0.3448 P 0.3597 R 0.3448 F1 0.2905 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   3/200 | treino: perda 2.1227 acc 0.2313 P 0.2051 R 0.2313 F1 0.2076 | val: perda 1.9660 acc 0.3619 P 0.4501 R 0.3619 F1 0.3105 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   4/200 | treino: perda 2.0640 acc 0.2511 P 0.2165 R 0.2510 F1 0.2217 | val: perda 1.9054 acc 0.3590 P 0.4080 R 0.3590 F1 0.3012 |   1.1s
+[MLP-B-128_aug2_preliminar] época   5/200 | treino: perda 2.0196 acc 0.2766 P 0.2390 R 0.2766 F1 0.2467 | val: perda 1.8780 acc 0.3762 P 0.3119 R 0.3762 F1 0.3231 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   6/200 | treino: perda 1.9978 acc 0.2915 P 0.2549 R 0.2915 F1 0.2611 | val: perda 1.8313 acc 0.3924 P 0.3252 R 0.3924 F1 0.3406 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   7/200 | treino: perda 1.9497 acc 0.3119 P 0.2793 R 0.3119 F1 0.2830 | val: perda 1.8079 acc 0.4124 P 0.3534 R 0.4124 F1 0.3556 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   8/200 | treino: perda 1.9395 acc 0.3150 P 0.2753 R 0.3149 F1 0.2821 | val: perda 1.7677 acc 0.4286 P 0.3931 R 0.4286 F1 0.3743 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época   9/200 | treino: perda 1.9105 acc 0.3272 P 0.2973 R 0.3272 F1 0.2984 | val: perda 1.7458 acc 0.4448 P 0.4976 R 0.4448 F1 0.3960 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  10/200 | treino: perda 1.8914 acc 0.3317 P 0.2953 R 0.3317 F1 0.3029 | val: perda 1.7156 acc 0.4524 P 0.4677 R 0.4524 F1 0.4040 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  11/200 | treino: perda 1.8542 acc 0.3462 P 0.3151 R 0.3462 F1 0.3206 | val: perda 1.6822 acc 0.4686 P 0.4757 R 0.4686 F1 0.4289 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  12/200 | treino: perda 1.8465 acc 0.3572 P 0.3272 R 0.3572 F1 0.3324 | val: perda 1.6558 acc 0.4762 P 0.4564 R 0.4762 F1 0.4338 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  13/200 | treino: perda 1.8031 acc 0.3733 P 0.3407 R 0.3733 F1 0.3462 | val: perda 1.6253 acc 0.4990 P 0.4616 R 0.4990 F1 0.4495 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  14/200 | treino: perda 1.7940 acc 0.3756 P 0.3416 R 0.3755 F1 0.3487 | val: perda 1.5929 acc 0.4933 P 0.4501 R 0.4933 F1 0.4440 |   1.1s
+[MLP-B-128_aug2_preliminar] época  15/200 | treino: perda 1.7725 acc 0.3801 P 0.3506 R 0.3800 F1 0.3549 | val: perda 1.5678 acc 0.5029 P 0.4651 R 0.5029 F1 0.4537 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  16/200 | treino: perda 1.7653 acc 0.3899 P 0.3571 R 0.3898 F1 0.3630 | val: perda 1.5593 acc 0.4848 P 0.4645 R 0.4848 F1 0.4416 |   1.0s
+[MLP-B-128_aug2_preliminar] época  17/200 | treino: perda 1.7303 acc 0.3989 P 0.3724 R 0.3988 F1 0.3758 | val: perda 1.5234 acc 0.4990 P 0.4638 R 0.4990 F1 0.4555 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  18/200 | treino: perda 1.7323 acc 0.3897 P 0.3620 R 0.3896 F1 0.3669 | val: perda 1.5115 acc 0.4981 P 0.4789 R 0.4981 F1 0.4615 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  19/200 | treino: perda 1.7196 acc 0.3962 P 0.3703 R 0.3962 F1 0.3738 | val: perda 1.4950 acc 0.5238 P 0.4993 R 0.5238 F1 0.4784 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  20/200 | treino: perda 1.6872 acc 0.4152 P 0.3878 R 0.4151 F1 0.3932 | val: perda 1.4667 acc 0.5200 P 0.4948 R 0.5200 F1 0.4800 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  21/200 | treino: perda 1.6912 acc 0.4082 P 0.3783 R 0.4082 F1 0.3843 | val: perda 1.4617 acc 0.5343 P 0.5147 R 0.5343 F1 0.4998 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  22/200 | treino: perda 1.6746 acc 0.4133 P 0.3868 R 0.4133 F1 0.3922 | val: perda 1.4411 acc 0.5219 P 0.4957 R 0.5219 F1 0.4882 |   1.1s
+[MLP-B-128_aug2_preliminar] época  23/200 | treino: perda 1.6730 acc 0.4117 P 0.3857 R 0.4117 F1 0.3914 | val: perda 1.4293 acc 0.5276 P 0.5016 R 0.5276 F1 0.4892 |   1.1s
+[MLP-B-128_aug2_preliminar] época  24/200 | treino: perda 1.6692 acc 0.4221 P 0.3959 R 0.4221 F1 0.4006 | val: perda 1.4150 acc 0.5276 P 0.5106 R 0.5276 F1 0.4975 |   1.1s
+[MLP-B-128_aug2_preliminar] época  25/200 | treino: perda 1.6439 acc 0.4225 P 0.3962 R 0.4225 F1 0.4017 | val: perda 1.4123 acc 0.5257 P 0.5012 R 0.5257 F1 0.4888 |   1.1s
+[MLP-B-128_aug2_preliminar] época  26/200 | treino: perda 1.6389 acc 0.4301 P 0.4024 R 0.4300 F1 0.4080 | val: perda 1.3907 acc 0.5371 P 0.5070 R 0.5371 F1 0.5007 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  27/200 | treino: perda 1.6223 acc 0.4321 P 0.4062 R 0.4321 F1 0.4117 | val: perda 1.3927 acc 0.5324 P 0.5078 R 0.5324 F1 0.5017 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  28/200 | treino: perda 1.6138 acc 0.4227 P 0.4000 R 0.4227 F1 0.4051 | val: perda 1.3709 acc 0.5390 P 0.5177 R 0.5390 F1 0.5037 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  29/200 | treino: perda 1.6226 acc 0.4276 P 0.4066 R 0.4276 F1 0.4104 | val: perda 1.3855 acc 0.5371 P 0.5141 R 0.5371 F1 0.5030 |   1.1s
+[MLP-B-128_aug2_preliminar] época  30/200 | treino: perda 1.6115 acc 0.4362 P 0.4131 R 0.4362 F1 0.4174 | val: perda 1.3620 acc 0.5400 P 0.5202 R 0.5400 F1 0.5092 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  31/200 | treino: perda 1.6023 acc 0.4280 P 0.4017 R 0.4280 F1 0.4073 | val: perda 1.3548 acc 0.5552 P 0.5335 R 0.5552 F1 0.5236 |   1.1s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  32/200 | treino: perda 1.5894 acc 0.4419 P 0.4186 R 0.4419 F1 0.4237 | val: perda 1.3399 acc 0.5524 P 0.5286 R 0.5524 F1 0.5232 |   1.0s
+[MLP-B-128_aug2_preliminar] época  33/200 | treino: perda 1.5824 acc 0.4489 P 0.4236 R 0.4488 F1 0.4286 | val: perda 1.3429 acc 0.5410 P 0.5212 R 0.5410 F1 0.5107 |   1.1s
+[MLP-B-128_aug2_preliminar] época  34/200 | treino: perda 1.5707 acc 0.4468 P 0.4211 R 0.4468 F1 0.4279 | val: perda 1.3236 acc 0.5486 P 0.5250 R 0.5486 F1 0.5204 |   1.1s
+[MLP-B-128_aug2_preliminar] época  35/200 | treino: perda 1.5841 acc 0.4444 P 0.4227 R 0.4443 F1 0.4280 | val: perda 1.3307 acc 0.5314 P 0.4999 R 0.5314 F1 0.4972 |   1.1s
+[MLP-B-128_aug2_preliminar] época  36/200 | treino: perda 1.5745 acc 0.4505 P 0.4260 R 0.4504 F1 0.4312 | val: perda 1.3262 acc 0.5524 P 0.5251 R 0.5524 F1 0.5200 |   1.1s
+[MLP-B-128_aug2_preliminar] época  37/200 | treino: perda 1.5622 acc 0.4491 P 0.4253 R 0.4490 F1 0.4315 | val: perda 1.3207 acc 0.5324 P 0.4975 R 0.5324 F1 0.4990 |   1.0s
+[MLP-B-128_aug2_preliminar] época  38/200 | treino: perda 1.5552 acc 0.4585 P 0.4340 R 0.4584 F1 0.4393 | val: perda 1.3129 acc 0.5638 P 0.5418 R 0.5638 F1 0.5356 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  39/200 | treino: perda 1.5419 acc 0.4619 P 0.4351 R 0.4619 F1 0.4414 | val: perda 1.3052 acc 0.5638 P 0.5364 R 0.5638 F1 0.5304 |   1.0s
+[MLP-B-128_aug2_preliminar] época  40/200 | treino: perda 1.5482 acc 0.4630 P 0.4396 R 0.4629 F1 0.4456 | val: perda 1.2965 acc 0.5695 P 0.5427 R 0.5695 F1 0.5414 |   1.0s  *checkpoint*
+[MLP-B-128_aug2_preliminar] época  41/200 | treino: perda 1.5676 acc 0.4466 P 0.4204 R 0.4466 F1 0.4269 | val: perda 1.2958 acc 0.5581 P 0.5298 R 0.5581 F1 0.5281 |   1.1s
+[MLP-B-128_aug2_preliminar] época  42/200 | treino: perda 1.5344 acc 0.4554 P 0.4292 R 0.4553 F1 0.4354 | val: perda 1.2961 acc 0.5457 P 0.5160 R 0.5457 F1 0.5111 |   1.1s
+[MLP-B-128_aug2_preliminar] época  43/200 | treino: perda 1.5384 acc 0.4564 P 0.4300 R 0.4564 F1 0.4366 | val: perda 1.3053 acc 0.5467 P 0.5097 R 0.5467 F1 0.5104 |   1.0s
+[MLP-B-128_aug2_preliminar] época  44/200 | treino: perda 1.5469 acc 0.4587 P 0.4340 R 0.4586 F1 0.4392 | val: perda 1.2886 acc 0.5581 P 0.5236 R 0.5581 F1 0.5239 |   1.1s
+[MLP-B-128_aug2_preliminar] época  45/200 | treino: perda 1.5426 acc 0.4650 P 0.4426 R 0.4649 F1 0.4478 | val: perda 1.2914 acc 0.5571 P 0.5190 R 0.5571 F1 0.5215 |   1.1s
+[MLP-B-128_aug2_preliminar] época  46/200 | treino: perda 1.5560 acc 0.4550 P 0.4303 R 0.4549 F1 0.4379 | val: perda 1.2771 acc 0.5619 P 0.5342 R 0.5619 F1 0.5278 |   1.1s
+[MLP-B-128_aug2_preliminar] época  47/200 | treino: perda 1.5396 acc 0.4587 P 0.4340 R 0.4586 F1 0.4394 | val: perda 1.2838 acc 0.5610 P 0.5221 R 0.5610 F1 0.5273 |   1.1s
+[MLP-B-128_aug2_preliminar] época  48/200 | treino: perda 1.5173 acc 0.4713 P 0.4493 R 0.4713 F1 0.4536 | val: perda 1.2724 acc 0.5667 P 0.5366 R 0.5667 F1 0.5385 |   1.1s
+[MLP-B-128_aug2_preliminar] época  49/200 | treino: perda 1.5360 acc 0.4642 P 0.4383 R 0.4641 F1 0.4452 | val: perda 1.2754 acc 0.5571 P 0.5279 R 0.5571 F1 0.5257 |   1.1s
+[MLP-B-128_aug2_preliminar] época  50/200 | treino: perda 1.5244 acc 0.4697 P 0.4435 R 0.4696 F1 0.4503 | val: perda 1.2694 acc 0.5562 P 0.5127 R 0.5562 F1 0.5229 |   1.1s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_aug2_preliminar: checkpoint na época 40 de 50 | 25,341,386 parâmetros | 53.1s no total (1.06s/época)
+  treino    : perda 1.5482 | acurácia 0.4630 | precisão macro 0.4396 | recall macro 0.4629 | F1 macro 0.4456
+  validação : perda 1.2965 | acurácia 0.5695 | precisão macro 0.5427 | recall macro 0.5695 | F1 macro 0.5414
+  diferença treino − validação (F1 macro): -0.0958
+
+Relatório por classe (validação, checkpoint da época 40):
+                   precision    recall  f1-score   support
+
+          airport     0.3404    0.1524    0.2105       105
+            beach     0.7100    0.6762    0.6927       105
+circular_farmland     0.4416    0.6476    0.5251       105
+dense_residential     0.5524    0.5524    0.5524       105
+           desert     0.7982    0.8667    0.8311       105
+           forest     0.6579    0.9524    0.7782       105
+           harbor     0.5950    0.6857    0.6372       105
+         mountain     0.3333    0.1429    0.2000       105
+            river     0.4800    0.3429    0.4000       105
+     storage_tank     0.5182    0.6762    0.5868       105
+
+         accuracy                         0.5695      1050
+        macro avg     0.5427    0.5695    0.5414      1050
+     weighted avg     0.5427    0.5695    0.5414      1050
+
+MLPA_HP 25,234,570 parâmetros (igual à MLPA)
+MLPB_HP 25,341,386 parâmetros (igual à MLPB)
+##### MLP-A-128_opt (sem aumento) | lr 1.15e-03  weight_decay 7.07e-06  dropout 0.3  lote 128
+[MLP-A-128_opt_preliminar] época   1/200 | treino: perda 1.7976 acc 0.3611 P 0.3296 R 0.3610 F1 0.3211 | val: perda 1.5450 acc 0.4648 P 0.4608 R 0.4648 F1 0.4077 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época   2/200 | treino: perda 1.4683 acc 0.4950 P 0.4720 R 0.4949 F1 0.4755 | val: perda 1.3625 acc 0.5457 P 0.5323 R 0.5457 F1 0.5143 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época   3/200 | treino: perda 1.3158 acc 0.5481 P 0.5313 R 0.5480 F1 0.5343 | val: perda 1.2852 acc 0.5610 P 0.5366 R 0.5610 F1 0.5375 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época   4/200 | treino: perda 1.1817 acc 0.5985 P 0.5828 R 0.5984 F1 0.5856 | val: perda 1.2690 acc 0.5410 P 0.5287 R 0.5410 F1 0.5140 |   0.6s
+[MLP-A-128_opt_preliminar] época   5/200 | treino: perda 1.1060 acc 0.6236 P 0.6081 R 0.6235 F1 0.6121 | val: perda 1.2576 acc 0.5638 P 0.5634 R 0.5638 F1 0.5546 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época   6/200 | treino: perda 1.0206 acc 0.6493 P 0.6396 R 0.6493 F1 0.6422 | val: perda 1.2865 acc 0.5476 P 0.5601 R 0.5476 F1 0.5430 |   0.6s
+[MLP-A-128_opt_preliminar] época   7/200 | treino: perda 0.9199 acc 0.6875 P 0.6801 R 0.6874 F1 0.6822 | val: perda 1.2711 acc 0.5619 P 0.5497 R 0.5619 F1 0.5501 |   0.6s
+[MLP-A-128_opt_preliminar] época   8/200 | treino: perda 0.8806 acc 0.6963 P 0.6870 R 0.6962 F1 0.6891 | val: perda 1.3006 acc 0.5629 P 0.5540 R 0.5629 F1 0.5482 |   0.6s
+[MLP-A-128_opt_preliminar] época   9/200 | treino: perda 0.8462 acc 0.7195 P 0.7142 R 0.7195 F1 0.7150 | val: perda 1.3450 acc 0.5714 P 0.5636 R 0.5714 F1 0.5622 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época  10/200 | treino: perda 0.7704 acc 0.7438 P 0.7398 R 0.7438 F1 0.7406 | val: perda 1.3571 acc 0.5514 P 0.5454 R 0.5514 F1 0.5382 |   0.6s
+[MLP-A-128_opt_preliminar] época  11/200 | treino: perda 0.7001 acc 0.7591 P 0.7543 R 0.7591 F1 0.7556 | val: perda 1.4345 acc 0.5429 P 0.5403 R 0.5429 F1 0.5331 |   0.6s
+[MLP-A-128_opt_preliminar] época  12/200 | treino: perda 0.6790 acc 0.7714 P 0.7669 R 0.7713 F1 0.7680 | val: perda 1.3843 acc 0.5505 P 0.5469 R 0.5505 F1 0.5397 |   0.6s
+[MLP-A-128_opt_preliminar] época  13/200 | treino: perda 0.6325 acc 0.7969 P 0.7948 R 0.7969 F1 0.7946 | val: perda 1.4562 acc 0.5467 P 0.5568 R 0.5467 F1 0.5439 |   0.6s
+[MLP-A-128_opt_preliminar] época  14/200 | treino: perda 0.5514 acc 0.8136 P 0.8120 R 0.8136 F1 0.8119 | val: perda 1.4496 acc 0.5543 P 0.5505 R 0.5543 F1 0.5450 |   0.6s
+[MLP-A-128_opt_preliminar] época  15/200 | treino: perda 0.5345 acc 0.8196 P 0.8183 R 0.8195 F1 0.8183 | val: perda 1.4760 acc 0.5457 P 0.5366 R 0.5457 F1 0.5335 |   0.6s
+[MLP-A-128_opt_preliminar] época  16/200 | treino: perda 0.4950 acc 0.8420 P 0.8412 R 0.8420 F1 0.8406 | val: perda 1.4631 acc 0.5686 P 0.5708 R 0.5686 F1 0.5657 |   0.6s  *checkpoint*
+[MLP-A-128_opt_preliminar] época  17/200 | treino: perda 0.4531 acc 0.8522 P 0.8519 R 0.8522 F1 0.8513 | val: perda 1.5998 acc 0.5248 P 0.5257 R 0.5248 F1 0.5195 |   0.6s
+[MLP-A-128_opt_preliminar] época  18/200 | treino: perda 0.4473 acc 0.8575 P 0.8568 R 0.8575 F1 0.8567 | val: perda 1.6074 acc 0.5362 P 0.5362 R 0.5362 F1 0.5207 |   0.6s
+[MLP-A-128_opt_preliminar] época  19/200 | treino: perda 0.4909 acc 0.8349 P 0.8342 R 0.8348 F1 0.8339 | val: perda 1.6418 acc 0.5390 P 0.5440 R 0.5390 F1 0.5302 |   0.6s
+[MLP-A-128_opt_preliminar] época  20/200 | treino: perda 0.4629 acc 0.8494 P 0.8493 R 0.8493 F1 0.8487 | val: perda 1.5735 acc 0.5495 P 0.5414 R 0.5495 F1 0.5366 |   0.6s
+[MLP-A-128_opt_preliminar] época  21/200 | treino: perda 0.4204 acc 0.8683 P 0.8684 R 0.8683 F1 0.8677 | val: perda 1.6170 acc 0.5324 P 0.5230 R 0.5324 F1 0.5221 |   0.6s
+[MLP-A-128_opt_preliminar] época  22/200 | treino: perda 0.3891 acc 0.8751 P 0.8752 R 0.8751 F1 0.8740 | val: perda 1.6614 acc 0.5343 P 0.5275 R 0.5343 F1 0.5226 |   0.6s
+[MLP-A-128_opt_preliminar] época  23/200 | treino: perda 0.4062 acc 0.8720 P 0.8721 R 0.8720 F1 0.8717 | val: perda 1.6105 acc 0.5581 P 0.5593 R 0.5581 F1 0.5524 |   0.6s
+[MLP-A-128_opt_preliminar] época  24/200 | treino: perda 0.4015 acc 0.8659 P 0.8654 R 0.8659 F1 0.8652 | val: perda 1.7007 acc 0.5533 P 0.5464 R 0.5533 F1 0.5405 |   0.7s
+[MLP-A-128_opt_preliminar] época  25/200 | treino: perda 0.3617 acc 0.8812 P 0.8816 R 0.8812 F1 0.8809 | val: perda 1.7929 acc 0.5390 P 0.5443 R 0.5390 F1 0.5283 |   0.6s
+[MLP-A-128_opt_preliminar] época  26/200 | treino: perda 0.3570 acc 0.8812 P 0.8814 R 0.8812 F1 0.8812 | val: perda 1.7795 acc 0.5314 P 0.5202 R 0.5314 F1 0.5181 |   0.6s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_opt_preliminar: checkpoint na época 16 de 26 | 25,234,570 parâmetros | 16.0s no total (0.62s/época)
+  treino    : perda 0.4950 | acurácia 0.8420 | precisão macro 0.8412 | recall macro 0.8420 | F1 macro 0.8406
+  validação : perda 1.4631 | acurácia 0.5686 | precisão macro 0.5708 | recall macro 0.5686 | F1 macro 0.5657
+  diferença treino − validação (F1 macro): +0.2749
+
+Relatório por classe (validação, checkpoint da época 16):
+                   precision    recall  f1-score   support
+
+          airport     0.3810    0.4571    0.4156       105
+            beach     0.7048    0.7048    0.7048       105
+circular_farmland     0.5094    0.5143    0.5118       105
+dense_residential     0.4804    0.4667    0.4734       105
+           desert     0.8000    0.8762    0.8364       105
+           forest     0.7603    0.8762    0.8142       105
+           harbor     0.7368    0.5333    0.6188       105
+         mountain     0.3010    0.2952    0.2981       105
+            river     0.5083    0.5810    0.5422       105
+     storage_tank     0.5263    0.3810    0.4420       105
+
+         accuracy                         0.5686      1050
+        macro avg     0.5708    0.5686    0.5657      1050
+     weighted avg     0.5708    0.5686    0.5657      1050
+
+##### MLP-A-128_aug_opt (aumento leve) | lr 1.15e-03  weight_decay 7.07e-06  dropout 0.3  lote 128
+[MLP-A-128_aug_opt_preliminar] época   1/200 | treino: perda 1.7972 acc 0.3595 P 0.3212 R 0.3594 F1 0.3161 | val: perda 1.5332 acc 0.4629 P 0.4585 R 0.4629 F1 0.3958 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época   2/200 | treino: perda 1.4917 acc 0.4895 P 0.4639 R 0.4894 F1 0.4660 | val: perda 1.3767 acc 0.5381 P 0.5146 R 0.5381 F1 0.5113 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época   3/200 | treino: perda 1.3738 acc 0.5232 P 0.5043 R 0.5231 F1 0.5088 | val: perda 1.2946 acc 0.5610 P 0.5440 R 0.5610 F1 0.5439 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época   4/200 | treino: perda 1.3113 acc 0.5473 P 0.5306 R 0.5472 F1 0.5345 | val: perda 1.2516 acc 0.5562 P 0.5272 R 0.5562 F1 0.5324 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época   5/200 | treino: perda 1.2769 acc 0.5540 P 0.5369 R 0.5539 F1 0.5410 | val: perda 1.2144 acc 0.5810 P 0.5756 R 0.5810 F1 0.5723 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época   6/200 | treino: perda 1.2408 acc 0.5617 P 0.5509 R 0.5617 F1 0.5541 | val: perda 1.1969 acc 0.5867 P 0.5652 R 0.5867 F1 0.5625 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época   7/200 | treino: perda 1.2157 acc 0.5715 P 0.5582 R 0.5715 F1 0.5619 | val: perda 1.1960 acc 0.5771 P 0.5581 R 0.5771 F1 0.5561 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época   8/200 | treino: perda 1.2011 acc 0.5793 P 0.5649 R 0.5792 F1 0.5686 | val: perda 1.1599 acc 0.5895 P 0.5647 R 0.5895 F1 0.5645 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época   9/200 | treino: perda 1.2025 acc 0.5732 P 0.5612 R 0.5731 F1 0.5633 | val: perda 1.1485 acc 0.5895 P 0.5687 R 0.5895 F1 0.5704 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  10/200 | treino: perda 1.1906 acc 0.5787 P 0.5693 R 0.5786 F1 0.5715 | val: perda 1.1528 acc 0.5924 P 0.5647 R 0.5924 F1 0.5672 |   0.7s
+[MLP-A-128_aug_opt_preliminar] época  11/200 | treino: perda 1.1489 acc 0.5958 P 0.5817 R 0.5958 F1 0.5860 | val: perda 1.1446 acc 0.6010 P 0.5877 R 0.6010 F1 0.5874 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  12/200 | treino: perda 1.1389 acc 0.5958 P 0.5829 R 0.5958 F1 0.5856 | val: perda 1.1246 acc 0.6029 P 0.5792 R 0.6029 F1 0.5837 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  13/200 | treino: perda 1.1250 acc 0.6095 P 0.5978 R 0.6095 F1 0.6007 | val: perda 1.1294 acc 0.6190 P 0.6060 R 0.6190 F1 0.6036 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  14/200 | treino: perda 1.0910 acc 0.6181 P 0.6045 R 0.6180 F1 0.6079 | val: perda 1.1135 acc 0.6124 P 0.6007 R 0.6124 F1 0.6025 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  15/200 | treino: perda 1.1110 acc 0.6089 P 0.6006 R 0.6089 F1 0.6025 | val: perda 1.1126 acc 0.6105 P 0.5942 R 0.6105 F1 0.5934 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  16/200 | treino: perda 1.0796 acc 0.6240 P 0.6101 R 0.6239 F1 0.6141 | val: perda 1.1023 acc 0.6000 P 0.5956 R 0.6000 F1 0.5916 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  17/200 | treino: perda 1.0579 acc 0.6281 P 0.6163 R 0.6280 F1 0.6196 | val: perda 1.0630 acc 0.6229 P 0.6067 R 0.6229 F1 0.6086 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  18/200 | treino: perda 1.0602 acc 0.6279 P 0.6154 R 0.6278 F1 0.6193 | val: perda 1.0765 acc 0.6152 P 0.6062 R 0.6152 F1 0.6028 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  19/200 | treino: perda 1.0470 acc 0.6287 P 0.6166 R 0.6286 F1 0.6201 | val: perda 1.0700 acc 0.6124 P 0.6021 R 0.6124 F1 0.6011 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  20/200 | treino: perda 1.0356 acc 0.6387 P 0.6281 R 0.6386 F1 0.6315 | val: perda 1.0499 acc 0.6229 P 0.6056 R 0.6229 F1 0.6093 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  21/200 | treino: perda 1.0290 acc 0.6326 P 0.6218 R 0.6325 F1 0.6246 | val: perda 1.0570 acc 0.6162 P 0.6113 R 0.6162 F1 0.6088 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  22/200 | treino: perda 1.0078 acc 0.6438 P 0.6324 R 0.6437 F1 0.6358 | val: perda 1.0291 acc 0.6333 P 0.6173 R 0.6333 F1 0.6183 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  23/200 | treino: perda 1.0134 acc 0.6375 P 0.6294 R 0.6374 F1 0.6316 | val: perda 1.0204 acc 0.6381 P 0.6258 R 0.6381 F1 0.6261 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  24/200 | treino: perda 0.9859 acc 0.6528 P 0.6413 R 0.6527 F1 0.6442 | val: perda 1.0147 acc 0.6314 P 0.6224 R 0.6314 F1 0.6246 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  25/200 | treino: perda 0.9730 acc 0.6532 P 0.6427 R 0.6531 F1 0.6455 | val: perda 1.0298 acc 0.6238 P 0.6119 R 0.6238 F1 0.6108 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  26/200 | treino: perda 0.9822 acc 0.6585 P 0.6509 R 0.6585 F1 0.6528 | val: perda 1.0337 acc 0.6324 P 0.6225 R 0.6324 F1 0.6191 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  27/200 | treino: perda 0.9674 acc 0.6634 P 0.6518 R 0.6633 F1 0.6546 | val: perda 1.0088 acc 0.6210 P 0.6202 R 0.6210 F1 0.6170 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  28/200 | treino: perda 0.9570 acc 0.6648 P 0.6558 R 0.6648 F1 0.6582 | val: perda 0.9888 acc 0.6533 P 0.6499 R 0.6533 F1 0.6442 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  29/200 | treino: perda 0.9487 acc 0.6740 P 0.6641 R 0.6740 F1 0.6669 | val: perda 1.0022 acc 0.6495 P 0.6373 R 0.6495 F1 0.6400 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  30/200 | treino: perda 0.9266 acc 0.6771 P 0.6670 R 0.6770 F1 0.6699 | val: perda 0.9875 acc 0.6371 P 0.6268 R 0.6371 F1 0.6285 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  31/200 | treino: perda 0.9210 acc 0.6761 P 0.6693 R 0.6760 F1 0.6707 | val: perda 0.9686 acc 0.6590 P 0.6530 R 0.6590 F1 0.6529 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  32/200 | treino: perda 0.9147 acc 0.6781 P 0.6705 R 0.6780 F1 0.6726 | val: perda 0.9836 acc 0.6438 P 0.6352 R 0.6438 F1 0.6361 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  33/200 | treino: perda 0.9319 acc 0.6756 P 0.6679 R 0.6756 F1 0.6694 | val: perda 0.9922 acc 0.6448 P 0.6293 R 0.6448 F1 0.6329 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  34/200 | treino: perda 0.8804 acc 0.6897 P 0.6825 R 0.6897 F1 0.6845 | val: perda 1.0135 acc 0.6371 P 0.6222 R 0.6371 F1 0.6238 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  35/200 | treino: perda 0.9265 acc 0.6722 P 0.6637 R 0.6721 F1 0.6667 | val: perda 0.9787 acc 0.6476 P 0.6416 R 0.6476 F1 0.6383 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  36/200 | treino: perda 0.8810 acc 0.6899 P 0.6813 R 0.6899 F1 0.6839 | val: perda 0.9711 acc 0.6486 P 0.6422 R 0.6486 F1 0.6412 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  37/200 | treino: perda 0.8689 acc 0.7036 P 0.6964 R 0.7036 F1 0.6982 | val: perda 0.9631 acc 0.6429 P 0.6327 R 0.6429 F1 0.6342 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  38/200 | treino: perda 0.8690 acc 0.7012 P 0.6919 R 0.7011 F1 0.6945 | val: perda 0.9746 acc 0.6629 P 0.6650 R 0.6629 F1 0.6570 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  39/200 | treino: perda 0.8653 acc 0.6993 P 0.6899 R 0.6993 F1 0.6926 | val: perda 0.9831 acc 0.6676 P 0.6638 R 0.6676 F1 0.6596 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  40/200 | treino: perda 0.8572 acc 0.6963 P 0.6891 R 0.6962 F1 0.6912 | val: perda 0.9833 acc 0.6581 P 0.6450 R 0.6581 F1 0.6483 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  41/200 | treino: perda 0.8475 acc 0.7157 P 0.7093 R 0.7156 F1 0.7109 | val: perda 0.9459 acc 0.6619 P 0.6552 R 0.6619 F1 0.6555 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  42/200 | treino: perda 0.8292 acc 0.7144 P 0.7063 R 0.7144 F1 0.7086 | val: perda 0.9750 acc 0.6533 P 0.6479 R 0.6533 F1 0.6446 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  43/200 | treino: perda 0.8469 acc 0.7063 P 0.7004 R 0.7062 F1 0.7017 | val: perda 0.9576 acc 0.6600 P 0.6493 R 0.6600 F1 0.6513 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  44/200 | treino: perda 0.8452 acc 0.7052 P 0.6997 R 0.7052 F1 0.7012 | val: perda 0.9740 acc 0.6486 P 0.6386 R 0.6486 F1 0.6372 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  45/200 | treino: perda 0.8423 acc 0.7118 P 0.7049 R 0.7117 F1 0.7065 | val: perda 0.9799 acc 0.6590 P 0.6524 R 0.6590 F1 0.6514 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  46/200 | treino: perda 0.8241 acc 0.7136 P 0.7068 R 0.7136 F1 0.7091 | val: perda 0.9690 acc 0.6629 P 0.6555 R 0.6629 F1 0.6555 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  47/200 | treino: perda 0.7887 acc 0.7320 P 0.7253 R 0.7319 F1 0.7272 | val: perda 0.9358 acc 0.6714 P 0.6645 R 0.6714 F1 0.6632 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  48/200 | treino: perda 0.8008 acc 0.7234 P 0.7173 R 0.7234 F1 0.7187 | val: perda 0.9444 acc 0.6610 P 0.6503 R 0.6610 F1 0.6491 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  49/200 | treino: perda 0.8120 acc 0.7181 P 0.7110 R 0.7181 F1 0.7127 | val: perda 1.0132 acc 0.6352 P 0.6250 R 0.6352 F1 0.6216 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  50/200 | treino: perda 0.8121 acc 0.7146 P 0.7089 R 0.7146 F1 0.7106 | val: perda 0.9688 acc 0.6600 P 0.6557 R 0.6600 F1 0.6517 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  51/200 | treino: perda 0.8127 acc 0.7112 P 0.7031 R 0.7111 F1 0.7055 | val: perda 0.9655 acc 0.6590 P 0.6545 R 0.6590 F1 0.6508 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  52/200 | treino: perda 0.7999 acc 0.7183 P 0.7117 R 0.7183 F1 0.7135 | val: perda 0.9317 acc 0.6724 P 0.6610 R 0.6724 F1 0.6630 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  53/200 | treino: perda 0.7850 acc 0.7277 P 0.7214 R 0.7277 F1 0.7231 | val: perda 0.9440 acc 0.6695 P 0.6640 R 0.6695 F1 0.6622 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  54/200 | treino: perda 0.7649 acc 0.7304 P 0.7250 R 0.7303 F1 0.7269 | val: perda 0.9255 acc 0.6648 P 0.6535 R 0.6648 F1 0.6540 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  55/200 | treino: perda 0.7734 acc 0.7350 P 0.7275 R 0.7350 F1 0.7295 | val: perda 0.8861 acc 0.6857 P 0.6821 R 0.6857 F1 0.6818 |   0.6s  *checkpoint*
+[MLP-A-128_aug_opt_preliminar] época  56/200 | treino: perda 0.7710 acc 0.7263 P 0.7223 R 0.7262 F1 0.7232 | val: perda 0.9184 acc 0.6790 P 0.6717 R 0.6790 F1 0.6695 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  57/200 | treino: perda 0.7501 acc 0.7428 P 0.7376 R 0.7428 F1 0.7388 | val: perda 0.9134 acc 0.6771 P 0.6777 R 0.6771 F1 0.6713 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  58/200 | treino: perda 0.7525 acc 0.7371 P 0.7308 R 0.7370 F1 0.7323 | val: perda 0.9069 acc 0.6810 P 0.6779 R 0.6810 F1 0.6757 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  59/200 | treino: perda 0.7483 acc 0.7408 P 0.7367 R 0.7407 F1 0.7376 | val: perda 0.9224 acc 0.6743 P 0.6658 R 0.6743 F1 0.6666 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  60/200 | treino: perda 0.7372 acc 0.7477 P 0.7419 R 0.7477 F1 0.7433 | val: perda 0.9150 acc 0.6829 P 0.6762 R 0.6829 F1 0.6766 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  61/200 | treino: perda 0.7368 acc 0.7457 P 0.7404 R 0.7456 F1 0.7422 | val: perda 0.9641 acc 0.6638 P 0.6661 R 0.6638 F1 0.6580 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  62/200 | treino: perda 0.7332 acc 0.7399 P 0.7340 R 0.7399 F1 0.7357 | val: perda 0.9249 acc 0.6705 P 0.6629 R 0.6705 F1 0.6623 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  63/200 | treino: perda 0.7433 acc 0.7379 P 0.7310 R 0.7379 F1 0.7326 | val: perda 0.9123 acc 0.6705 P 0.6647 R 0.6705 F1 0.6650 |   0.6s
+[MLP-A-128_aug_opt_preliminar] época  64/200 | treino: perda 0.7252 acc 0.7491 P 0.7440 R 0.7491 F1 0.7457 | val: perda 0.8914 acc 0.6771 P 0.6699 R 0.6771 F1 0.6703 |   0.7s
+[MLP-A-128_aug_opt_preliminar] época  65/200 | treino: perda 0.7096 acc 0.7477 P 0.7437 R 0.7477 F1 0.7448 | val: perda 0.9082 acc 0.6695 P 0.6646 R 0.6695 F1 0.6623 |   0.6s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_aug_opt_preliminar: checkpoint na época 55 de 65 | 25,234,570 parâmetros | 41.1s no total (0.63s/época)
+  treino    : perda 0.7734 | acurácia 0.7350 | precisão macro 0.7275 | recall macro 0.7350 | F1 macro 0.7295
+  validação : perda 0.8861 | acurácia 0.6857 | precisão macro 0.6821 | recall macro 0.6857 | F1 macro 0.6818
+  diferença treino − validação (F1 macro): +0.0477
+
+Relatório por classe (validação, checkpoint da época 55):
+                   precision    recall  f1-score   support
+
+          airport     0.4646    0.4381    0.4510       105
+            beach     0.8687    0.8190    0.8431       105
+circular_farmland     0.6321    0.6381    0.6351       105
+dense_residential     0.6916    0.7048    0.6981       105
+           desert     0.8952    0.8952    0.8952       105
+           forest     0.7937    0.9524    0.8658       105
+           harbor     0.7476    0.7333    0.7404       105
+         mountain     0.5488    0.4286    0.4813       105
+            river     0.5726    0.6762    0.6201       105
+     storage_tank     0.6061    0.5714    0.5882       105
+
+         accuracy                         0.6857      1050
+        macro avg     0.6821    0.6857    0.6818      1050
+     weighted avg     0.6821    0.6857    0.6818      1050
+
+##### MLP-A-128_aug2_opt (aumento forte) | lr 1.15e-03  weight_decay 7.07e-06  dropout 0.3  lote 128
+[MLP-A-128_aug2_opt_preliminar] época   1/200 | treino: perda 1.8965 acc 0.3205 P 0.2834 R 0.3204 F1 0.2813 | val: perda 1.6147 acc 0.4533 P 0.4292 R 0.4533 F1 0.3916 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época   2/200 | treino: perda 1.6275 acc 0.4213 P 0.3917 R 0.4213 F1 0.3959 | val: perda 1.4059 acc 0.5429 P 0.5315 R 0.5429 F1 0.5187 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época   3/200 | treino: perda 1.5229 acc 0.4593 P 0.4360 R 0.4592 F1 0.4406 | val: perda 1.3416 acc 0.5552 P 0.5369 R 0.5552 F1 0.5362 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época   4/200 | treino: perda 1.4565 acc 0.4844 P 0.4633 R 0.4843 F1 0.4680 | val: perda 1.2938 acc 0.5476 P 0.5197 R 0.5476 F1 0.5219 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época   5/200 | treino: perda 1.4488 acc 0.4844 P 0.4606 R 0.4843 F1 0.4655 | val: perda 1.2790 acc 0.5648 P 0.5525 R 0.5648 F1 0.5509 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época   6/200 | treino: perda 1.4084 acc 0.4913 P 0.4739 R 0.4913 F1 0.4800 | val: perda 1.2509 acc 0.5838 P 0.5621 R 0.5838 F1 0.5625 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época   7/200 | treino: perda 1.3816 acc 0.5123 P 0.4919 R 0.5123 F1 0.4969 | val: perda 1.2409 acc 0.5705 P 0.5295 R 0.5705 F1 0.5352 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época   8/200 | treino: perda 1.3847 acc 0.5056 P 0.4850 R 0.5056 F1 0.4886 | val: perda 1.2315 acc 0.5638 P 0.5346 R 0.5638 F1 0.5405 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época   9/200 | treino: perda 1.3970 acc 0.4962 P 0.4798 R 0.4962 F1 0.4837 | val: perda 1.2273 acc 0.5914 P 0.5759 R 0.5914 F1 0.5734 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  10/200 | treino: perda 1.3957 acc 0.5017 P 0.4867 R 0.5017 F1 0.4904 | val: perda 1.1843 acc 0.5962 P 0.5702 R 0.5962 F1 0.5738 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  11/200 | treino: perda 1.3440 acc 0.5183 P 0.4960 R 0.5182 F1 0.5020 | val: perda 1.2017 acc 0.5952 P 0.5843 R 0.5952 F1 0.5795 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  12/200 | treino: perda 1.3439 acc 0.5254 P 0.5079 R 0.5254 F1 0.5121 | val: perda 1.1640 acc 0.6029 P 0.5818 R 0.6029 F1 0.5782 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  13/200 | treino: perda 1.3352 acc 0.5262 P 0.5070 R 0.5262 F1 0.5119 | val: perda 1.1681 acc 0.6067 P 0.5899 R 0.6067 F1 0.5894 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  14/200 | treino: perda 1.3200 acc 0.5315 P 0.5110 R 0.5315 F1 0.5159 | val: perda 1.1620 acc 0.5952 P 0.5854 R 0.5952 F1 0.5796 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  15/200 | treino: perda 1.3338 acc 0.5207 P 0.5050 R 0.5207 F1 0.5100 | val: perda 1.1584 acc 0.6019 P 0.5775 R 0.6019 F1 0.5782 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  16/200 | treino: perda 1.2973 acc 0.5428 P 0.5222 R 0.5427 F1 0.5267 | val: perda 1.1337 acc 0.6114 P 0.6019 R 0.6114 F1 0.6009 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  17/200 | treino: perda 1.2954 acc 0.5299 P 0.5143 R 0.5298 F1 0.5186 | val: perda 1.1327 acc 0.6095 P 0.5899 R 0.6095 F1 0.5927 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  18/200 | treino: perda 1.2896 acc 0.5344 P 0.5150 R 0.5343 F1 0.5202 | val: perda 1.1253 acc 0.6124 P 0.5994 R 0.6124 F1 0.5968 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  19/200 | treino: perda 1.3020 acc 0.5422 P 0.5244 R 0.5421 F1 0.5295 | val: perda 1.1171 acc 0.6105 P 0.5904 R 0.6105 F1 0.5918 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  20/200 | treino: perda 1.2905 acc 0.5397 P 0.5208 R 0.5396 F1 0.5261 | val: perda 1.1011 acc 0.6048 P 0.5817 R 0.6048 F1 0.5838 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  21/200 | treino: perda 1.2700 acc 0.5452 P 0.5273 R 0.5451 F1 0.5317 | val: perda 1.1031 acc 0.6181 P 0.5973 R 0.6181 F1 0.6023 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  22/200 | treino: perda 1.2743 acc 0.5434 P 0.5252 R 0.5433 F1 0.5304 | val: perda 1.1042 acc 0.6067 P 0.5796 R 0.6067 F1 0.5814 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  23/200 | treino: perda 1.2754 acc 0.5383 P 0.5225 R 0.5382 F1 0.5271 | val: perda 1.1140 acc 0.6105 P 0.5941 R 0.6105 F1 0.5897 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  24/200 | treino: perda 1.2594 acc 0.5483 P 0.5329 R 0.5482 F1 0.5332 | val: perda 1.0774 acc 0.6229 P 0.6020 R 0.6229 F1 0.6048 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  25/200 | treino: perda 1.2423 acc 0.5556 P 0.5374 R 0.5556 F1 0.5428 | val: perda 1.0655 acc 0.6410 P 0.6239 R 0.6410 F1 0.6232 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  26/200 | treino: perda 1.2491 acc 0.5585 P 0.5424 R 0.5584 F1 0.5470 | val: perda 1.0825 acc 0.6210 P 0.6052 R 0.6210 F1 0.6008 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  27/200 | treino: perda 1.2476 acc 0.5560 P 0.5380 R 0.5560 F1 0.5413 | val: perda 1.0850 acc 0.6200 P 0.6070 R 0.6200 F1 0.6074 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  28/200 | treino: perda 1.2667 acc 0.5481 P 0.5288 R 0.5480 F1 0.5342 | val: perda 1.0650 acc 0.6333 P 0.6176 R 0.6333 F1 0.6172 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  29/200 | treino: perda 1.2579 acc 0.5515 P 0.5322 R 0.5515 F1 0.5372 | val: perda 1.0938 acc 0.6076 P 0.5938 R 0.6076 F1 0.5872 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  30/200 | treino: perda 1.2325 acc 0.5601 P 0.5407 R 0.5601 F1 0.5454 | val: perda 1.0514 acc 0.6448 P 0.6239 R 0.6448 F1 0.6244 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  31/200 | treino: perda 1.2079 acc 0.5730 P 0.5571 R 0.5729 F1 0.5609 | val: perda 1.0318 acc 0.6610 P 0.6492 R 0.6610 F1 0.6449 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  32/200 | treino: perda 1.2226 acc 0.5617 P 0.5452 R 0.5617 F1 0.5491 | val: perda 1.0456 acc 0.6305 P 0.6153 R 0.6305 F1 0.6157 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  33/200 | treino: perda 1.2119 acc 0.5671 P 0.5500 R 0.5670 F1 0.5535 | val: perda 1.0401 acc 0.6324 P 0.6155 R 0.6324 F1 0.6095 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  34/200 | treino: perda 1.2094 acc 0.5636 P 0.5478 R 0.5635 F1 0.5508 | val: perda 1.0484 acc 0.6390 P 0.6241 R 0.6390 F1 0.6204 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  35/200 | treino: perda 1.2274 acc 0.5571 P 0.5400 R 0.5570 F1 0.5453 | val: perda 1.0221 acc 0.6448 P 0.6248 R 0.6448 F1 0.6265 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  36/200 | treino: perda 1.2186 acc 0.5615 P 0.5435 R 0.5615 F1 0.5488 | val: perda 1.0646 acc 0.6171 P 0.5983 R 0.6171 F1 0.5954 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  37/200 | treino: perda 1.2029 acc 0.5677 P 0.5508 R 0.5676 F1 0.5547 | val: perda 1.0225 acc 0.6505 P 0.6322 R 0.6505 F1 0.6343 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  38/200 | treino: perda 1.1855 acc 0.5813 P 0.5637 R 0.5813 F1 0.5691 | val: perda 1.0109 acc 0.6552 P 0.6426 R 0.6552 F1 0.6450 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  39/200 | treino: perda 1.1903 acc 0.5724 P 0.5561 R 0.5723 F1 0.5585 | val: perda 1.0307 acc 0.6514 P 0.6365 R 0.6514 F1 0.6334 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  40/200 | treino: perda 1.2149 acc 0.5622 P 0.5469 R 0.5621 F1 0.5512 | val: perda 1.0038 acc 0.6486 P 0.6292 R 0.6486 F1 0.6321 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  41/200 | treino: perda 1.1842 acc 0.5750 P 0.5592 R 0.5750 F1 0.5632 | val: perda 1.0244 acc 0.6448 P 0.6301 R 0.6448 F1 0.6315 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  42/200 | treino: perda 1.1994 acc 0.5677 P 0.5507 R 0.5676 F1 0.5533 | val: perda 1.0127 acc 0.6448 P 0.6280 R 0.6448 F1 0.6269 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  43/200 | treino: perda 1.1766 acc 0.5811 P 0.5689 R 0.5811 F1 0.5712 | val: perda 1.0073 acc 0.6514 P 0.6367 R 0.6514 F1 0.6355 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  44/200 | treino: perda 1.1791 acc 0.5805 P 0.5656 R 0.5805 F1 0.5690 | val: perda 0.9968 acc 0.6514 P 0.6336 R 0.6514 F1 0.6317 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  45/200 | treino: perda 1.1684 acc 0.5797 P 0.5662 R 0.5797 F1 0.5697 | val: perda 0.9941 acc 0.6600 P 0.6400 R 0.6600 F1 0.6408 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  46/200 | treino: perda 1.1694 acc 0.5873 P 0.5722 R 0.5872 F1 0.5759 | val: perda 0.9832 acc 0.6590 P 0.6431 R 0.6590 F1 0.6446 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  47/200 | treino: perda 1.1546 acc 0.5869 P 0.5712 R 0.5868 F1 0.5748 | val: perda 0.9759 acc 0.6648 P 0.6489 R 0.6648 F1 0.6459 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  48/200 | treino: perda 1.1833 acc 0.5803 P 0.5670 R 0.5803 F1 0.5691 | val: perda 1.0148 acc 0.6390 P 0.6203 R 0.6390 F1 0.6187 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  49/200 | treino: perda 1.1704 acc 0.5762 P 0.5603 R 0.5762 F1 0.5628 | val: perda 1.0124 acc 0.6552 P 0.6424 R 0.6552 F1 0.6389 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  50/200 | treino: perda 1.1611 acc 0.5818 P 0.5670 R 0.5817 F1 0.5707 | val: perda 0.9765 acc 0.6657 P 0.6504 R 0.6657 F1 0.6510 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  51/200 | treino: perda 1.1628 acc 0.5887 P 0.5746 R 0.5886 F1 0.5774 | val: perda 0.9902 acc 0.6533 P 0.6395 R 0.6533 F1 0.6365 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  52/200 | treino: perda 1.1569 acc 0.5836 P 0.5681 R 0.5835 F1 0.5703 | val: perda 0.9696 acc 0.6724 P 0.6563 R 0.6724 F1 0.6575 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  53/200 | treino: perda 1.1488 acc 0.5928 P 0.5800 R 0.5927 F1 0.5829 | val: perda 0.9756 acc 0.6648 P 0.6541 R 0.6648 F1 0.6534 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  54/200 | treino: perda 1.1578 acc 0.5909 P 0.5784 R 0.5909 F1 0.5818 | val: perda 0.9841 acc 0.6457 P 0.6271 R 0.6457 F1 0.6241 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  55/200 | treino: perda 1.1292 acc 0.5934 P 0.5785 R 0.5933 F1 0.5811 | val: perda 0.9495 acc 0.6790 P 0.6684 R 0.6790 F1 0.6665 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  56/200 | treino: perda 1.1355 acc 0.5907 P 0.5773 R 0.5907 F1 0.5815 | val: perda 0.9616 acc 0.6686 P 0.6556 R 0.6686 F1 0.6487 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  57/200 | treino: perda 1.1326 acc 0.5981 P 0.5840 R 0.5980 F1 0.5869 | val: perda 0.9569 acc 0.6648 P 0.6548 R 0.6648 F1 0.6489 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  58/200 | treino: perda 1.1122 acc 0.6007 P 0.5853 R 0.6007 F1 0.5880 | val: perda 0.9622 acc 0.6724 P 0.6678 R 0.6724 F1 0.6619 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  59/200 | treino: perda 1.1291 acc 0.5977 P 0.5844 R 0.5976 F1 0.5877 | val: perda 0.9439 acc 0.6695 P 0.6559 R 0.6695 F1 0.6544 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  60/200 | treino: perda 1.1299 acc 0.6050 P 0.5899 R 0.6050 F1 0.5928 | val: perda 0.9595 acc 0.6590 P 0.6408 R 0.6590 F1 0.6423 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  61/200 | treino: perda 1.1340 acc 0.5964 P 0.5846 R 0.5964 F1 0.5877 | val: perda 0.9550 acc 0.6819 P 0.6688 R 0.6819 F1 0.6666 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  62/200 | treino: perda 1.1123 acc 0.6005 P 0.5884 R 0.6005 F1 0.5918 | val: perda 0.9525 acc 0.6752 P 0.6640 R 0.6752 F1 0.6623 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  63/200 | treino: perda 1.1150 acc 0.5985 P 0.5830 R 0.5984 F1 0.5864 | val: perda 0.9445 acc 0.6762 P 0.6604 R 0.6762 F1 0.6628 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  64/200 | treino: perda 1.1144 acc 0.6034 P 0.5862 R 0.6033 F1 0.5912 | val: perda 0.9483 acc 0.6762 P 0.6603 R 0.6762 F1 0.6602 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  65/200 | treino: perda 1.1384 acc 0.5948 P 0.5807 R 0.5948 F1 0.5845 | val: perda 0.9272 acc 0.6848 P 0.6712 R 0.6848 F1 0.6648 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  66/200 | treino: perda 1.1219 acc 0.5924 P 0.5796 R 0.5923 F1 0.5822 | val: perda 0.9478 acc 0.6724 P 0.6590 R 0.6724 F1 0.6576 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  67/200 | treino: perda 1.1144 acc 0.6050 P 0.5942 R 0.6050 F1 0.5964 | val: perda 0.9244 acc 0.6800 P 0.6755 R 0.6800 F1 0.6680 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  68/200 | treino: perda 1.1380 acc 0.5889 P 0.5738 R 0.5888 F1 0.5784 | val: perda 0.9453 acc 0.6648 P 0.6546 R 0.6648 F1 0.6491 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  69/200 | treino: perda 1.0869 acc 0.6105 P 0.5977 R 0.6105 F1 0.6005 | val: perda 0.9456 acc 0.6743 P 0.6579 R 0.6743 F1 0.6544 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  70/200 | treino: perda 1.1136 acc 0.5940 P 0.5781 R 0.5939 F1 0.5825 | val: perda 0.9526 acc 0.6657 P 0.6483 R 0.6657 F1 0.6490 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  71/200 | treino: perda 1.1190 acc 0.6130 P 0.6010 R 0.6129 F1 0.6034 | val: perda 0.9371 acc 0.6743 P 0.6545 R 0.6743 F1 0.6547 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  72/200 | treino: perda 1.1001 acc 0.6067 P 0.5919 R 0.6066 F1 0.5958 | val: perda 0.9224 acc 0.6819 P 0.6677 R 0.6819 F1 0.6685 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  73/200 | treino: perda 1.0974 acc 0.6181 P 0.6064 R 0.6180 F1 0.6087 | val: perda 0.9241 acc 0.6886 P 0.6743 R 0.6886 F1 0.6741 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  74/200 | treino: perda 1.1009 acc 0.6050 P 0.5922 R 0.6050 F1 0.5952 | val: perda 0.9252 acc 0.6762 P 0.6587 R 0.6762 F1 0.6579 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  75/200 | treino: perda 1.0985 acc 0.6077 P 0.5936 R 0.6076 F1 0.5975 | val: perda 0.9243 acc 0.6790 P 0.6670 R 0.6790 F1 0.6675 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  76/200 | treino: perda 1.1115 acc 0.6077 P 0.5960 R 0.6076 F1 0.5990 | val: perda 0.9195 acc 0.6867 P 0.6769 R 0.6867 F1 0.6773 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  77/200 | treino: perda 1.0974 acc 0.6095 P 0.5956 R 0.6095 F1 0.5982 | val: perda 0.9027 acc 0.6867 P 0.6701 R 0.6867 F1 0.6711 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  78/200 | treino: perda 1.0907 acc 0.6056 P 0.5920 R 0.6056 F1 0.5949 | val: perda 0.9257 acc 0.6762 P 0.6623 R 0.6762 F1 0.6635 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  79/200 | treino: perda 1.0988 acc 0.6083 P 0.5976 R 0.6082 F1 0.6005 | val: perda 0.9197 acc 0.6895 P 0.6758 R 0.6895 F1 0.6777 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  80/200 | treino: perda 1.0834 acc 0.6122 P 0.5992 R 0.6121 F1 0.6020 | val: perda 0.9314 acc 0.6733 P 0.6588 R 0.6733 F1 0.6599 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  81/200 | treino: perda 1.1126 acc 0.6003 P 0.5874 R 0.6003 F1 0.5912 | val: perda 0.9233 acc 0.6848 P 0.6707 R 0.6848 F1 0.6725 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  82/200 | treino: perda 1.0869 acc 0.6126 P 0.6000 R 0.6125 F1 0.6025 | val: perda 0.9514 acc 0.6781 P 0.6655 R 0.6781 F1 0.6649 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  83/200 | treino: perda 1.0954 acc 0.6138 P 0.6008 R 0.6137 F1 0.6044 | val: perda 0.9300 acc 0.6800 P 0.6678 R 0.6800 F1 0.6692 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  84/200 | treino: perda 1.0743 acc 0.6071 P 0.5930 R 0.6070 F1 0.5974 | val: perda 0.9197 acc 0.6848 P 0.6727 R 0.6848 F1 0.6690 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  85/200 | treino: perda 1.0989 acc 0.6183 P 0.6031 R 0.6182 F1 0.6061 | val: perda 0.9495 acc 0.6705 P 0.6632 R 0.6705 F1 0.6573 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  86/200 | treino: perda 1.0877 acc 0.6097 P 0.5997 R 0.6097 F1 0.6023 | val: perda 0.9296 acc 0.6733 P 0.6607 R 0.6733 F1 0.6609 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  87/200 | treino: perda 1.1039 acc 0.6058 P 0.5944 R 0.6058 F1 0.5967 | val: perda 0.9021 acc 0.6895 P 0.6754 R 0.6895 F1 0.6775 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  88/200 | treino: perda 1.0763 acc 0.6187 P 0.6050 R 0.6186 F1 0.6084 | val: perda 0.8940 acc 0.6990 P 0.6894 R 0.6990 F1 0.6905 |   0.8s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  89/200 | treino: perda 1.0704 acc 0.6173 P 0.6069 R 0.6172 F1 0.6087 | val: perda 0.9017 acc 0.6990 P 0.6879 R 0.6990 F1 0.6880 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  90/200 | treino: perda 1.0854 acc 0.6081 P 0.5964 R 0.6080 F1 0.5999 | val: perda 0.9157 acc 0.6810 P 0.6763 R 0.6810 F1 0.6675 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  91/200 | treino: perda 1.0706 acc 0.6205 P 0.6068 R 0.6205 F1 0.6087 | val: perda 0.8924 acc 0.7105 P 0.7009 R 0.7105 F1 0.6994 |   0.7s  *checkpoint*
+[MLP-A-128_aug2_opt_preliminar] época  92/200 | treino: perda 1.0921 acc 0.6052 P 0.5889 R 0.6052 F1 0.5926 | val: perda 0.9180 acc 0.6819 P 0.6675 R 0.6819 F1 0.6672 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época  93/200 | treino: perda 1.0747 acc 0.6165 P 0.6053 R 0.6164 F1 0.6080 | val: perda 0.8949 acc 0.6971 P 0.6812 R 0.6971 F1 0.6841 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  94/200 | treino: perda 1.0493 acc 0.6291 P 0.6151 R 0.6291 F1 0.6187 | val: perda 0.8959 acc 0.6876 P 0.6735 R 0.6876 F1 0.6741 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  95/200 | treino: perda 1.0694 acc 0.6214 P 0.6096 R 0.6213 F1 0.6123 | val: perda 0.8812 acc 0.7038 P 0.6892 R 0.7038 F1 0.6911 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  96/200 | treino: perda 1.0689 acc 0.6120 P 0.5995 R 0.6119 F1 0.6023 | val: perda 0.8953 acc 0.6971 P 0.6842 R 0.6971 F1 0.6831 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  97/200 | treino: perda 1.0825 acc 0.6162 P 0.6040 R 0.6162 F1 0.6067 | val: perda 0.8976 acc 0.6943 P 0.6812 R 0.6943 F1 0.6802 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  98/200 | treino: perda 1.0639 acc 0.6120 P 0.5978 R 0.6119 F1 0.6014 | val: perda 0.9065 acc 0.6810 P 0.6734 R 0.6810 F1 0.6684 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época  99/200 | treino: perda 1.0465 acc 0.6263 P 0.6134 R 0.6262 F1 0.6163 | val: perda 0.8867 acc 0.7038 P 0.6936 R 0.7038 F1 0.6945 |   0.7s
+[MLP-A-128_aug2_opt_preliminar] época 100/200 | treino: perda 1.0687 acc 0.6183 P 0.6052 R 0.6182 F1 0.6084 | val: perda 0.8957 acc 0.6790 P 0.6619 R 0.6790 F1 0.6581 |   0.8s
+[MLP-A-128_aug2_opt_preliminar] época 101/200 | treino: perda 1.0671 acc 0.6238 P 0.6081 R 0.6237 F1 0.6121 | val: perda 0.8952 acc 0.6933 P 0.6830 R 0.6933 F1 0.6799 |   0.7s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-A-128_aug2_opt_preliminar: checkpoint na época 91 de 101 | 25,234,570 parâmetros | 75.1s no total (0.74s/época)
+  treino    : perda 1.0706 | acurácia 0.6205 | precisão macro 0.6068 | recall macro 0.6205 | F1 macro 0.6087
+  validação : perda 0.8924 | acurácia 0.7105 | precisão macro 0.7009 | recall macro 0.7105 | F1 macro 0.6994
+  diferença treino − validação (F1 macro): -0.0907
+
+Relatório por classe (validação, checkpoint da época 91):
+                   precision    recall  f1-score   support
+
+          airport     0.5000    0.3905    0.4385       105
+            beach     0.8288    0.8762    0.8519       105
+circular_farmland     0.6723    0.7619    0.7143       105
+dense_residential     0.8132    0.7048    0.7551       105
+           desert     0.8868    0.8952    0.8910       105
+           forest     0.7034    0.9714    0.8160       105
+           harbor     0.7281    0.7905    0.7580       105
+         mountain     0.5469    0.3333    0.4142       105
+            river     0.6111    0.6286    0.6197       105
+     storage_tank     0.7182    0.7524    0.7349       105
+
+         accuracy                         0.7105      1050
+        macro avg     0.7009    0.7105    0.6994      1050
+     weighted avg     0.7009    0.7105    0.6994      1050
+
+##### MLP-B-128_opt (sem aumento) | lr 2.02e-04  weight_decay 2.01e-06  dropout 0.2  lote 128
+[MLP-B-128_opt_preliminar] época   1/200 | treino: perda 2.0177 acc 0.2874 P 0.2579 R 0.2874 F1 0.2524 | val: perda 1.8335 acc 0.3848 P 0.3262 R 0.3848 F1 0.3262 |   0.7s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   2/200 | treino: perda 1.7890 acc 0.4009 P 0.3784 R 0.4009 F1 0.3651 | val: perda 1.6686 acc 0.4629 P 0.4897 R 0.4629 F1 0.4158 |   0.7s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   3/200 | treino: perda 1.6444 acc 0.4693 P 0.4551 R 0.4692 F1 0.4401 | val: perda 1.5585 acc 0.5076 P 0.4888 R 0.5076 F1 0.4638 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   4/200 | treino: perda 1.5222 acc 0.5246 P 0.5143 R 0.5246 F1 0.5004 | val: perda 1.4786 acc 0.5143 P 0.4925 R 0.5143 F1 0.4866 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   5/200 | treino: perda 1.4221 acc 0.5658 P 0.5493 R 0.5658 F1 0.5443 | val: perda 1.4299 acc 0.5305 P 0.5196 R 0.5305 F1 0.5119 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   6/200 | treino: perda 1.3174 acc 0.5989 P 0.5849 R 0.5989 F1 0.5844 | val: perda 1.3784 acc 0.5514 P 0.5337 R 0.5514 F1 0.5339 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   7/200 | treino: perda 1.2109 acc 0.6446 P 0.6305 R 0.6446 F1 0.6324 | val: perda 1.3539 acc 0.5524 P 0.5391 R 0.5524 F1 0.5340 |   0.7s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   8/200 | treino: perda 1.1233 acc 0.6679 P 0.6533 R 0.6678 F1 0.6545 | val: perda 1.3485 acc 0.5543 P 0.5360 R 0.5543 F1 0.5373 |   0.7s  *checkpoint*
+[MLP-B-128_opt_preliminar] época   9/200 | treino: perda 1.0461 acc 0.6987 P 0.6863 R 0.6987 F1 0.6871 | val: perda 1.3290 acc 0.5629 P 0.5402 R 0.5629 F1 0.5417 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época  10/200 | treino: perda 0.9767 acc 0.7261 P 0.7188 R 0.7260 F1 0.7183 | val: perda 1.3477 acc 0.5457 P 0.5458 R 0.5457 F1 0.5364 |   0.7s
+[MLP-B-128_opt_preliminar] época  11/200 | treino: perda 0.8979 acc 0.7487 P 0.7419 R 0.7487 F1 0.7425 | val: perda 1.3449 acc 0.5524 P 0.5502 R 0.5524 F1 0.5447 |   0.6s  *checkpoint*
+[MLP-B-128_opt_preliminar] época  12/200 | treino: perda 0.8374 acc 0.7704 P 0.7652 R 0.7703 F1 0.7655 | val: perda 1.3499 acc 0.5448 P 0.5416 R 0.5448 F1 0.5319 |   0.6s
+[MLP-B-128_opt_preliminar] época  13/200 | treino: perda 0.7688 acc 0.7863 P 0.7828 R 0.7863 F1 0.7822 | val: perda 1.3381 acc 0.5467 P 0.5439 R 0.5467 F1 0.5395 |   0.7s
+[MLP-B-128_opt_preliminar] época  14/200 | treino: perda 0.7154 acc 0.8042 P 0.8024 R 0.8042 F1 0.8018 | val: perda 1.3606 acc 0.5419 P 0.5402 R 0.5419 F1 0.5331 |   0.7s
+[MLP-B-128_opt_preliminar] época  15/200 | treino: perda 0.6707 acc 0.8185 P 0.8165 R 0.8185 F1 0.8161 | val: perda 1.3807 acc 0.5390 P 0.5400 R 0.5390 F1 0.5321 |   0.7s
+[MLP-B-128_opt_preliminar] época  16/200 | treino: perda 0.6171 acc 0.8383 P 0.8364 R 0.8383 F1 0.8357 | val: perda 1.3577 acc 0.5429 P 0.5417 R 0.5429 F1 0.5380 |   0.7s
+[MLP-B-128_opt_preliminar] época  17/200 | treino: perda 0.5647 acc 0.8530 P 0.8527 R 0.8530 F1 0.8517 | val: perda 1.4265 acc 0.5267 P 0.5346 R 0.5267 F1 0.5185 |   0.6s
+[MLP-B-128_opt_preliminar] época  18/200 | treino: perda 0.5483 acc 0.8555 P 0.8547 R 0.8555 F1 0.8545 | val: perda 1.4297 acc 0.5371 P 0.5383 R 0.5371 F1 0.5288 |   0.6s
+[MLP-B-128_opt_preliminar] época  19/200 | treino: perda 0.5236 acc 0.8590 P 0.8586 R 0.8589 F1 0.8581 | val: perda 1.4294 acc 0.5314 P 0.5308 R 0.5314 F1 0.5220 |   0.7s
+[MLP-B-128_opt_preliminar] época  20/200 | treino: perda 0.5173 acc 0.8585 P 0.8586 R 0.8585 F1 0.8578 | val: perda 1.4302 acc 0.5543 P 0.5458 R 0.5543 F1 0.5409 |   0.6s
+[MLP-B-128_opt_preliminar] época  21/200 | treino: perda 0.4549 acc 0.8859 P 0.8860 R 0.8859 F1 0.8855 | val: perda 1.4558 acc 0.5267 P 0.5353 R 0.5267 F1 0.5260 |   0.6s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_opt_preliminar: checkpoint na época 11 de 21 | 25,341,386 parâmetros | 13.7s no total (0.65s/época)
+  treino    : perda 0.8979 | acurácia 0.7487 | precisão macro 0.7419 | recall macro 0.7487 | F1 macro 0.7425
+  validação : perda 1.3449 | acurácia 0.5524 | precisão macro 0.5502 | recall macro 0.5524 | F1 macro 0.5447
+  diferença treino − validação (F1 macro): +0.1978
+
+Relatório por classe (validação, checkpoint da época 11):
+                   precision    recall  f1-score   support
+
+          airport     0.3514    0.3714    0.3611       105
+            beach     0.7347    0.6857    0.7094       105
+circular_farmland     0.5234    0.5333    0.5283       105
+dense_residential     0.4667    0.4000    0.4308       105
+           desert     0.7965    0.8571    0.8257       105
+           forest     0.6228    0.9905    0.7647       105
+           harbor     0.6753    0.4952    0.5714       105
+         mountain     0.2788    0.2762    0.2775       105
+            river     0.4948    0.4571    0.4752       105
+     storage_tank     0.5581    0.4571    0.5026       105
+
+         accuracy                         0.5524      1050
+        macro avg     0.5502    0.5524    0.5447      1050
+     weighted avg     0.5502    0.5524    0.5447      1050
+
+##### MLP-B-128_aug_opt (aumento leve) | lr 2.02e-04  weight_decay 2.01e-06  dropout 0.2  lote 128
+[MLP-B-128_aug_opt_preliminar] época   1/200 | treino: perda 2.0087 acc 0.2886 P 0.2597 R 0.2886 F1 0.2548 | val: perda 1.8141 acc 0.3924 P 0.3474 R 0.3924 F1 0.3368 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   2/200 | treino: perda 1.7875 acc 0.3954 P 0.3721 R 0.3953 F1 0.3586 | val: perda 1.6484 acc 0.4743 P 0.4981 R 0.4743 F1 0.4260 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   3/200 | treino: perda 1.6519 acc 0.4607 P 0.4372 R 0.4607 F1 0.4316 | val: perda 1.5450 acc 0.5105 P 0.5052 R 0.5105 F1 0.4735 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   4/200 | treino: perda 1.5666 acc 0.4970 P 0.4791 R 0.4970 F1 0.4714 | val: perda 1.4590 acc 0.5314 P 0.5018 R 0.5314 F1 0.4961 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   5/200 | treino: perda 1.4866 acc 0.5295 P 0.5112 R 0.5294 F1 0.5066 | val: perda 1.4111 acc 0.5438 P 0.5208 R 0.5438 F1 0.5171 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   6/200 | treino: perda 1.4328 acc 0.5397 P 0.5226 R 0.5396 F1 0.5226 | val: perda 1.3702 acc 0.5486 P 0.5241 R 0.5486 F1 0.5189 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   7/200 | treino: perda 1.3818 acc 0.5483 P 0.5281 R 0.5482 F1 0.5301 | val: perda 1.3142 acc 0.5638 P 0.5371 R 0.5638 F1 0.5366 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época   8/200 | treino: perda 1.3481 acc 0.5544 P 0.5347 R 0.5543 F1 0.5364 | val: perda 1.2876 acc 0.5657 P 0.5307 R 0.5657 F1 0.5348 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época   9/200 | treino: perda 1.3242 acc 0.5632 P 0.5412 R 0.5631 F1 0.5452 | val: perda 1.2562 acc 0.5667 P 0.5374 R 0.5667 F1 0.5366 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  10/200 | treino: perda 1.3092 acc 0.5538 P 0.5363 R 0.5537 F1 0.5395 | val: perda 1.2256 acc 0.5800 P 0.5523 R 0.5800 F1 0.5567 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  11/200 | treino: perda 1.2542 acc 0.5820 P 0.5641 R 0.5819 F1 0.5669 | val: perda 1.2269 acc 0.5829 P 0.5674 R 0.5829 F1 0.5602 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  12/200 | treino: perda 1.2472 acc 0.5864 P 0.5700 R 0.5864 F1 0.5741 | val: perda 1.1985 acc 0.5838 P 0.5602 R 0.5838 F1 0.5613 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  13/200 | treino: perda 1.2206 acc 0.5952 P 0.5801 R 0.5952 F1 0.5825 | val: perda 1.1895 acc 0.5867 P 0.5696 R 0.5867 F1 0.5706 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  14/200 | treino: perda 1.1903 acc 0.5987 P 0.5834 R 0.5986 F1 0.5870 | val: perda 1.1636 acc 0.6143 P 0.6035 R 0.6143 F1 0.6009 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  15/200 | treino: perda 1.1861 acc 0.6032 P 0.5890 R 0.6031 F1 0.5926 | val: perda 1.1504 acc 0.6057 P 0.5873 R 0.6057 F1 0.5879 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  16/200 | treino: perda 1.1757 acc 0.5983 P 0.5808 R 0.5982 F1 0.5848 | val: perda 1.1575 acc 0.5962 P 0.5850 R 0.5962 F1 0.5814 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  17/200 | treino: perda 1.1552 acc 0.6062 P 0.5953 R 0.6062 F1 0.5979 | val: perda 1.1264 acc 0.6086 P 0.5922 R 0.6086 F1 0.5921 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  18/200 | treino: perda 1.1265 acc 0.6167 P 0.6038 R 0.6166 F1 0.6076 | val: perda 1.1411 acc 0.6057 P 0.5981 R 0.6057 F1 0.5940 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  19/200 | treino: perda 1.1253 acc 0.6197 P 0.6051 R 0.6197 F1 0.6090 | val: perda 1.1077 acc 0.6105 P 0.5920 R 0.6105 F1 0.5963 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  20/200 | treino: perda 1.1088 acc 0.6371 P 0.6260 R 0.6370 F1 0.6292 | val: perda 1.0994 acc 0.6267 P 0.6108 R 0.6267 F1 0.6121 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  21/200 | treino: perda 1.0814 acc 0.6350 P 0.6242 R 0.6350 F1 0.6273 | val: perda 1.0864 acc 0.6190 P 0.6052 R 0.6190 F1 0.6038 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  22/200 | treino: perda 1.0630 acc 0.6373 P 0.6266 R 0.6372 F1 0.6298 | val: perda 1.1102 acc 0.6076 P 0.5973 R 0.6076 F1 0.5947 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  23/200 | treino: perda 1.0756 acc 0.6409 P 0.6314 R 0.6409 F1 0.6335 | val: perda 1.0773 acc 0.6171 P 0.6010 R 0.6171 F1 0.6032 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  24/200 | treino: perda 1.0526 acc 0.6483 P 0.6362 R 0.6482 F1 0.6391 | val: perda 1.0876 acc 0.6314 P 0.6189 R 0.6314 F1 0.6209 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  25/200 | treino: perda 1.0262 acc 0.6512 P 0.6406 R 0.6511 F1 0.6433 | val: perda 1.0634 acc 0.6267 P 0.6155 R 0.6267 F1 0.6179 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  26/200 | treino: perda 1.0199 acc 0.6571 P 0.6487 R 0.6570 F1 0.6513 | val: perda 1.0711 acc 0.6152 P 0.6046 R 0.6152 F1 0.6045 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  27/200 | treino: perda 1.0237 acc 0.6505 P 0.6396 R 0.6505 F1 0.6422 | val: perda 1.0458 acc 0.6238 P 0.6089 R 0.6238 F1 0.6117 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  28/200 | treino: perda 1.0076 acc 0.6644 P 0.6547 R 0.6644 F1 0.6574 | val: perda 1.0425 acc 0.6295 P 0.6204 R 0.6295 F1 0.6194 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  29/200 | treino: perda 0.9970 acc 0.6707 P 0.6624 R 0.6707 F1 0.6646 | val: perda 1.0287 acc 0.6429 P 0.6340 R 0.6429 F1 0.6336 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  30/200 | treino: perda 0.9577 acc 0.6752 P 0.6658 R 0.6752 F1 0.6688 | val: perda 1.0163 acc 0.6533 P 0.6426 R 0.6533 F1 0.6453 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  31/200 | treino: perda 0.9799 acc 0.6761 P 0.6663 R 0.6760 F1 0.6693 | val: perda 1.0030 acc 0.6524 P 0.6396 R 0.6524 F1 0.6416 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  32/200 | treino: perda 0.9466 acc 0.6775 P 0.6703 R 0.6774 F1 0.6727 | val: perda 1.0243 acc 0.6362 P 0.6335 R 0.6362 F1 0.6306 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  33/200 | treino: perda 0.9504 acc 0.6842 P 0.6749 R 0.6842 F1 0.6773 | val: perda 1.0279 acc 0.6276 P 0.6155 R 0.6276 F1 0.6151 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  34/200 | treino: perda 0.9280 acc 0.6891 P 0.6800 R 0.6891 F1 0.6826 | val: perda 1.0283 acc 0.6362 P 0.6295 R 0.6362 F1 0.6270 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  35/200 | treino: perda 0.9302 acc 0.6832 P 0.6735 R 0.6831 F1 0.6769 | val: perda 1.0062 acc 0.6410 P 0.6304 R 0.6410 F1 0.6321 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  36/200 | treino: perda 0.9034 acc 0.6908 P 0.6839 R 0.6907 F1 0.6856 | val: perda 1.0250 acc 0.6543 P 0.6465 R 0.6543 F1 0.6470 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  37/200 | treino: perda 0.9045 acc 0.6891 P 0.6812 R 0.6891 F1 0.6836 | val: perda 1.0296 acc 0.6514 P 0.6463 R 0.6514 F1 0.6429 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  38/200 | treino: perda 0.8984 acc 0.6971 P 0.6880 R 0.6970 F1 0.6907 | val: perda 0.9997 acc 0.6514 P 0.6448 R 0.6514 F1 0.6455 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  39/200 | treino: perda 0.8863 acc 0.6969 P 0.6903 R 0.6968 F1 0.6923 | val: perda 1.0283 acc 0.6467 P 0.6397 R 0.6467 F1 0.6385 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  40/200 | treino: perda 0.8791 acc 0.7008 P 0.6935 R 0.7007 F1 0.6958 | val: perda 0.9956 acc 0.6390 P 0.6288 R 0.6390 F1 0.6327 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  41/200 | treino: perda 0.8799 acc 0.6981 P 0.6900 R 0.6981 F1 0.6926 | val: perda 0.9738 acc 0.6610 P 0.6543 R 0.6610 F1 0.6556 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  42/200 | treino: perda 0.8386 acc 0.7126 P 0.7053 R 0.7125 F1 0.7073 | val: perda 0.9775 acc 0.6524 P 0.6471 R 0.6524 F1 0.6466 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  43/200 | treino: perda 0.8517 acc 0.7077 P 0.7014 R 0.7076 F1 0.7030 | val: perda 0.9876 acc 0.6581 P 0.6445 R 0.6581 F1 0.6439 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  44/200 | treino: perda 0.8634 acc 0.7048 P 0.6972 R 0.7048 F1 0.6995 | val: perda 0.9724 acc 0.6638 P 0.6549 R 0.6638 F1 0.6546 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  45/200 | treino: perda 0.8237 acc 0.7232 P 0.7169 R 0.7232 F1 0.7188 | val: perda 0.9792 acc 0.6686 P 0.6624 R 0.6686 F1 0.6629 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  46/200 | treino: perda 0.8450 acc 0.7146 P 0.7066 R 0.7146 F1 0.7090 | val: perda 0.9728 acc 0.6581 P 0.6461 R 0.6581 F1 0.6479 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  47/200 | treino: perda 0.8194 acc 0.7220 P 0.7146 R 0.7219 F1 0.7170 | val: perda 0.9680 acc 0.6724 P 0.6583 R 0.6724 F1 0.6605 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  48/200 | treino: perda 0.8157 acc 0.7216 P 0.7170 R 0.7215 F1 0.7182 | val: perda 0.9565 acc 0.6714 P 0.6638 R 0.6714 F1 0.6641 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  49/200 | treino: perda 0.8037 acc 0.7222 P 0.7153 R 0.7221 F1 0.7174 | val: perda 0.9594 acc 0.6581 P 0.6443 R 0.6581 F1 0.6457 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  50/200 | treino: perda 0.8029 acc 0.7255 P 0.7179 R 0.7254 F1 0.7201 | val: perda 0.9822 acc 0.6438 P 0.6360 R 0.6438 F1 0.6369 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  51/200 | treino: perda 0.8082 acc 0.7177 P 0.7120 R 0.7177 F1 0.7140 | val: perda 0.9965 acc 0.6533 P 0.6489 R 0.6533 F1 0.6461 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  52/200 | treino: perda 0.7985 acc 0.7277 P 0.7217 R 0.7277 F1 0.7235 | val: perda 0.9863 acc 0.6629 P 0.6580 R 0.6629 F1 0.6554 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  53/200 | treino: perda 0.7868 acc 0.7324 P 0.7271 R 0.7323 F1 0.7289 | val: perda 0.9496 acc 0.6752 P 0.6680 R 0.6752 F1 0.6677 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  54/200 | treino: perda 0.7686 acc 0.7385 P 0.7323 R 0.7385 F1 0.7342 | val: perda 0.9635 acc 0.6667 P 0.6529 R 0.6667 F1 0.6550 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  55/200 | treino: perda 0.7592 acc 0.7422 P 0.7357 R 0.7421 F1 0.7374 | val: perda 0.9374 acc 0.6800 P 0.6754 R 0.6800 F1 0.6753 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  56/200 | treino: perda 0.7576 acc 0.7424 P 0.7377 R 0.7424 F1 0.7391 | val: perda 0.9556 acc 0.6648 P 0.6552 R 0.6648 F1 0.6544 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  57/200 | treino: perda 0.7479 acc 0.7412 P 0.7363 R 0.7411 F1 0.7378 | val: perda 0.9318 acc 0.6771 P 0.6711 R 0.6771 F1 0.6714 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  58/200 | treino: perda 0.7325 acc 0.7524 P 0.7459 R 0.7523 F1 0.7472 | val: perda 0.9231 acc 0.6781 P 0.6695 R 0.6781 F1 0.6697 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  59/200 | treino: perda 0.7372 acc 0.7504 P 0.7457 R 0.7503 F1 0.7470 | val: perda 0.9474 acc 0.6676 P 0.6618 R 0.6676 F1 0.6610 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  60/200 | treino: perda 0.7105 acc 0.7681 P 0.7638 R 0.7681 F1 0.7647 | val: perda 0.9326 acc 0.6762 P 0.6704 R 0.6762 F1 0.6711 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  61/200 | treino: perda 0.7241 acc 0.7589 P 0.7545 R 0.7589 F1 0.7559 | val: perda 0.9744 acc 0.6590 P 0.6508 R 0.6590 F1 0.6509 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  62/200 | treino: perda 0.7254 acc 0.7522 P 0.7466 R 0.7521 F1 0.7482 | val: perda 0.9621 acc 0.6667 P 0.6676 R 0.6667 F1 0.6599 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  63/200 | treino: perda 0.7001 acc 0.7663 P 0.7609 R 0.7662 F1 0.7622 | val: perda 0.9292 acc 0.6714 P 0.6639 R 0.6714 F1 0.6642 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  64/200 | treino: perda 0.6969 acc 0.7675 P 0.7641 R 0.7675 F1 0.7648 | val: perda 0.9444 acc 0.6819 P 0.6781 R 0.6819 F1 0.6763 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  65/200 | treino: perda 0.6957 acc 0.7679 P 0.7634 R 0.7679 F1 0.7645 | val: perda 0.9319 acc 0.6800 P 0.6805 R 0.6800 F1 0.6756 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  66/200 | treino: perda 0.6873 acc 0.7632 P 0.7568 R 0.7632 F1 0.7583 | val: perda 0.9185 acc 0.6905 P 0.6833 R 0.6905 F1 0.6832 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  67/200 | treino: perda 0.6813 acc 0.7630 P 0.7603 R 0.7630 F1 0.7612 | val: perda 0.9330 acc 0.6838 P 0.6804 R 0.6838 F1 0.6796 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  68/200 | treino: perda 0.6747 acc 0.7677 P 0.7634 R 0.7677 F1 0.7647 | val: perda 0.9078 acc 0.6848 P 0.6805 R 0.6848 F1 0.6800 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  69/200 | treino: perda 0.6651 acc 0.7706 P 0.7665 R 0.7705 F1 0.7678 | val: perda 0.9482 acc 0.6819 P 0.6811 R 0.6819 F1 0.6772 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  70/200 | treino: perda 0.6609 acc 0.7749 P 0.7702 R 0.7748 F1 0.7714 | val: perda 0.9394 acc 0.6838 P 0.6900 R 0.6838 F1 0.6831 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  71/200 | treino: perda 0.6624 acc 0.7749 P 0.7711 R 0.7748 F1 0.7721 | val: perda 0.9354 acc 0.6943 P 0.6896 R 0.6943 F1 0.6897 |   0.7s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  72/200 | treino: perda 0.6569 acc 0.7785 P 0.7754 R 0.7785 F1 0.7761 | val: perda 0.9067 acc 0.6867 P 0.6861 R 0.6867 F1 0.6837 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  73/200 | treino: perda 0.6553 acc 0.7765 P 0.7715 R 0.7764 F1 0.7729 | val: perda 0.9370 acc 0.6771 P 0.6738 R 0.6771 F1 0.6715 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  74/200 | treino: perda 0.6424 acc 0.7859 P 0.7829 R 0.7858 F1 0.7835 | val: perda 0.9552 acc 0.6752 P 0.6694 R 0.6752 F1 0.6671 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  75/200 | treino: perda 0.6513 acc 0.7804 P 0.7767 R 0.7803 F1 0.7777 | val: perda 0.9365 acc 0.6771 P 0.6722 R 0.6771 F1 0.6713 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  76/200 | treino: perda 0.6196 acc 0.7891 P 0.7859 R 0.7891 F1 0.7864 | val: perda 0.9529 acc 0.6629 P 0.6589 R 0.6629 F1 0.6578 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  77/200 | treino: perda 0.6338 acc 0.7898 P 0.7855 R 0.7897 F1 0.7867 | val: perda 0.8924 acc 0.7048 P 0.6983 R 0.7048 F1 0.6986 |   0.6s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  78/200 | treino: perda 0.6294 acc 0.7932 P 0.7895 R 0.7932 F1 0.7904 | val: perda 0.9244 acc 0.6886 P 0.6856 R 0.6886 F1 0.6835 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  79/200 | treino: perda 0.6123 acc 0.7889 P 0.7860 R 0.7889 F1 0.7867 | val: perda 0.8790 acc 0.7000 P 0.6964 R 0.7000 F1 0.6953 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  80/200 | treino: perda 0.6245 acc 0.7853 P 0.7819 R 0.7852 F1 0.7828 | val: perda 0.8924 acc 0.7038 P 0.6991 R 0.7038 F1 0.6991 |   0.6s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  81/200 | treino: perda 0.6406 acc 0.7849 P 0.7816 R 0.7848 F1 0.7824 | val: perda 0.9111 acc 0.6914 P 0.6938 R 0.6914 F1 0.6910 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  82/200 | treino: perda 0.5987 acc 0.7991 P 0.7969 R 0.7991 F1 0.7972 | val: perda 0.9182 acc 0.6914 P 0.6853 R 0.6914 F1 0.6869 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  83/200 | treino: perda 0.5987 acc 0.7971 P 0.7937 R 0.7971 F1 0.7949 | val: perda 0.9100 acc 0.6971 P 0.6925 R 0.6971 F1 0.6932 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  84/200 | treino: perda 0.6134 acc 0.7949 P 0.7924 R 0.7948 F1 0.7927 | val: perda 0.9111 acc 0.7067 P 0.7008 R 0.7067 F1 0.7000 |   0.6s  *checkpoint*
+[MLP-B-128_aug_opt_preliminar] época  85/200 | treino: perda 0.5927 acc 0.8030 P 0.7997 R 0.8030 F1 0.8004 | val: perda 0.9472 acc 0.6848 P 0.6803 R 0.6848 F1 0.6783 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  86/200 | treino: perda 0.5930 acc 0.8006 P 0.7980 R 0.8005 F1 0.7985 | val: perda 0.9745 acc 0.6838 P 0.6814 R 0.6838 F1 0.6784 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  87/200 | treino: perda 0.5801 acc 0.8020 P 0.7999 R 0.8020 F1 0.8000 | val: perda 0.9281 acc 0.6886 P 0.6825 R 0.6886 F1 0.6839 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  88/200 | treino: perda 0.5763 acc 0.8061 P 0.8042 R 0.8060 F1 0.8044 | val: perda 0.9454 acc 0.6886 P 0.6852 R 0.6886 F1 0.6820 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  89/200 | treino: perda 0.5997 acc 0.7944 P 0.7916 R 0.7944 F1 0.7920 | val: perda 0.9292 acc 0.6819 P 0.6786 R 0.6819 F1 0.6776 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  90/200 | treino: perda 0.5797 acc 0.8042 P 0.8016 R 0.8042 F1 0.8021 | val: perda 0.9165 acc 0.6867 P 0.6837 R 0.6867 F1 0.6820 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  91/200 | treino: perda 0.5686 acc 0.8106 P 0.8075 R 0.8105 F1 0.8082 | val: perda 0.9492 acc 0.6790 P 0.6767 R 0.6790 F1 0.6741 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  92/200 | treino: perda 0.5773 acc 0.8081 P 0.8051 R 0.8081 F1 0.8054 | val: perda 1.0128 acc 0.6600 P 0.6626 R 0.6600 F1 0.6562 |   0.7s
+[MLP-B-128_aug_opt_preliminar] época  93/200 | treino: perda 0.5621 acc 0.8157 P 0.8133 R 0.8156 F1 0.8139 | val: perda 0.9221 acc 0.6857 P 0.6824 R 0.6857 F1 0.6805 |   0.6s
+[MLP-B-128_aug_opt_preliminar] época  94/200 | treino: perda 0.5528 acc 0.8177 P 0.8153 R 0.8177 F1 0.8157 | val: perda 0.9230 acc 0.6876 P 0.6844 R 0.6876 F1 0.6834 |   0.7s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_aug_opt_preliminar: checkpoint na época 84 de 94 | 25,341,386 parâmetros | 63.6s no total (0.68s/época)
+  treino    : perda 0.6134 | acurácia 0.7949 | precisão macro 0.7924 | recall macro 0.7948 | F1 macro 0.7927
+  validação : perda 0.9111 | acurácia 0.7067 | precisão macro 0.7008 | recall macro 0.7067 | F1 macro 0.7000
+  diferença treino − validação (F1 macro): +0.0927
+
+Relatório por classe (validação, checkpoint da época 84):
+                   precision    recall  f1-score   support
+
+          airport     0.5765    0.4667    0.5158       105
+            beach     0.8529    0.8286    0.8406       105
+circular_farmland     0.7041    0.6571    0.6798       105
+dense_residential     0.7018    0.7619    0.7306       105
+           desert     0.8796    0.9048    0.8920       105
+           forest     0.7183    0.9714    0.8259       105
+           harbor     0.7248    0.7524    0.7383       105
+         mountain     0.5823    0.4381    0.5000       105
+            river     0.6168    0.6286    0.6226       105
+     storage_tank     0.6509    0.6571    0.6540       105
+
+         accuracy                         0.7067      1050
+        macro avg     0.7008    0.7067    0.7000      1050
+     weighted avg     0.7008    0.7067    0.7000      1050
+
+##### MLP-B-128_aug2_opt (aumento forte) | lr 2.02e-04  weight_decay 2.01e-06  dropout 0.2  lote 128
+[MLP-B-128_aug2_opt_preliminar] época   1/200 | treino: perda 2.0647 acc 0.2662 P 0.2337 R 0.2661 F1 0.2264 | val: perda 1.8429 acc 0.3819 P 0.3452 R 0.3819 F1 0.3083 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   2/200 | treino: perda 1.8629 acc 0.3568 P 0.3235 R 0.3568 F1 0.3186 | val: perda 1.6813 acc 0.5010 P 0.4844 R 0.5010 F1 0.4669 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   3/200 | treino: perda 1.7508 acc 0.4074 P 0.3778 R 0.4074 F1 0.3773 | val: perda 1.5803 acc 0.5057 P 0.4970 R 0.5057 F1 0.4731 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   4/200 | treino: perda 1.6613 acc 0.4417 P 0.4200 R 0.4417 F1 0.4136 | val: perda 1.4994 acc 0.5238 P 0.5234 R 0.5238 F1 0.4894 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   5/200 | treino: perda 1.6087 acc 0.4660 P 0.4446 R 0.4660 F1 0.4405 | val: perda 1.4406 acc 0.5381 P 0.5188 R 0.5381 F1 0.5077 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   6/200 | treino: perda 1.5730 acc 0.4660 P 0.4402 R 0.4660 F1 0.4444 | val: perda 1.4229 acc 0.5438 P 0.5321 R 0.5438 F1 0.5152 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   7/200 | treino: perda 1.5236 acc 0.4881 P 0.4650 R 0.4880 F1 0.4691 | val: perda 1.3742 acc 0.5524 P 0.5379 R 0.5524 F1 0.5245 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   8/200 | treino: perda 1.4988 acc 0.4840 P 0.4574 R 0.4839 F1 0.4618 | val: perda 1.3467 acc 0.5714 P 0.5532 R 0.5714 F1 0.5423 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época   9/200 | treino: perda 1.4816 acc 0.4915 P 0.4716 R 0.4915 F1 0.4745 | val: perda 1.2990 acc 0.5743 P 0.5572 R 0.5743 F1 0.5471 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  10/200 | treino: perda 1.4834 acc 0.4883 P 0.4673 R 0.4882 F1 0.4720 | val: perda 1.2701 acc 0.5790 P 0.5514 R 0.5790 F1 0.5548 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  11/200 | treino: perda 1.4347 acc 0.5079 P 0.4858 R 0.5078 F1 0.4898 | val: perda 1.2625 acc 0.5781 P 0.5568 R 0.5781 F1 0.5560 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  12/200 | treino: perda 1.4344 acc 0.5093 P 0.4905 R 0.5092 F1 0.4948 | val: perda 1.2461 acc 0.5895 P 0.5588 R 0.5895 F1 0.5600 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  13/200 | treino: perda 1.4140 acc 0.5130 P 0.4904 R 0.5129 F1 0.4950 | val: perda 1.2465 acc 0.5867 P 0.5674 R 0.5867 F1 0.5647 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  14/200 | treino: perda 1.3900 acc 0.5205 P 0.4980 R 0.5205 F1 0.5035 | val: perda 1.2463 acc 0.5724 P 0.5591 R 0.5724 F1 0.5526 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  15/200 | treino: perda 1.3914 acc 0.5128 P 0.4948 R 0.5127 F1 0.5004 | val: perda 1.2084 acc 0.5981 P 0.5729 R 0.5981 F1 0.5753 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  16/200 | treino: perda 1.3713 acc 0.5234 P 0.5007 R 0.5233 F1 0.5056 | val: perda 1.2044 acc 0.5981 P 0.5808 R 0.5981 F1 0.5790 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  17/200 | treino: perda 1.3634 acc 0.5207 P 0.5030 R 0.5207 F1 0.5083 | val: perda 1.1852 acc 0.6029 P 0.5837 R 0.6029 F1 0.5858 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  18/200 | treino: perda 1.3571 acc 0.5240 P 0.5015 R 0.5239 F1 0.5078 | val: perda 1.2008 acc 0.5990 P 0.5853 R 0.5990 F1 0.5826 |   0.9s
+[MLP-B-128_aug2_opt_preliminar] época  19/200 | treino: perda 1.3503 acc 0.5309 P 0.5122 R 0.5309 F1 0.5172 | val: perda 1.1724 acc 0.6019 P 0.5836 R 0.6019 F1 0.5861 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  20/200 | treino: perda 1.3497 acc 0.5307 P 0.5120 R 0.5307 F1 0.5178 | val: perda 1.1486 acc 0.6019 P 0.5775 R 0.6019 F1 0.5821 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  21/200 | treino: perda 1.3207 acc 0.5417 P 0.5236 R 0.5417 F1 0.5293 | val: perda 1.1478 acc 0.6095 P 0.5890 R 0.6095 F1 0.5910 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  22/200 | treino: perda 1.3265 acc 0.5393 P 0.5218 R 0.5392 F1 0.5269 | val: perda 1.1557 acc 0.6076 P 0.5894 R 0.6076 F1 0.5904 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  23/200 | treino: perda 1.3236 acc 0.5326 P 0.5147 R 0.5325 F1 0.5201 | val: perda 1.1457 acc 0.6057 P 0.5837 R 0.6057 F1 0.5881 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  24/200 | treino: perda 1.3230 acc 0.5319 P 0.5103 R 0.5319 F1 0.5163 | val: perda 1.1401 acc 0.6114 P 0.5954 R 0.6114 F1 0.5926 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  25/200 | treino: perda 1.2894 acc 0.5503 P 0.5336 R 0.5503 F1 0.5376 | val: perda 1.1324 acc 0.6181 P 0.6037 R 0.6181 F1 0.6039 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  26/200 | treino: perda 1.3058 acc 0.5452 P 0.5281 R 0.5452 F1 0.5335 | val: perda 1.1383 acc 0.6000 P 0.5808 R 0.6000 F1 0.5812 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  27/200 | treino: perda 1.3137 acc 0.5419 P 0.5248 R 0.5419 F1 0.5295 | val: perda 1.1102 acc 0.6257 P 0.6078 R 0.6257 F1 0.6087 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  28/200 | treino: perda 1.2981 acc 0.5489 P 0.5291 R 0.5488 F1 0.5346 | val: perda 1.1068 acc 0.6229 P 0.6105 R 0.6229 F1 0.6092 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  29/200 | treino: perda 1.2864 acc 0.5507 P 0.5340 R 0.5507 F1 0.5388 | val: perda 1.1294 acc 0.6067 P 0.5932 R 0.6067 F1 0.5882 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  30/200 | treino: perda 1.2736 acc 0.5513 P 0.5332 R 0.5513 F1 0.5378 | val: perda 1.0890 acc 0.6229 P 0.6031 R 0.6229 F1 0.6036 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  31/200 | treino: perda 1.2801 acc 0.5505 P 0.5332 R 0.5505 F1 0.5383 | val: perda 1.0734 acc 0.6333 P 0.6078 R 0.6333 F1 0.6124 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  32/200 | treino: perda 1.2598 acc 0.5591 P 0.5435 R 0.5590 F1 0.5484 | val: perda 1.0796 acc 0.6352 P 0.6206 R 0.6352 F1 0.6190 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  33/200 | treino: perda 1.2549 acc 0.5638 P 0.5494 R 0.5637 F1 0.5525 | val: perda 1.0801 acc 0.6362 P 0.6230 R 0.6362 F1 0.6162 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  34/200 | treino: perda 1.2495 acc 0.5624 P 0.5453 R 0.5623 F1 0.5485 | val: perda 1.0620 acc 0.6324 P 0.6162 R 0.6324 F1 0.6137 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  35/200 | treino: perda 1.2632 acc 0.5595 P 0.5433 R 0.5594 F1 0.5480 | val: perda 1.0900 acc 0.6362 P 0.6220 R 0.6362 F1 0.6219 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  36/200 | treino: perda 1.2433 acc 0.5666 P 0.5515 R 0.5666 F1 0.5557 | val: perda 1.0802 acc 0.6200 P 0.5987 R 0.6200 F1 0.6020 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  37/200 | treino: perda 1.2324 acc 0.5620 P 0.5462 R 0.5619 F1 0.5506 | val: perda 1.0597 acc 0.6371 P 0.6162 R 0.6371 F1 0.6168 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  38/200 | treino: perda 1.2192 acc 0.5726 P 0.5552 R 0.5725 F1 0.5588 | val: perda 1.0327 acc 0.6552 P 0.6397 R 0.6552 F1 0.6404 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  39/200 | treino: perda 1.2253 acc 0.5720 P 0.5574 R 0.5719 F1 0.5615 | val: perda 1.0366 acc 0.6419 P 0.6199 R 0.6419 F1 0.6245 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  40/200 | treino: perda 1.2231 acc 0.5695 P 0.5540 R 0.5695 F1 0.5575 | val: perda 1.0228 acc 0.6524 P 0.6276 R 0.6524 F1 0.6312 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  41/200 | treino: perda 1.2225 acc 0.5752 P 0.5590 R 0.5752 F1 0.5634 | val: perda 1.0152 acc 0.6524 P 0.6334 R 0.6524 F1 0.6375 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  42/200 | treino: perda 1.2063 acc 0.5785 P 0.5625 R 0.5784 F1 0.5659 | val: perda 1.0206 acc 0.6400 P 0.6246 R 0.6400 F1 0.6254 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  43/200 | treino: perda 1.2142 acc 0.5711 P 0.5577 R 0.5711 F1 0.5611 | val: perda 1.0193 acc 0.6486 P 0.6281 R 0.6486 F1 0.6286 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  44/200 | treino: perda 1.2088 acc 0.5748 P 0.5601 R 0.5748 F1 0.5635 | val: perda 1.0075 acc 0.6438 P 0.6208 R 0.6438 F1 0.6249 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  45/200 | treino: perda 1.1954 acc 0.5793 P 0.5659 R 0.5793 F1 0.5690 | val: perda 0.9966 acc 0.6648 P 0.6448 R 0.6648 F1 0.6482 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  46/200 | treino: perda 1.2036 acc 0.5758 P 0.5594 R 0.5758 F1 0.5638 | val: perda 1.0082 acc 0.6514 P 0.6344 R 0.6514 F1 0.6342 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  47/200 | treino: perda 1.1906 acc 0.5787 P 0.5629 R 0.5786 F1 0.5675 | val: perda 0.9970 acc 0.6667 P 0.6463 R 0.6667 F1 0.6491 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  48/200 | treino: perda 1.1948 acc 0.5838 P 0.5690 R 0.5837 F1 0.5725 | val: perda 0.9811 acc 0.6667 P 0.6445 R 0.6667 F1 0.6482 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  49/200 | treino: perda 1.1894 acc 0.5824 P 0.5664 R 0.5823 F1 0.5691 | val: perda 0.9843 acc 0.6638 P 0.6447 R 0.6638 F1 0.6473 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  50/200 | treino: perda 1.1640 acc 0.5967 P 0.5820 R 0.5966 F1 0.5852 | val: perda 0.9914 acc 0.6448 P 0.6289 R 0.6448 F1 0.6302 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  51/200 | treino: perda 1.1889 acc 0.5887 P 0.5746 R 0.5886 F1 0.5790 | val: perda 0.9896 acc 0.6619 P 0.6492 R 0.6619 F1 0.6452 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  52/200 | treino: perda 1.1572 acc 0.5901 P 0.5760 R 0.5901 F1 0.5788 | val: perda 0.9584 acc 0.6733 P 0.6545 R 0.6733 F1 0.6575 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  53/200 | treino: perda 1.1625 acc 0.5926 P 0.5792 R 0.5925 F1 0.5833 | val: perda 0.9646 acc 0.6571 P 0.6390 R 0.6571 F1 0.6425 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  54/200 | treino: perda 1.1749 acc 0.5893 P 0.5781 R 0.5893 F1 0.5812 | val: perda 0.9638 acc 0.6543 P 0.6309 R 0.6543 F1 0.6339 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  55/200 | treino: perda 1.1489 acc 0.5971 P 0.5847 R 0.5970 F1 0.5865 | val: perda 0.9366 acc 0.6724 P 0.6537 R 0.6724 F1 0.6568 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  56/200 | treino: perda 1.1549 acc 0.5877 P 0.5748 R 0.5876 F1 0.5785 | val: perda 0.9620 acc 0.6629 P 0.6478 R 0.6629 F1 0.6477 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  57/200 | treino: perda 1.1360 acc 0.6032 P 0.5905 R 0.6031 F1 0.5940 | val: perda 0.9466 acc 0.6733 P 0.6587 R 0.6733 F1 0.6588 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  58/200 | treino: perda 1.1343 acc 0.5969 P 0.5847 R 0.5968 F1 0.5873 | val: perda 0.9803 acc 0.6581 P 0.6405 R 0.6581 F1 0.6391 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  59/200 | treino: perda 1.1298 acc 0.6054 P 0.5927 R 0.6054 F1 0.5947 | val: perda 0.9363 acc 0.6752 P 0.6578 R 0.6752 F1 0.6610 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  60/200 | treino: perda 1.1395 acc 0.5987 P 0.5858 R 0.5986 F1 0.5883 | val: perda 0.9415 acc 0.6705 P 0.6556 R 0.6705 F1 0.6567 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  61/200 | treino: perda 1.1287 acc 0.6034 P 0.5923 R 0.6033 F1 0.5953 | val: perda 0.9761 acc 0.6648 P 0.6526 R 0.6648 F1 0.6508 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  62/200 | treino: perda 1.1467 acc 0.5889 P 0.5767 R 0.5889 F1 0.5801 | val: perda 0.9427 acc 0.6676 P 0.6609 R 0.6676 F1 0.6567 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  63/200 | treino: perda 1.1243 acc 0.6060 P 0.5920 R 0.6060 F1 0.5962 | val: perda 0.9338 acc 0.6724 P 0.6573 R 0.6724 F1 0.6584 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  64/200 | treino: perda 1.1062 acc 0.6052 P 0.5905 R 0.6052 F1 0.5947 | val: perda 0.9223 acc 0.6781 P 0.6608 R 0.6781 F1 0.6629 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  65/200 | treino: perda 1.1336 acc 0.6018 P 0.5889 R 0.6017 F1 0.5926 | val: perda 0.9134 acc 0.6790 P 0.6649 R 0.6790 F1 0.6660 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  66/200 | treino: perda 1.1338 acc 0.5940 P 0.5785 R 0.5939 F1 0.5827 | val: perda 0.9277 acc 0.6752 P 0.6591 R 0.6752 F1 0.6611 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  67/200 | treino: perda 1.1163 acc 0.6030 P 0.5920 R 0.6029 F1 0.5951 | val: perda 0.9199 acc 0.6686 P 0.6547 R 0.6686 F1 0.6554 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  68/200 | treino: perda 1.1222 acc 0.6069 P 0.5946 R 0.6068 F1 0.5976 | val: perda 0.9229 acc 0.6695 P 0.6531 R 0.6695 F1 0.6552 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  69/200 | treino: perda 1.0841 acc 0.6181 P 0.6042 R 0.6180 F1 0.6085 | val: perda 0.9261 acc 0.6705 P 0.6535 R 0.6705 F1 0.6540 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  70/200 | treino: perda 1.1204 acc 0.6026 P 0.5878 R 0.6025 F1 0.5915 | val: perda 0.9285 acc 0.6743 P 0.6653 R 0.6743 F1 0.6620 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  71/200 | treino: perda 1.0899 acc 0.6150 P 0.6031 R 0.6150 F1 0.6050 | val: perda 0.9144 acc 0.6781 P 0.6633 R 0.6781 F1 0.6633 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  72/200 | treino: perda 1.0932 acc 0.6169 P 0.6048 R 0.6168 F1 0.6077 | val: perda 0.9142 acc 0.6771 P 0.6640 R 0.6771 F1 0.6618 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  73/200 | treino: perda 1.1075 acc 0.6062 P 0.5946 R 0.6062 F1 0.5973 | val: perda 0.9099 acc 0.6781 P 0.6577 R 0.6781 F1 0.6603 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  74/200 | treino: perda 1.0932 acc 0.6103 P 0.5989 R 0.6103 F1 0.6021 | val: perda 0.9072 acc 0.6790 P 0.6683 R 0.6790 F1 0.6668 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  75/200 | treino: perda 1.0956 acc 0.6126 P 0.6013 R 0.6125 F1 0.6047 | val: perda 0.9061 acc 0.6695 P 0.6553 R 0.6695 F1 0.6566 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  76/200 | treino: perda 1.0955 acc 0.6124 P 0.6004 R 0.6123 F1 0.6031 | val: perda 0.9147 acc 0.6686 P 0.6544 R 0.6686 F1 0.6544 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  77/200 | treino: perda 1.0815 acc 0.6183 P 0.6069 R 0.6182 F1 0.6096 | val: perda 0.8923 acc 0.6838 P 0.6671 R 0.6838 F1 0.6698 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  78/200 | treino: perda 1.0941 acc 0.6103 P 0.5989 R 0.6103 F1 0.6010 | val: perda 0.8917 acc 0.6857 P 0.6722 R 0.6857 F1 0.6729 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  79/200 | treino: perda 1.0762 acc 0.6230 P 0.6132 R 0.6229 F1 0.6150 | val: perda 0.8965 acc 0.6829 P 0.6727 R 0.6829 F1 0.6705 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  80/200 | treino: perda 1.0572 acc 0.6273 P 0.6176 R 0.6272 F1 0.6197 | val: perda 0.8975 acc 0.6829 P 0.6702 R 0.6829 F1 0.6670 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  81/200 | treino: perda 1.0862 acc 0.6162 P 0.6045 R 0.6162 F1 0.6078 | val: perda 0.9070 acc 0.6800 P 0.6686 R 0.6800 F1 0.6690 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  82/200 | treino: perda 1.0871 acc 0.6150 P 0.6033 R 0.6150 F1 0.6062 | val: perda 0.9070 acc 0.6790 P 0.6627 R 0.6790 F1 0.6665 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  83/200 | treino: perda 1.0704 acc 0.6201 P 0.6082 R 0.6201 F1 0.6114 | val: perda 0.8909 acc 0.6829 P 0.6680 R 0.6829 F1 0.6695 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  84/200 | treino: perda 1.0665 acc 0.6185 P 0.6077 R 0.6184 F1 0.6110 | val: perda 0.8781 acc 0.6914 P 0.6806 R 0.6914 F1 0.6812 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  85/200 | treino: perda 1.0630 acc 0.6197 P 0.6096 R 0.6197 F1 0.6121 | val: perda 0.8956 acc 0.6838 P 0.6740 R 0.6838 F1 0.6718 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  86/200 | treino: perda 1.0779 acc 0.6146 P 0.6015 R 0.6146 F1 0.6049 | val: perda 0.8964 acc 0.6876 P 0.6794 R 0.6876 F1 0.6770 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  87/200 | treino: perda 1.0733 acc 0.6232 P 0.6122 R 0.6231 F1 0.6150 | val: perda 0.8830 acc 0.7000 P 0.6896 R 0.7000 F1 0.6891 |   0.9s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  88/200 | treino: perda 1.0517 acc 0.6222 P 0.6095 R 0.6221 F1 0.6134 | val: perda 0.8760 acc 0.6895 P 0.6823 R 0.6895 F1 0.6797 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  89/200 | treino: perda 1.0720 acc 0.6228 P 0.6140 R 0.6227 F1 0.6160 | val: perda 0.8735 acc 0.7000 P 0.6857 R 0.7000 F1 0.6852 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  90/200 | treino: perda 1.0681 acc 0.6226 P 0.6110 R 0.6225 F1 0.6146 | val: perda 0.8827 acc 0.6933 P 0.6823 R 0.6933 F1 0.6785 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  91/200 | treino: perda 1.0574 acc 0.6218 P 0.6098 R 0.6217 F1 0.6127 | val: perda 0.8601 acc 0.7048 P 0.6941 R 0.7048 F1 0.6938 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  92/200 | treino: perda 1.0550 acc 0.6162 P 0.6036 R 0.6162 F1 0.6059 | val: perda 0.8708 acc 0.7000 P 0.6872 R 0.7000 F1 0.6857 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  93/200 | treino: perda 1.0599 acc 0.6218 P 0.6121 R 0.6217 F1 0.6148 | val: perda 0.8801 acc 0.6876 P 0.6715 R 0.6876 F1 0.6718 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  94/200 | treino: perda 1.0325 acc 0.6354 P 0.6223 R 0.6354 F1 0.6258 | val: perda 0.8780 acc 0.7029 P 0.6909 R 0.7029 F1 0.6894 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  95/200 | treino: perda 1.0511 acc 0.6283 P 0.6183 R 0.6283 F1 0.6214 | val: perda 0.8569 acc 0.7076 P 0.6974 R 0.7076 F1 0.6959 |   0.8s  *checkpoint*
+[MLP-B-128_aug2_opt_preliminar] época  96/200 | treino: perda 1.0480 acc 0.6218 P 0.6129 R 0.6217 F1 0.6155 | val: perda 0.8564 acc 0.6990 P 0.6866 R 0.6990 F1 0.6846 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  97/200 | treino: perda 1.0568 acc 0.6267 P 0.6161 R 0.6266 F1 0.6184 | val: perda 0.8729 acc 0.6886 P 0.6752 R 0.6886 F1 0.6721 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  98/200 | treino: perda 1.0427 acc 0.6348 P 0.6237 R 0.6348 F1 0.6265 | val: perda 0.8787 acc 0.7029 P 0.6927 R 0.7029 F1 0.6907 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época  99/200 | treino: perda 1.0430 acc 0.6297 P 0.6201 R 0.6297 F1 0.6230 | val: perda 0.8565 acc 0.7029 P 0.6921 R 0.7029 F1 0.6904 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 100/200 | treino: perda 1.0493 acc 0.6299 P 0.6207 R 0.6299 F1 0.6232 | val: perda 0.8513 acc 0.7029 P 0.6901 R 0.7029 F1 0.6913 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 101/200 | treino: perda 1.0242 acc 0.6461 P 0.6358 R 0.6460 F1 0.6385 | val: perda 0.8610 acc 0.6952 P 0.6841 R 0.6952 F1 0.6832 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 102/200 | treino: perda 1.0290 acc 0.6356 P 0.6250 R 0.6356 F1 0.6277 | val: perda 0.8467 acc 0.6990 P 0.6860 R 0.6990 F1 0.6833 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 103/200 | treino: perda 1.0360 acc 0.6393 P 0.6311 R 0.6393 F1 0.6331 | val: perda 0.8388 acc 0.7029 P 0.6906 R 0.7029 F1 0.6898 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 104/200 | treino: perda 1.0126 acc 0.6393 P 0.6271 R 0.6393 F1 0.6304 | val: perda 0.8563 acc 0.6952 P 0.6867 R 0.6952 F1 0.6827 |   0.8s
+[MLP-B-128_aug2_opt_preliminar] época 105/200 | treino: perda 1.0388 acc 0.6279 P 0.6186 R 0.6278 F1 0.6212 | val: perda 0.8434 acc 0.7029 P 0.6928 R 0.7029 F1 0.6911 |   0.8s
+Parada antecipada: 10 épocas sem melhora no F1 macro de validação.
+
+Resumo MLP-B-128_aug2_opt_preliminar: checkpoint na época 95 de 105 | 25,341,386 parâmetros | 83.8s no total (0.80s/época)
+  treino    : perda 1.0511 | acurácia 0.6283 | precisão macro 0.6183 | recall macro 0.6283 | F1 macro 0.6214
+  validação : perda 0.8569 | acurácia 0.7076 | precisão macro 0.6974 | recall macro 0.7076 | F1 macro 0.6959
+  diferença treino − validação (F1 macro): -0.0745
+
+Relatório por classe (validação, checkpoint da época 95):
+                   precision    recall  f1-score   support
+
+          airport     0.4471    0.3619    0.4000       105
+            beach     0.7899    0.8952    0.8393       105
+circular_farmland     0.6847    0.7238    0.7037       105
+dense_residential     0.7700    0.7333    0.7512       105
+           desert     0.9029    0.8857    0.8942       105
+           forest     0.7153    0.9810    0.8273       105
+           harbor     0.7812    0.7143    0.7463       105
+         mountain     0.5574    0.3238    0.4096       105
+            river     0.6696    0.7143    0.6912       105
+     storage_tank     0.6555    0.7429    0.6964       105
+
+         accuracy                         0.7076      1050
+        macro avg     0.6974    0.7076    0.6959      1050
+     weighted avg     0.6974    0.7076    0.6959      1050
+
