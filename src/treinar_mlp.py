@@ -8,7 +8,7 @@ Saídas:
     modelos/<nome>.pt                                  melhor checkpoint (F1 macro val)
     resultados/historicos/<nome>_historico.csv         métricas por época
     resultados/experimentos.csv                        uma linha por execução
-    resultados/figuras/<nome>_curvas.png               curvas de perda/acurácia/F1
+    resultados/figuras/mlp/<nome>_curvas.png               curvas de perda/acurácia/F1
     resultados/configs/<nome>.json                     configuração + normalização + versões
 """
 
@@ -73,7 +73,7 @@ def main() -> None:
     dir_res = PROJECT_ROOT / "resultados"
     saida = treinar(modelo, (X_tr, y_tr), (X_va, y_va), cfg, PROJECT_ROOT / "modelos", dir_res)
 
-    fig = plotar_curvas(saida["historico"], nome_execucao, dir_res / "figuras" / f"{nome_execucao}_curvas.png")
+    fig = plotar_curvas(saida["historico"], nome_execucao, dir_res / "figuras" / "mlp" / f"{nome_execucao}_curvas.png")
 
     (dir_res / "configs").mkdir(parents=True, exist_ok=True)
     with open(dir_res / "configs" / f"{nome_execucao}.json", "w", encoding="utf-8") as f:

@@ -1,14 +1,5 @@
 {
   "arquitetura": "MLP-B-128",
-  "camadas": {
-    "ocultas": [
-      512,
-      256,
-      128,
-      64
-    ],
-    "dropout": 0.5
-  },
   "entrada": "RGB 128x128 achatado (49152 valores)",
   "classes": [
     "airport",
@@ -22,71 +13,42 @@
     "river",
     "storage_tank"
   ],
-  "pre_processamento": "RGB, resize bilinear a partir do original, /255, padronização por canal (stats do treino)",
   "normalizacao": {
     "media": [
-      0.40089884400367737,
-      0.40729090571403503,
-      0.3541330397129059
+      0.40089885135348313,
+      0.4072908975497763,
+      0.3541330325821484
     ],
     "desvio": [
-      0.2234679013490677,
-      0.18603582680225372,
-      0.17244668304920197
+      0.2234678988605064,
+      0.18603583222848943,
+      0.17244668650637573
     ]
   },
   "aumento_de_dados": "nenhum",
   "perda": "CrossEntropyLoss",
-  "config_treino": {
-    "nome_execucao": "MLP-B-128_preliminar",
-    "otimizador": "adam",
-    "taxa_aprendizagem": 0.0001,
-    "weight_decay": 0.0001,
-    "tamanho_lote": 64,
-    "max_epocas": 60,
-    "paciencia": 10,
-    "semente": 42,
-    "tipo_execucao": "preliminar",
-    "extras": {
-      "arquitetura": "MLP-B-128",
-      "ocultas": [
-        512,
-        256,
-        128,
-        64
-      ],
-      "dropout": 0.5
-    }
-  },
   "resultado": {
     "nome_execucao": "MLP-B-128_preliminar",
     "tipo_execucao": "preliminar",
     "parametros": 25341386,
     "tamanho_modelo_mb": 96.69,
-    "epocas_executadas": 52,
-    "epoca_checkpoint": 42,
-    "f1_macro_validacao": 0.5249,
-    "acuracia_validacao": 0.5352,
-    "perda_validacao": 1.4161,
-    "tempo_total_s": 470.3,
-    "tempo_medio_epoca_s": 9.04,
-    "hardware": "CPU Intel64 Family 6 Model 197 Stepping 2, GenuineIntel (14 núcleos lógicos)",
+    "epocas_executadas": 51,
+    "epoca_checkpoint": 41,
+    "f1_macro_validacao": 0.5353,
+    "acuracia_validacao": 0.5419,
+    "perda_validacao": 1.3718,
+    "tempo_total_s": 99.5,
+    "tempo_medio_epoca_s": 1.95,
+    "hardware": "Apple MPS",
     "otimizador": "adam",
     "taxa_aprendizagem": 0.0001,
     "weight_decay": 0.0001,
     "tamanho_lote": 64,
-    "max_epocas": 60,
+    "max_epocas": 200,
     "paciencia": 10,
     "criterio_parada": "F1 macro de validação",
     "semente": 42,
-    "torch": "2.15.0+cpu",
-    "extras": "{\"arquitetura\": \"MLP-B-128\", \"ocultas\": [512, 256, 128, 64], \"dropout\": 0.5}"
-  },
-  "versoes": {
-    "python": "3.12.14",
-    "torch": "2.15.0+cpu",
-    "numpy": "2.5.4",
-    "scikit-learn": "1.9.1",
-    "pillow": "13.0.0"
+    "torch": "2.15.0",
+    "extras": "{\"arquitetura\": \"MLP-B-128\", \"classe\": \"MLPB\", \"aumento_de_dados\": \"nenhum\"}"
   }
 }

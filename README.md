@@ -32,6 +32,8 @@ Investigação de como a arquitetura (MLP vs. CNN) e a resolução das imagens (
 │   ├── experimentos.csv
 │   ├── previsoes_teste.csv
 │   └── figuras/          # Gráficos, curvas e matrizes de confusão
+│       ├── mlp/          # Figuras dos treinos de MLP
+│       └── cnn/          # Figuras dos treinos de CNN
 └── docs/                 # Documentos do projeto (acompanhamento, artigo, pitch)
 ```
 
@@ -66,6 +68,40 @@ python src/setup_dataset.py
 ```
 
 > **Atenção:** o script `src/setup_dataset.py` exclui permanentemente as subpastas diretas de `NWPU-RESISC45/` que não fazem parte das 10 classes listadas acima (procurando em `dados/raw/NWPU-RESISC45` ou no diretório atual).
+
+## Duplicatas e partições
+
+**Inventário** (`python src/check_integrity.py` → `resultados/inventario_dados.csv`): 7.000 imagens, todas legíveis, RGB (3 canais) e `256 × 256`. Foram encontrados **6 pares de duplicatas exatas** (mesmo hash MD5), todos na classe `airport`:
+
+| Par | Partição |
+|---|---|
+| `airport_050` / `airport_420` | treino |
+| `airport_064` / `airport_527` | treino |
+| `airport_118` / `airport_315` | treino |
+| `airport_361` / `airport_509` | treino |
+| `airport_243` / `airport_397` | teste |
+| `airport_289` / `airport_635` | validação |
+
+**Tratamento:** nenhuma imagem foi excluída e os originais não foram alterados. As duplicatas são mantidas e **agrupadas na mesma partição**.
+
+**Regra de partição** (`python src/create_splits.py` → `dados/splits/particoes.csv`):
+
+1. Carregar o inventário e ordenar os caminhos antes do sorteio.
+2. Agrupar as imagens por hash MD5, para que cópias idênticas fiquem juntas.
+3. Dividir os **hashes** em `70% / 15% / 15%` com `train_test_split`, estratificado por classe e com semente `42`.
+4. Atribuir a cada imagem a partição do seu hash.
+
+Como a divisão é por hash, as contagens por classe não são exatamente `490 / 105 / 105`. Contagens finais (7.000 imagens):
+
+| Partição | Imagens |
+|---|---|
+| treino | 4.899 |
+| validação | 1.050 |
+| teste | 1.051 |
+
+Todas as classes têm `490 / 105 / 105`, exceto `airport`, que tem `489 / 105 / 106`. Nenhum par de duplicatas cruza partições, portanto não há vazamento por cópia exata. Esta mesma divisão é reutilizada em todos os experimentos e no bônus.
+
+**Limitação:** o MD5 detecta apenas cópias idênticas byte a byte. Versões da mesma imagem recortadas, rotacionadas, redimensionadas ou recomprimidas teriam hashes diferentes e não são detectadas.
 
 ## Ordem de execução
 

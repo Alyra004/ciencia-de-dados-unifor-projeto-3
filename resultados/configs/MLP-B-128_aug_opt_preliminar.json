@@ -1,0 +1,54 @@
+{
+  "arquitetura": "MLP-B-128_aug_opt",
+  "entrada": "RGB 128x128 achatado (49152 valores)",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "normalizacao": {
+    "media": [
+      0.40089885135348313,
+      0.4072908975497763,
+      0.3541330325821484
+    ],
+    "desvio": [
+      0.2234678988605064,
+      0.18603583222848943,
+      0.17244668650637573
+    ]
+  },
+  "aumento_de_dados": "espelhamentos e rotações de 90° (só no treino)",
+  "perda": "CrossEntropyLoss",
+  "resultado": {
+    "nome_execucao": "MLP-B-128_aug_opt_preliminar",
+    "tipo_execucao": "preliminar_optuna",
+    "parametros": 25341386,
+    "tamanho_modelo_mb": 96.69,
+    "epocas_executadas": 66,
+    "epoca_checkpoint": 56,
+    "f1_macro_validacao": 0.6734,
+    "acuracia_validacao": 0.68,
+    "perda_validacao": 0.9283,
+    "tempo_total_s": 113.6,
+    "tempo_medio_epoca_s": 1.72,
+    "hardware": "Apple MPS",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.00020229509980917732,
+    "weight_decay": 2.0050219515319434e-06,
+    "tamanho_lote": 128,
+    "max_epocas": 200,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.15.0",
+    "extras": "{\"arquitetura\": \"MLP-B-128_aug_opt\", \"classe\": \"MLPB_HP\", \"aumento_de_dados\": \"espelhamentos e rotações de 90° (só no treino)\", \"busca\": \"optuna\", \"dropout\": 0.2, \"estudo\": \"MLP-B-128\"}"
+  }
+}

@@ -33,3 +33,9 @@ Thumbs.db
 
 # Cache de imagens pré-processadas (gerado por src/dados_imagens.py)
 dados/cache/
+
+# Pastas do YOLO classify: links simbólicos para as imagens (gerado em notebooks/03_CNNs.ipynb)
+dados/yolo/
+
+# Banco do Optuna (a busca pode ser retomada; os CSV e o JSON da pasta ficam versionados)
+resultados/optuna/*.db

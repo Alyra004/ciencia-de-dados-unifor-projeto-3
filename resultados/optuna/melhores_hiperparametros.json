@@ -1,0 +1,16 @@
+{
+  "MLP-A-128": {
+    "lr": 0.0011536162338241388,
+    "weight_decay": 7.068974950624607e-06,
+    "dropout": 0.3,
+    "lote": 128,
+    "melhor_f1_macro_validacao": 0.6751480889689822
+  },
+  "MLP-B-128": {
+    "lr": 0.00020229509980917732,
+    "weight_decay": 2.0050219515319434e-06,
+    "dropout": 0.2,
+    "lote": 128,
+    "melhor_f1_macro_validacao": 0.6733902444199649
+  }
+}

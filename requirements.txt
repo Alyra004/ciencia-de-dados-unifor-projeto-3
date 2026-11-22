@@ -9,5 +9,8 @@ matplotlib>=3.8.0
 seaborn>=0.13.0
 jupyter>=1.0.0
 
-# Opcional (Bônus YOLO classify)
-# ultralytics>=8.0.0
+# Bônus YOLO classify (testado com 8.4.216; YOLO26 exige versão recente)
+ultralytics>=8.4.0
+
+# Busca de hiperparâmetros das MLPs (notebooks/02_mlp_preliminar.ipynb, parte 2)
+optuna>=3.6.0
