@@ -23,7 +23,7 @@ from graficos_cnn import CLASSES, FONTE, desenhar_cm, estilo, fmt, rodape  # noq
 RAIZ = Path(__file__).resolve().parent.parent
 YOLO = RAIZ / "resultados" / "yolo"
 SAIDA = RAIZ / "resultados" / "figuras" / "yolo"
-CNN_REF = "VGG16SE-256_opt_preliminar"      # CNN de maior F1 macro de validação
+CNN_REF = "VGG16SE-256_aug2_opt_preliminar"  # CNN de maior F1 macro de validação (96 treinos)
 
 
 def main():
@@ -71,7 +71,7 @@ def main():
     f_cnn = pd.read_csv(RAIZ / "resultados" / "metricas_por_classe" / f"{CNN_REF}.csv", index_col=0).loc[list(CLASSES), "f1-score"]
     x, larg = np.arange(len(CLASSES)), 0.38
     fig, ax = plt.subplots(figsize=(12, 4.8))
-    ax.bar(x - larg / 2, f_cnn.values, larg, color="#2a78d6", label=f"{CNN_REF.split('_')[0]} (do zero)")
+    ax.bar(x - larg / 2, f_cnn.values, larg, color="#2a78d6", label=f"{CNN_REF.split('_')[0]} (aumento forte + Optuna, do zero)")
     ax.bar(x + larg / 2, f_yolo.values, larg, color="#eb6834", label="YOLO26n-cls (pré-treinado)")
     for xi, v in zip(x - larg / 2, f_cnn.values):
         ax.text(xi, v + 0.003, fmt(v, 2), ha="center", fontsize=7.5)

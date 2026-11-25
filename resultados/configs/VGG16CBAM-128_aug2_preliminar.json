@@ -1,0 +1,54 @@
+{
+  "arquitetura": "VGG16CBAM",
+  "entrada": "RGB 128x128 (3x128x128), sem achatar",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "normalizacao": {
+    "media": [
+      0.400898851353483,
+      0.40729089754977615,
+      0.35413303258214845
+    ],
+    "desvio": [
+      0.22346789886112975,
+      0.1860358322281845,
+      0.17244668650608969
+    ]
+  },
+  "aumento_de_dados": "espelhamentos e rotações de 90°, recorte com zoom (50-100% da área), variação de cor (brilho, contraste e saturação ±20%) e apagamento aleatório (p = 0,5; 10-40% do lado), só no treino",
+  "perda": "CrossEntropyLoss",
+  "resultado": {
+    "nome_execucao": "VGG16CBAM-128_aug2_preliminar",
+    "tipo_execucao": "preliminar",
+    "parametros": 14802384,
+    "tamanho_modelo_mb": 56.53,
+    "epocas_executadas": 62,
+    "epoca_checkpoint": 52,
+    "f1_macro_validacao": 0.9501,
+    "acuracia_validacao": 0.9505,
+    "perda_validacao": 0.1607,
+    "tempo_total_s": 357.8,
+    "tempo_medio_epoca_s": 5.77,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.0001,
+    "weight_decay": 0.0001,
+    "tamanho_lote": 64,
+    "max_epocas": 200,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.14.1+cu130",
+    "extras": "{\"arquitetura\": \"VGG16CBAM\", \"classe\": \"VGG16CBAM\", \"resolucao\": 128, \"aumento_de_dados\": \"espelhamentos e rotações de 90°, recorte com zoom (50-100% da área), variação de cor (brilho, contraste e saturação ±20%) e apagamento aleatório (p = 0,5; 10-40% do lado), só no treino\", \"familia\": \"VGG16\", \"busca\": \"hiperparâmetros iniciais\", \"receita_aumento\": \"forte\"}"
+  }
+}

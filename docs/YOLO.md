@@ -44,38 +44,38 @@ As curvas estão em `resultados/figuras/yolo/yolo_2_curvas.png`. A acurácia de 
 
 ## 3. Comparação com a melhor CNN
 
-A CNN de referência é a de maior F1 macro de validação do projeto: **VGG16SE em 256 × 256 com hiperparâmetros do Optuna**.
+A CNN de referência é a de maior F1 macro de validação entre os **96 treinos de CNN** do projeto: **VGG16SE em 256 × 256 com aumento forte e hiperparâmetros do Optuna** (`docs/CNN.md`, seção 13). A melhor CNN com o aumento leve do notebook (VGG16SE em 256 com Optuna, F1 0,9645) fica 0,5 ponto abaixo dela.
 
-| | VGG16SE-256 (Optuna) | YOLO26n-cls-256 | Diferença |
+| | VGG16SE-256 (aumento forte, Optuna) | YOLO26n-cls-256 | Diferença |
 |---|---|---|---|
-| F1 macro | 0,9645 | **0,9895** | +2,5 pts |
-| Acurácia | 0,9648 | **0,9895** | +2,5 pts |
+| F1 macro | 0,9695 | **0,9895** | +2,0 pts |
+| Acurácia | 0,9695 | **0,9895** | +2,0 pts |
 | Parâmetros | 14,80 M | 1,54 M | 9,6 vezes menos |
 | Tamanho do modelo | 56,53 MB | 3,06 MB | 18 vezes menor |
-| Épocas (melhor época) | 73 (63) | 34 (24) | |
-| Tempo total | 1.152 s | 243 s | 4,7 vezes menos |
-| Tempo por época | 15,78 s | 7,14 s | 2,2 vezes menos |
+| Épocas (melhor época) | 93 (83) | 34 (24) | |
+| Tempo total | 1.501 s | 243 s | 6,2 vezes menos |
+| Tempo por época | 16,14 s | 7,14 s | 2,3 vezes menos |
 | Pesos iniciais | novos | pré-treinados no ImageNet | |
 
 O YOLO ganha em desempenho **e** em custo, mas a comparação **não isola a arquitetura**: as duas receitas diferem em pré-treinamento, aumento de dados, otimizador, normalização (o Ultralytics usa a própria, e não a média e o desvio do treino do projeto) e número de parâmetros. A diferença vem, em boa parte, do pré-treinamento, que as CNNs do projeto não têm.
 
 **F1 por classe** (`resultados/figuras/yolo/yolo_3_f1_por_classe.png`)
 
-| Classe | VGG16SE-256 (Optuna) | YOLO26n-cls |
+| Classe | VGG16SE-256 (forte, Optuna) | YOLO26n-cls |
 |---|---|---|
-| airport | 0,916 | **0,995** |
-| beach | 0,995 | 1,000 |
-| circular_farmland | 0,991 | 1,000 |
-| dense_residential | 0,981 | 0,981 |
-| desert | 0,945 | 0,972 |
-| forest | 0,991 | 1,000 |
+| airport | 0,956 | **0,995** |
+| beach | 0,981 | 1,000 |
+| circular_farmland | 0,995 | 1,000 |
+| dense_residential | 0,986 | 0,981 |
+| desert | 0,952 | 0,972 |
+| forest | 0,986 | 1,000 |
 | harbor | 1,000 | 0,995 |
-| mountain | 0,937 | 0,976 |
-| river | 0,928 | 0,986 |
+| mountain | 0,930 | 0,976 |
+| river | 0,948 | 0,986 |
 | storage_tank | 0,962 | 0,991 |
-| **macro** | **0,9645** | **0,9895** |
+| **macro** | **0,9695** | **0,9895** |
 
-O maior ganho é em `airport` (+7,9 pontos), justamente a pior classe de 30 dos 32 modelos de CNN, e em `river` (+5,7) e `mountain` (+4,0). O YOLO só não melhora em `dense_residential` (empate) e `harbor` (−0,5).
+Os maiores ganhos do YOLO são em `mountain` (+4,7 pontos), `airport` (+4,0) e `river` (+3,8). O YOLO só não melhora em `dense_residential` (−0,5) e `harbor` (−0,5). `airport` é a pior classe em 79 dos 96 modelos de CNN, mas nesta CNN a pior é `mountain` (0,930).
 
 ---
 
@@ -107,7 +107,7 @@ O YOLO errou **11 das 1.050 imagens de validação** (matriz em `resultados/figu
 ## 5. Diferenças de pré-treinamento e preparação
 
 - **Pré-treinamento:** o YOLO parte de pesos aprendidos no ImageNet e só ajusta o modelo ao RESISC45. As CNNs aprendem tudo do zero em 4.899 imagens. Isso ajuda a explicar a convergência rápida (acurácia de 0,931 já na primeira época) e o ganho em classes difíceis como `airport`.
-- **Aumento de dados:** as CNNs usam só espelhamentos e rotações de 90°. O YOLO usa o aumento padrão do Ultralytics, mais forte (RandAugment, cor, escala, translação, apagamento).
+- **Aumento de dados:** a maioria das CNNs usa espelhamentos e rotações de 90° (aumento leve); também foram treinadas sem aumento e com um aumento forte (recorte com zoom, cor e apagamento, `docs/CNN.md` seção 13), mais parecido com o do YOLO, que usa o aumento padrão do Ultralytics (RandAugment, cor, escala, translação, apagamento). A melhor CNN usa o aumento forte, então parte da distância ao YOLO não vem do aumento.
 - **Otimização:** as CNNs usam Adam com lr fixo (inicial ou do Optuna). O YOLO usa o otimizador e a programação de lr escolhidos automaticamente pelo Ultralytics, com período de aquecimento.
 - **Modelo:** 1,5 M de parâmetros contra 11 a 15 M das CNNs.
 - Não verificamos se há imagens do ImageNet muito parecidas com as do RESISC45, o que seria uma forma de vazamento indireto do pré-treinamento.

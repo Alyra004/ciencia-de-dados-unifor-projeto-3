@@ -115,11 +115,11 @@ Todas as classes têm `490 / 105 / 105`, exceto `airport`, que tem `489 / 105 / 
 | Família | Melhor modelo | F1 macro | Acurácia | Documento |
 |---|---|---|---|---|
 | YOLO (bônus, pré-treinado) | YOLO26n-cls, 256 × 256 | 0,9895 | 0,9895 | `docs/YOLO.md` |
-| CNN (VGG16) | VGG16SE, 256 × 256, Optuna | 0,9645 | 0,9648 | `docs/CNN.md` |
-| CNN (ResNet18) | ResNet18SE, 256 × 256, inicial | 0,9481 | 0,9486 | `docs/CNN.md` |
+| CNN (VGG16) | VGG16SE, 256 × 256, aumento forte, Optuna | 0,9695 | 0,9695 | `docs/CNN.md` |
+| CNN (ResNet18) | ResNet18, 256 × 256, aumento forte, inicial | 0,9514 | 0,9514 | `docs/CNN.md` |
 | MLP | MLP-B, 128 × 128, aumento leve, Optuna | 0,7000 | 0,7067 | `docs/MLP.md` |
 
-MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. O estado detalhado, o que falta (inclusive as variações de aumento de dados das CNNs, ainda parciais) e como retomar estão em **`docs/PROGRESSO.md`**.
+MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. As CNNs foram treinadas em **96 combinações** (8 arquiteturas × 2 resoluções × 2 rodadas de hiperparâmetros × 3 receitas de aumento de dados); a tabela mostra o melhor de cada família. O estado detalhado, o que falta e como retomar estão em **`docs/PROGRESSO.md`**.
 
 ## Ordem de execução
 
@@ -127,6 +127,6 @@ MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. O estado detal
 2. Auditar integridade, canais RGB e duplicatas com `python src/check_integrity.py` (gera `resultados/inventario_dados.csv`).
 3. Análise exploratória e geração das partições estratificadas (`70%` treino, `15%` validação, `15%` teste, semente `42`) em `dados/splits/`.
 4. MLPs: `notebooks/02_mlp_preliminar.ipynb` (código e Optuna) e, para refazer os 12 treinos numa GPU e avaliar na validação, `python src/rodar_mlps_a100.py` (gera matrizes de confusão, métricas por classe e previsões).
-5. CNNs: `notebooks/03_CNNs.ipynb` (8 arquiteturas com aumento leve, Optuna, bônus YOLO) e `python src/rodar_cnns_aumentos.py <128|256>` (receitas sem aumento e aumento forte; retomável). Depois `python src/avaliar_cnn_validacao.py` e `python src/avaliar_yolo_validacao.py`.
+5. CNNs: `notebooks/03_CNNs.ipynb` (8 arquiteturas com aumento leve, Optuna, bônus YOLO) e `python src/rodar_cnns_aumentos.py <128|256>` (receitas sem aumento e aumento forte, 32 treinos por resolução; retomável). Depois `python src/avaliar_cnn_validacao.py` e `python src/avaliar_yolo_validacao.py`.
 6. Gráficos: `python src/graficos_mlp.py`, `python src/graficos_cnn.py`, `python src/graficos_cnn_aumentos.py` e `python src/graficos_yolo.py`.
 7. Avaliação no conjunto de teste (ainda não feita) e geração das métricas, tabelas e figuras em `resultados/`.

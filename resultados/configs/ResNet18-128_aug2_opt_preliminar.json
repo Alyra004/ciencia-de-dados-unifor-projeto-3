@@ -1,0 +1,54 @@
+{
+  "arquitetura": "ResNet18",
+  "entrada": "RGB 128x128 (3x128x128), sem achatar",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "normalizacao": {
+    "media": [
+      0.400898851353483,
+      0.40729089754977615,
+      0.35413303258214845
+    ],
+    "desvio": [
+      0.22346789886112975,
+      0.1860358322281845,
+      0.17244668650608969
+    ]
+  },
+  "aumento_de_dados": "espelhamentos e rotações de 90°, recorte com zoom (50-100% da área), variação de cor (brilho, contraste e saturação ±20%) e apagamento aleatório (p = 0,5; 10-40% do lado), só no treino",
+  "perda": "CrossEntropyLoss",
+  "resultado": {
+    "nome_execucao": "ResNet18-128_aug2_opt_preliminar",
+    "tipo_execucao": "preliminar_optuna",
+    "parametros": 11181642,
+    "tamanho_modelo_mb": 42.73,
+    "epocas_executadas": 50,
+    "epoca_checkpoint": 40,
+    "f1_macro_validacao": 0.912,
+    "acuracia_validacao": 0.9124,
+    "perda_validacao": 0.2866,
+    "tempo_total_s": 102.9,
+    "tempo_medio_epoca_s": 2.06,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 8.468008575248323e-05,
+    "weight_decay": 0.0063512210106407,
+    "tamanho_lote": 32,
+    "max_epocas": 200,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.14.1+cu130",
+    "extras": "{\"arquitetura\": \"ResNet18\", \"classe\": \"ResNet18\", \"resolucao\": 128, \"aumento_de_dados\": \"espelhamentos e rotações de 90°, recorte com zoom (50-100% da área), variação de cor (brilho, contraste e saturação ±20%) e apagamento aleatório (p = 0,5; 10-40% do lado), só no treino\", \"familia\": \"ResNet18\", \"busca\": \"optuna (feita com aumento leve)\", \"receita_aumento\": \"forte\"}"
+  }
+}

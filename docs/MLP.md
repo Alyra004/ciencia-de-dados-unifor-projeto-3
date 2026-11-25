@@ -400,13 +400,13 @@ Agora tudo roda na **mesma A100**, então o tempo é comparável. Melhor modelo 
 | Família | Melhor modelo | F1 macro | Acurácia | Parâmetros | Tempo de treino |
 |---|---|---|---|---|---|
 | **YOLO** (pré-treinado) | YOLO26n-cls, 256 | **0,9895** | 0,9895 | 1,54 M | 243 s |
-| **CNN (VGG16)** | VGG16SE, 256, Optuna | 0,9645 | 0,9648 | 14,80 M | 1.152 s |
-| **CNN (ResNet18)** | ResNet18SE, 256, inicial | 0,9481 | 0,9486 | 11,27 M | 213 s |
+| **CNN (VGG16)** | VGG16SE, 256, aumento forte, Optuna | 0,9695 | 0,9695 | 14,80 M | 1.501 s |
+| **CNN (ResNet18)** | ResNet18, 256, aumento forte, inicial | 0,9514 | 0,9514 | 11,18 M | 183 s |
 | **MLP** | MLP-B, 128, aumento leve, Optuna | 0,7000 | 0,7067 | 25,34 M | 64 s |
 
-- A melhor CNN fica **26,5 pontos acima** da melhor MLP. A MLP é a mais barata de treinar, mas é a que menos rende: trata a imagem como uma fila de pixels, sem estrutura espacial.
+- A melhor CNN fica **27,0 pontos acima** da melhor MLP (e a melhor CNN com aumento leve, 0,9645, fica 26,5 acima). A MLP é a mais barata de treinar, mas é a que menos rende: trata a imagem como uma fila de pixels, sem estrutura espacial.
 - A MLP tem **mais parâmetros** que qualquer CNN ou o YOLO, porque quase todos estão na primeira camada (49.152 × 512).
-- O YOLO é pré-treinado e usa outra receita (aumento de dados mais forte e otimizador automático), então a comparação não isola a arquitetura. Detalhes em `docs/YOLO.md`. As CNNs estão em `docs/CNN.md`.
+- O YOLO é pré-treinado e usa outra receita (aumento de dados mais forte e otimizador automático), então a comparação não isola a arquitetura. Detalhes em `docs/YOLO.md`. As CNNs (96 treinos, com três receitas de aumento de dados) estão em `docs/CNN.md`.
 - A MLP só existe em 128 × 128; as CNNs foram treinadas também em 256 × 256.
 
 ---

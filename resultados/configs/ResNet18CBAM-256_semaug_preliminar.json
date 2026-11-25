@@ -1,0 +1,54 @@
+{
+  "arquitetura": "ResNet18CBAM",
+  "entrada": "RGB 256x256 (3x256x256), sem achatar",
+  "classes": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "normalizacao": {
+    "media": [
+      0.40040945216750773,
+      0.4068007578530557,
+      0.35364333264078607
+    ],
+    "desvio": [
+      0.2308570612043676,
+      0.19471659045820144,
+      0.1816614638115609
+    ]
+  },
+  "aumento_de_dados": "nenhum",
+  "perda": "CrossEntropyLoss",
+  "resultado": {
+    "nome_execucao": "ResNet18CBAM-256_semaug_preliminar",
+    "tipo_execucao": "preliminar",
+    "parametros": 11271506,
+    "tamanho_modelo_mb": 43.09,
+    "epocas_executadas": 53,
+    "epoca_checkpoint": 43,
+    "f1_macro_validacao": 0.9222,
+    "acuracia_validacao": 0.9229,
+    "perda_validacao": 0.2922,
+    "tempo_total_s": 204.4,
+    "tempo_medio_epoca_s": 3.86,
+    "hardware": "GPU NVIDIA A100-SXM4-40GB",
+    "otimizador": "adam",
+    "taxa_aprendizagem": 0.0001,
+    "weight_decay": 0.0001,
+    "tamanho_lote": 64,
+    "max_epocas": 200,
+    "paciencia": 10,
+    "criterio_parada": "F1 macro de validação",
+    "semente": 42,
+    "torch": "2.14.1+cu130",
+    "extras": "{\"arquitetura\": \"ResNet18CBAM\", \"classe\": \"ResNet18CBAM\", \"resolucao\": 256, \"aumento_de_dados\": \"nenhum\", \"familia\": \"ResNet18\", \"busca\": \"hiperparâmetros iniciais\", \"receita_aumento\": \"nenhum\"}"
+  }
+}
