@@ -46,6 +46,7 @@ def rodape(fig):
 def carregar():
     exp = pd.read_csv(RES / "experimentos.csv")
     exp = exp[exp["nome_execucao"].str.match(r"^(ResNet|VGG)")].copy()
+    exp = exp[~exp["nome_execucao"].str.contains("_optf_")].copy()      # Optuna refeito com aumento forte: ver graficos_cnn_aumentos.py
     exp["arq"] = exp["nome_execucao"].str.extract(r"^([A-Za-z0-9]+)-")[0]
     exp["res"] = exp["nome_execucao"].str.extract(r"-(\d+)_")[0].astype(int)
     exp["rodada"] = np.where(exp["nome_execucao"].str.contains("_opt_"), "Optuna", "Inicial")

@@ -28,9 +28,11 @@ SAIDA = RAIZ / "resultados" / "figuras" / "cnn"
 RECEITAS = [("nenhum", "#2a78d6", "Sem aumento"), ("leve", "#eb6834", "Aumento leve"), ("forte", "#1baf7a", "Aumento forte")]
 
 
-def carregar():
+def carregar(optf=False):
+    """optf=False: os 96 treinos das três receitas. optf=True: só os 16 com o Optuna refeito com aumento forte (_optf_)."""
     e = pd.read_csv(RAIZ / "resultados" / "experimentos.csv")
     e = e[e["nome_execucao"].str.match(r"^(ResNet|VGG)")].copy()
+    e = e[e["nome_execucao"].str.contains("_optf_") == optf].copy()
     e["arq"] = e["nome_execucao"].str.extract(r"^([A-Za-z0-9]+)-")[0]
     e["res"] = e["nome_execucao"].str.extract(r"-(\d+)_")[0].astype(int)
     e["rodada"] = np.where(e["nome_execucao"].str.contains("_opt_"), "Optuna", "inicial")
@@ -109,6 +111,30 @@ def main():
     fig.tight_layout(rect=(0, 0.03, 1, 0.95))
     fig.savefig(SAIDA / "aumentos_3_custo.png", dpi=150)
     plt.close(fig)
+
+    # 4. Optuna refeito com aumento forte (_optf_) contra o Optuna do aumento leve, só com aumento forte
+    f = carregar(optf=True)
+    if len(f):
+        cores = [("inicial", "#b9b8b3", "Forte, hiperparâmetros iniciais"), ("optuna_leve", "#eb6834", "Forte, Optuna da busca com aumento leve"),
+                 ("optf", "#1baf7a", "Forte, Optuna refeito com aumento forte")]
+        fig, eixos = plt.subplots(1, 2, figsize=(15, 4.8), sharey=True)
+        for ax, res in zip(eixos, (128, 256)):
+            x, larg = np.arange(len(ARQS)), 0.27
+            series = {"inicial": e[(e.res == res) & (e.rodada == "inicial") & (e.aug == "forte")].set_index("arq")["f1_macro_validacao"],
+                      "optuna_leve": e[(e.res == res) & (e.rodada == "Optuna") & (e.aug == "forte")].set_index("arq")["f1_macro_validacao"],
+                      "optf": f[f.res == res].set_index("arq")["f1_macro_validacao"]}
+            for k, (chave, cor, rot) in enumerate(cores):
+                ax.bar(x + (k - 1) * larg, [series[chave].get(a, np.nan) for a in ARQS], larg, color=cor, label=rot)
+            ax.set_xticks(x, ARQS, rotation=25, ha="right", fontsize=8)
+            ax.set_ylim(0.85, 1.0)
+            ax.set_title(f"{res} × {res}", fontsize=10)
+        eixos[0].set_ylabel("F1 macro na validação")
+        eixos[0].legend(frameon=False, fontsize=8, loc="lower right")
+        fig.suptitle("Aumento forte: Optuna refeito com o aumento forte contra o da busca com aumento leve", fontweight="bold")
+        rodape(fig)
+        fig.tight_layout(rect=(0, 0.03, 1, 0.94))
+        fig.savefig(SAIDA / "aumentos_4_optuna_refeito_forte.png", dpi=150)
+        plt.close(fig)
     print("figuras em", SAIDA)
 
 

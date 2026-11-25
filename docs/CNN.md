@@ -2,9 +2,9 @@
 
 Este documento resume como as CNNs foram montadas, treinadas e avaliadas. O código está em `notebooks/03_CNNs.ipynb` e `src/`, e os números ficam em `resultados/`.
 
-> **Todos os treinos aqui são preliminares.** Só foram usados os dados de **treino** e de **validação**. O **teste não foi usado**. Foram **96 treinos de CNN**: 8 arquiteturas × 2 resoluções (128 × 128 e 256 × 256) × 2 rodadas (hiperparâmetros iniciais e hiperparâmetros achados pelo Optuna) × 3 receitas de aumento de dados (leve, sem aumento e forte). Cada treino foi feito **uma vez só**.
+> **Todos os treinos aqui são preliminares.** Só foram usados os dados de **treino** e de **validação**. O **teste não foi usado**. Foram **112 treinos de CNN**: 96 (8 arquiteturas × 2 resoluções (128 × 128 e 256 × 256) × 2 rodadas (hiperparâmetros iniciais e hiperparâmetros achados pelo Optuna) × 3 receitas de aumento de dados: leve, sem aumento e forte) e mais 16 com o Optuna refeito com o aumento forte (seção 14). Cada treino foi feito **uma vez só**.
 
-> **Como ler este documento:** as seções 4 a 8 tratam dos **32 treinos com aumento leve** (a receita do notebook). A seção 13 traz os outros **64 treinos** (sem aumento e aumento forte) e a comparação entre as três receitas. **O melhor treino de CNN dos 96 é a VGG16SE em 256 com aumento forte e Optuna (F1 macro 0,9695)**, descrito na seção 13; entre os 32 com aumento leve, o melhor é a VGG16SE em 256 com Optuna (0,9645).
+> **Como ler este documento:** as seções 4 a 8 tratam dos **32 treinos com aumento leve** (a receita do notebook). A seção 13 traz os outros **64 treinos** (sem aumento e aumento forte) e a comparação entre as três receitas, e a seção 14 traz os 16 treinos com o Optuna refeito com o aumento forte. **O melhor treino de CNN é a VGG16SE em 256 com aumento forte e Optuna (F1 macro 0,9695)**, descrito na seção 13; entre os 32 com aumento leve, o melhor é a VGG16SE em 256 com Optuna (0,9645).
 
 ---
 
@@ -203,7 +203,7 @@ Melhorias que não foram aplicadas, para manter a reprodução fiel: enfileirar 
 
 ## 8. Erros por classe e matrizes de confusão
 
-As matrizes (reais nas linhas, previstas nas colunas, contagens e normalizadas pela classe real) e as métricas por classe são calculadas **na validação**, a partir dos checkpoints salvos, por `src/avaliar_cnn_validacao.py`. O F1 e a acurácia calculados por esse script **reproduzem exatamente** os registrados no treino, para os 96 modelos. As tabelas desta seção cobrem os **32 modelos com aumento leve**; as matrizes e métricas dos outros 64 estão nos mesmos diretórios.
+As matrizes (reais nas linhas, previstas nas colunas, contagens e normalizadas pela classe real) e as métricas por classe são calculadas **na validação**, a partir dos checkpoints salvos, por `src/avaliar_cnn_validacao.py`. O F1 e a acurácia calculados por esse script **reproduzem exatamente** os registrados no treino, para os 112 modelos. As tabelas desta seção cobrem os **32 modelos com aumento leve**; as matrizes e métricas dos outros 64 estão nos mesmos diretórios.
 
 **F1 médio por classe (média dos 32 modelos com aumento leve)**
 
@@ -239,7 +239,7 @@ As matrizes (reais nas linhas, previstas nas colunas, contagens e normalizadas p
 | storage_tank | 0,953 | 0,971 | 0,962 |
 | **macro** | **0,965** | **0,965** | **0,965** |
 
-**Pares de classes mais confundidos nesse modelo** (real → prevista, contagem): `airport → desert` (6), `river → airport` (4), `airport → river` (3), `mountain → desert` (3). `airport` e `desert` se confundem nos dois sentidos (pistas e terminais cercados por terreno arenoso), assim como `mountain` e `desert` (relevo e solo seco), e `dense_residential` aparece confundida com `storage_tank` (estruturas pequenas e agrupadas). **Divisões por zero:** não ocorreram em nenhum dos 96 modelos. Todas as classes têm 105 imagens de suporte e foram previstas pelo menos uma vez em todos os modelos (nos 32 com aumento leve, a menor precisão por classe foi 0,727 e o menor recall foi 0,686; nos 96, 0,606 e 0,562), então precisão e recall estão definidos sempre. Nos 96 modelos, `airport` é a pior classe em 79, `mountain` em 10 e `river` em 7. O cálculo usa `zero_division=0` por precaução.
+**Pares de classes mais confundidos nesse modelo** (real → prevista, contagem): `airport → desert` (6), `river → airport` (4), `airport → river` (3), `mountain → desert` (3). `airport` e `desert` se confundem nos dois sentidos (pistas e terminais cercados por terreno arenoso), assim como `mountain` e `desert` (relevo e solo seco), e `dense_residential` aparece confundida com `storage_tank` (estruturas pequenas e agrupadas). **Divisões por zero:** não ocorreram em nenhum dos 112 modelos. Todas as classes têm 105 imagens de suporte e foram previstas pelo menos uma vez em todos os modelos (nos 32 com aumento leve, a menor precisão por classe foi 0,727 e o menor recall foi 0,686; nos 112, 0,606 e 0,562), então precisão e recall estão definidos sempre. Nos 112 modelos, `airport` é a pior classe em 89, `river` em 12 e `mountain` em 11. O cálculo usa `zero_division=0` por precaução.
 
 ---
 
@@ -273,7 +273,7 @@ O efeito é pequeno demais para mudar o F1 de forma relevante. Mas a regra do pr
 
 **Os 64 treinos da seção 13** rodaram numa VM A100 nova, com backup incremental para o computador local. Na primeira tentativa, o marcador do backup começou depois dos 5 primeiros treinos sem aumento em 128 × 128 (ResNet18, ResNet18SE, ResNet18CBAM, ResNet18SECBAM e VGG16SECBAM): só ficaram as linhas de resultado, as matrizes e as métricas, sem checkpoint, histórico e curvas. Esses 5 treinos foram **refeitos**, e os checkpoints e F1 reproduziram os registrados antes. O script `src/rodar_cnns_aumentos.py` é retomável: pula treinos que já têm histórico, linha de resultados e checkpoint.
 
-**Avaliação por classe.** Durante os treinos, a avaliação (matriz, métricas por classe e previsões) foi feita na CPU, para não tirar memória do treino. No fim, ela foi refeita **na GPU para os 96 modelos** (`AVALIAR_FORCAR=1`) e substituiu a da CPU: 9 das 100.800 previsões individuais mudaram entre as duas, e nenhum F1 ou acurácia muda (as métricas calculadas na avaliação reproduzem as do treino nos 96 modelos).
+**Avaliação por classe.** Durante os treinos, a avaliação (matriz, métricas por classe e previsões) foi feita na CPU, para não tirar memória do treino. No fim, ela foi refeita **na GPU** (`AVALIAR_FORCAR=1`), primeiro para os 96 modelos e depois para os 16 da seção 14, e substituiu a da CPU: 9 das 100.800 previsões individuais dos 96 e 2 das 16.800 dos 16 mudaram entre as duas, e nenhum F1 ou acurácia muda (as métricas calculadas na avaliação reproduzem as do treino nos 112 modelos). Os 16 treinos da seção 14 rodaram numa VM A100 nova, com a mesma rotina de backup, sem perda de artefatos.
 
 ---
 
@@ -282,7 +282,7 @@ O efeito é pequeno demais para mudar o F1 de forma relevante. Mas a regra do pr
 - Cada treino foi feito **uma vez** (semente 42). Diferenças de 1 a 2 pontos de F1 podem ser sorte de inicialização.
 - Todos os números são da **validação** e **preliminares**. O teste não foi usado.
 - O Optuna usou 10 tentativas por busca, com orçamento menor que o do treino final, e foi aplicado às variantes com atenção sem buscar para elas.
-- **O Optuna foi feito só com aumento leve** e usado nas outras duas receitas sem nova busca (seção 13). Os valores "Optuna" dos treinos sem aumento e com aumento forte não são os que uma busca específica acharia.
+- **O Optuna foi feito com aumento leve** e usado, sem nova busca, nos treinos sem aumento e com aumento forte (seção 13). Para o aumento forte a busca foi refeita (seção 14) e não melhorou o resultado. Para o treino sem aumento ela **não foi refeita**: os valores "Optuna" desses treinos não são os que uma busca específica acharia. Todas as buscas são pequenas (10 tentativas, 3 ou 4 concluídas).
 - **Paradas precoces.** Com paciência de 10 épocas, alguns treinos pararam muito cedo (checkpoint na época 12 ou antes em 8 dos 96, 5 deles sem aumento). Parte do efeito de uma receita ou de um hiperparâmetro pode ser parada precoce por ruído.
 - **O melhor dos 96 treinos é o máximo de 96 números com ruído,** escolhido na validação: o F1 dele é o mais otimista de todos. A vantagem de 0,5 ponto sobre o 2º lugar não é distinguível de ruído de inicialização.
 - A comparação descreve as condições executadas e não prova superioridade universal.
@@ -308,7 +308,8 @@ O efeito é pequeno demais para mudar o F1 de forma relevante. Mas a regra do pr
 | Busca do Optuna (tentativas e melhores valores) | `resultados/optuna/` |
 | Bônus YOLO (pré-treinado) | `docs/YOLO.md` e `resultados/yolo/` |
 | Figuras | `resultados/figuras/cnn/` (resumos, curvas por treino e `matrizes/` com uma figura por modelo) |
-| Modelos guardados (96 checkpoints, 4,7 GB, não versionados) | `modelos/` |
+| Optuna refeito com aumento forte (seção 14) | `src/optuna_cnns_aumento_forte.py`; `resultados/optuna/tentativas_*_aug2.csv` e `melhores_hiperparametros_cnn_aug2_<R>.json` |
+| Modelos guardados (112 checkpoints, 5,5 GB, não versionados) | `modelos/` |
 
 Principais figuras (aumento leve): `resumo_1_f1_antes_depois_{128,256}.png` (inicial contra Optuna), `resumo_2_custo_desempenho_{128,256}.png`, `resumo_3_f1_por_classe_{128,256}.png`, `resumo_4_curvas_validacao_{128,256}.png`, `resumo_5_matrizes_{inicial,optuna}_{128,256}.png` (grade das 8 matrizes) e `resumo_6_pares_confundidos_{128,256}.png`.
 
@@ -320,7 +321,7 @@ Para completar a comparação (como nas MLPs), as 8 CNNs foram treinadas também
 
 O código é `src/rodar_cnns_aumentos.py` (a avaliação é a mesma de `src/avaliar_cnn_validacao.py`). Nomes dos treinos: `<CNN>-<R>_semaug[_opt]_preliminar` (sem aumento) e `<CNN>-<R>_aug2[_opt]_preliminar` (aumento forte).
 
-**Atenção ao Optuna:** a busca de hiperparâmetros foi feita **uma vez**, com aumento leve e na rede sem atenção (seção 7), e **não foi refeita** para as outras receitas. Nos treinos "Optuna" destas duas receitas usam-se os valores da busca com aumento leve. Portanto, a comparação "Optuna contra inicial" nas receitas novas mede se esses valores se transferem, e não o que o Optuna acharia para elas.
+**Atenção ao Optuna:** a busca de hiperparâmetros foi feita **uma vez**, com aumento leve e na rede sem atenção (seção 7), e **não foi refeita** para as outras receitas nesta seção. Nos treinos "Optuna" destas duas receitas usam-se os valores da busca com aumento leve. (A busca foi refeita depois só para o aumento forte; resultados na seção 14.) Portanto, a comparação "Optuna contra inicial" nas receitas novas mede se esses valores se transferem, e não o que o Optuna acharia para elas.
 
 ### 13.1 Médias por receita (F1 macro; n = 8 modelos em cada linha)
 
@@ -506,7 +507,7 @@ Melhor treino de cada receita e resolução (qualquer rodada):
 **Cuidados na leitura**
 
 - **Parada antecipada.** A paciência é de 10 épocas. Alguns treinos pararam muito cedo (checkpoint na época 12 ou antes: 5 sem aumento, 2 com forte e 1 com leve, por exemplo ResNet18SE em 128 sem aumento com Optuna, época 7, F1 0,8390). Parte do efeito de uma receita pode ser, na verdade, uma parada precoce por ruído, e não a receita em si. Seria preciso repetir com outras sementes ou paciência maior para separar as duas coisas.
-- **Seleção na validação.** O checkpoint, a época de parada e os hiperparâmetros do Optuna foram escolhidos na validação. O F1 de validação fica ligeiramente otimista, e o melhor dos 96 treinos é o máximo de 96 números com ruído, portanto o mais otimista de todos. O desempenho de generalização só aparece no teste, avaliado uma vez ao final (ainda não feito).
+- **Seleção na validação.** O checkpoint, a época de parada e os hiperparâmetros do Optuna foram escolhidos na validação. O F1 de validação fica ligeiramente otimista, e o melhor dos 112 treinos é o máximo de 112 números com ruído, portanto o mais otimista de todos. O desempenho de generalização só aparece no teste, avaliado uma vez ao final (ainda não feito).
 - **O Optuna das receitas novas veio da busca com aumento leve** (acima), então "Optuna" nas receitas sem aumento e forte quer dizer "valores do Optuna do aumento leve".
 - **O desvio das tabelas é entre as 10 classes** de cada modelo, não entre sementes.
 
@@ -519,3 +520,60 @@ Melhor treino de cada receita e resolução (qualquer rodada):
 - `aumentos_3_custo.png`: custo (tempo e épocas) por receita.
 
 Cada treino tem também as curvas (`<nome>_curvas.png`) e a matriz de confusão (`matrizes/<nome>_confusao.png`).
+
+---
+
+## 14. Optuna refeito com o aumento forte
+
+Na seção 13, os treinos "Optuna" com aumento forte usaram os hiperparâmetros da busca feita com aumento **leve**. Para testar se isso atrapalhava, a **busca foi refeita com o aumento forte** (`src/optuna_cnns_aumento_forte.py`), com a mesma configuração da busca original (seção 7): uma busca por família (ResNet18 e VGG16, versão sem atenção) e por resolução, 10 tentativas, no máximo 30 épocas por tentativa, TPE com semente 42 e poda pela mediana. Depois as 8 CNNs de cada resolução foram treinadas com os melhores valores achados (16 treinos novos, `<CNN>-<R>_aug2_optf_preliminar`; `optf` = Optuna refeito com forte). Tudo na mesma A100, só treino e validação, um treino por modelo.
+
+**Valores achados** (tentativas em `resultados/optuna/tentativas_<família>-<R>_aug2.csv`):
+
+| Busca (aumento forte) | Melhor tentativa | Melhor F1 na busca | lr | Weight decay | Lote | Concluídas / podadas | Busca com aumento leve (seção 7) |
+|---|---|---|---|---|---|---|---|
+| ResNet18, 128 | 0 | 0,8967 | 8,5e-5 | 6,4e-3 | 32 | 3 / 7 | mesmos valores (tentativa 0) |
+| VGG16, 128 | 0 | 0,9170 | 8,5e-5 | 6,4e-3 | 32 | 4 / 6 | outros valores (lr 2,4e-5, wd 1,7e-6) |
+| ResNet18, 256 | 1 | 0,9089 | 2,4e-5 | 1,7e-6 | 32 | 3 / 7 | mesmos valores (tentativa 1) |
+| VGG16, 256 | 1 | 0,9086 | 2,4e-5 | 1,7e-6 | 32 | 3 / 7 | outros valores (lr 2,8e-5, wd 1,6e-5) |
+
+Nas quatro buscas, a melhor tentativa foi uma das duas primeiras, e as demais foram podadas ou ficaram abaixo. Como todas as buscas usam a mesma semente, as primeiras tentativas sorteiam os mesmos valores, então com 3 ou 4 tentativas concluídas a busca praticamente escolhe entre os 3 ou 4 primeiros pontos sorteados.
+
+### 14.1 128 × 128, aumento forte, hiperparâmetros do Optuna refeito com aumento forte
+
+| Modelo | F1 macro (Optuna forte) | F1 aumento forte com Optuna do leve | Diferença | F1 aumento forte inicial | F1 aumento leve com Optuna | Acurácia | Checkpoint | Tempo | s/época |
+|---|---|---|---|---|---|---|---|---|---|
+| ResNet18 | 0,9120 | 0,9120 | 0,0 pts | 0,9150 | 0,9164 | 0,9124 | 40/50 | 101 s | 2,03 |
+| ResNet18SE | 0,9320 | 0,9320 | 0,0 pts | 0,8698 | 0,9372 | 0,9324 | 58/68 | 199 s | 2,92 |
+| ResNet18CBAM | 0,8989 | 0,8989 | 0,0 pts | 0,8683 | 0,9349 | 0,8990 | 36/46 | 195 s | 4,23 |
+| ResNet18SECBAM | 0,9068 | 0,9068 | 0,0 pts | 0,9122 | 0,9099 | 0,9076 | 47/57 | 287 s | 5,04 |
+| VGG16 | 0,9170 | 0,9447 | −2,8 pts | 0,9469 | 0,9487 | 0,9171 | 26/36 | 152 s | 4,24 |
+| VGG16SE | 0,9163 | 0,9355 | −1,9 pts | 0,9433 | 0,9433 | 0,9171 | 29/39 | 186 s | 4,78 |
+| VGG16CBAM | 0,9304 | 0,9137 | +1,7 pts | 0,9501 | 0,9347 | 0,9305 | 59/69 | 424 s | 6,15 |
+| VGG16SECBAM | 0,9255 | 0,9123 | +1,3 pts | 0,9312 | 0,9520 | 0,9267 | 44/54 | 362 s | 6,71 |
+
+Média dos 8: **0,9174** (aumento forte com Optuna do leve 0,9195; aumento forte inicial 0,9171; aumento leve com Optuna 0,9346). Diferença média contra o Optuna do leve: −0,2 pts; só nas VGGs: −0,4 pts.
+
+### 14.2 256 × 256, aumento forte, hiperparâmetros do Optuna refeito com aumento forte
+
+| Modelo | F1 macro (Optuna forte) | F1 aumento forte com Optuna do leve | Diferença | F1 aumento forte inicial | F1 aumento leve com Optuna | Acurácia | Checkpoint | Tempo | s/época |
+|---|---|---|---|---|---|---|---|---|---|
+| ResNet18 | 0,9089 | 0,9089 | 0,0 pts | 0,9514 | 0,9356 | 0,9095 | 29/39 | 135 s | 3,47 |
+| ResNet18SE | 0,9446 | 0,9446 | 0,0 pts | 0,9375 | 0,9314 | 0,9448 | 82/92 | 370 s | 4,02 |
+| ResNet18CBAM | 0,9266 | 0,9266 | 0,0 pts | 0,9274 | 0,9368 | 0,9276 | 41/51 | 281 s | 5,51 |
+| ResNet18SECBAM | 0,9165 | 0,9165 | 0,0 pts | 0,9357 | 0,9326 | 0,9171 | 29/39 | 243 s | 6,23 |
+| VGG16 | 0,9513 | 0,9542 | −0,3 pts | 0,9422 | 0,9579 | 0,9514 | 46/56 | 809 s | 14,45 |
+| VGG16SE | 0,9694 | 0,9695 | 0,0 pts | 0,9240 | 0,9645 | 0,9695 | 93/103 | 1656 s | 16,08 |
+| VGG16CBAM | 0,9396 | 0,9460 | −0,6 pts | 0,9597 | 0,9590 | 0,9400 | 41/51 | 1074 s | 21,06 |
+| VGG16SECBAM | 0,9354 | 0,9532 | −1,8 pts | 0,9525 | 0,9541 | 0,9362 | 29/39 | 886 s | 22,71 |
+
+Média dos 8: **0,9365** (aumento forte com Optuna do leve 0,9399; aumento forte inicial 0,9413; aumento leve com Optuna 0,9465). Diferença média contra o Optuna do leve: −0,3 pts; só nas VGGs: −0,7 pts.
+
+**Leitura**
+
+- **As 8 ResNets (4 em 128 e 4 em 256) repetiram exatamente os treinos da seção 13** (mesmo F1, mesma acurácia e mesma época de checkpoint), porque a busca refeita devolveu os mesmos valores que a busca com aumento leve. É uma segunda conferência de reprodutibilidade do treino na A100.
+- **Só as VGGs mudaram, e não melhoraram na média:** −0,42 ponto em 128 e −0,68 em 256 contra o Optuna da busca com aumento leve. Em 128, a VGG16 e a VGG16SE pioram (−2,8 e −1,9) e as duas com CBAM melhoram (+1,7 e +1,3); em 256, as quatro pioram ou ficam iguais (de −1,8 a −0,0). Com um treino por modelo, cada diferença cabe em ruído de inicialização.
+- **O melhor treino de CNN não mudou:** VGG16SE em 256 com aumento forte e Optuna da busca com aumento leve (F1 0,9695). Com o Optuna refeito, a mesma arquitetura fez **0,9694** (acurácia 0,9695, checkpoint na época 93 de 103), com lr, weight decay e épocas diferentes. Os dois valores são indistinguíveis, e o resultado de cerca de 0,97 para essa arquitetura e receita não depende do Optuna ter sido feito com um aumento ou com o outro.
+- **Conclusão:** a hipótese de que a busca com aumento leve atrapalhava o aumento forte **não se confirmou**: refazer a busca não melhorou nada. As médias do aumento forte com Optuna refeito (0,9174 em 128 e 0,9365 em 256) ficam no mesmo nível das do forte com os valores do leve (0,9195 e 0,9399) e do forte inicial (0,9171 e 0,9413), e abaixo do aumento leve com Optuna (0,9346 e 0,9465).
+- **Limite:** a busca é pequena (10 tentativas, 3 ou 4 concluídas). Não foi testado se uma busca maior (mais tentativas, mais épocas por tentativa, ou lr e lote em faixas mais estreitas) acharia algo melhor.
+
+**Custo:** os 16 treinos somaram 122,7 minutos de GPU e as quatro buscas mais os treinos levaram cerca de 3 horas de A100 (cerca de 26 compute units).

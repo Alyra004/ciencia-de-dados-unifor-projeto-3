@@ -12,7 +12,7 @@ Este documento registra o estado do projeto, o que falta e como retomar de onde 
 |---|---|---|
 | Dados, partições e análise de duplicatas | pronto | 7.000 imagens, divisão 4.899 / 1.050 / 1.051 (semente 42). 6 pares de duplicatas exatas ficaram na mesma partição. Há 5 pares de **quase**-duplicatas entre partições (4 em `beach`, 1 em `mountain`), que o MD5 não detecta (`README.md`, `docs/CNN.md` seção 9) |
 | **MLPs** (12 treinos) | pronto, **refeito na A100** | 2 arquiteturas × 3 receitas de aumento (nenhum, leve, forte) × 2 rodadas (hiperparâmetros fixos e do Optuna). Melhor: MLP-B, aumento leve, Optuna, **F1 0,700**. Com matrizes de confusão (`docs/MLP.md`) |
-| **CNNs** (96 treinos) | **pronto** | 8 arquiteturas × 128 e 256 × inicial e Optuna × 3 receitas de aumento (leve, nenhum e forte). Melhor: **VGG16SE, 256 × 256, aumento forte, Optuna, F1 0,9695**. Com matrizes de confusão e métricas por classe dos 96 (`docs/CNN.md`) |
+| **CNNs** (112 treinos) | **pronto** | 96 treinos: 8 arquiteturas × 128 e 256 × inicial e Optuna × 3 receitas de aumento (leve, nenhum e forte), mais 16 com o Optuna refeito com aumento forte. Melhor: **VGG16SE, 256 × 256, aumento forte, Optuna, F1 0,9695**. Com matrizes de confusão e métricas por classe dos 112 (`docs/CNN.md`) |
 | **YOLO** (bônus, pré-treinado) | pronto | YOLO26n-cls em 256 × 256: **F1 0,9895**, o melhor de todos (`docs/YOLO.md`) |
 
 Melhor modelo de cada família (validação):
@@ -45,7 +45,8 @@ Resultados (detalhes e as tabelas de cada bloco de 8 treinos em `docs/CNN.md`, s
 - Os hiperparâmetros do Optuna (achados com aumento leve) **não se transferem** para sem aumento (pioram em média) nem de forma clara para o aumento forte.
 - Os 10 melhores treinos são todos VGGs em 256.
 - Os 5 treinos sem aumento em 128 cujos artefatos tinham se perdido numa primeira tentativa foram refeitos, e reproduziram os checkpoints e F1 anteriores (`docs/CNN.md`, seção 10).
-- Os resultados de **todos** os 96 treinos têm linha em `resultados/experimentos.csv`, histórico, configuração, curvas, matriz de confusão, métricas por classe e checkpoint (`modelos/`, não versionado). A avaliação final por classe foi refeita na GPU para os 96, e as métricas reproduzem as do treino.
+- **Optuna refeito com aumento forte** (16 treinos, `docs/CNN.md` seção 14, `src/optuna_cnns_aumento_forte.py`): as ResNets repetiram os treinos anteriores (mesmos valores achados) e as VGGs ficaram, em média, 0,4 a 0,7 ponto abaixo do forte com o Optuna do aumento leve. O melhor treino não mudou (0,9694 com a busca refeita, contra 0,9695). Não foi feita busca nova para o caso sem aumento.
+- Os resultados de **todos** os 112 treinos têm linha em `resultados/experimentos.csv`, histórico, configuração, curvas, matriz de confusão, métricas por classe e checkpoint (`modelos/`, não versionado). A avaliação final por classe foi refeita na GPU para os 112, e as métricas reproduzem as do treino.
 
 ---
 
@@ -53,7 +54,7 @@ Resultados (detalhes e as tabelas de cada bloco de 8 treinos em `docs/CNN.md`, s
 
 - **Escolher as seis execuções finais** do PDF (2 MLP e 2 CNN em 128, as mesmas 2 CNN em 256), treinar **do zero** e **avaliar no teste, uma única vez**. Foram treinadas 8 CNNs por resolução e receita; falta decidir qual é a CNN A e qual é a CNN B, com a justificativa (hipótese de comparação, parâmetros). Sugestão para discussão do grupo, não decidida: uma ResNet18 e uma VGG16, para comparar as duas famílias (as melhores variantes são a ResNet18 em 256 com aumento forte, 0,9514, e a VGG16SE em 256 com aumento forte e Optuna, 0,9695). Também falta decidir **qual receita de aumento e quais hiperparâmetros** entram nos treinos finais: os melhores resultados usam aumento forte ou leve em 256, e os valores do Optuna só foram buscados com aumento leve. A escolha deve ser feita com a validação, sem olhar o teste.
 - **Artigo** (`docs/artigo.pdf`), **slides do pitch** (`docs/pitch.pdf`) e **slides do acompanhamento** (`docs/acompanhamento.pdf`). Nada disso foi feito.
-- **Armazenamento externo dos modelos** com link de download (o PDF permite). Os checkpoints (4,7 GB dos 96 treinos de CNN e 1,2 GB das MLPs) estão só na pasta local `modelos/`, que não vai para o git. O `best.pt` do YOLO (3 MB) está no repositório.
+- **Armazenamento externo dos modelos** com link de download (o PDF permite). Os checkpoints (5,5 GB dos 112 treinos de CNN e 1,2 GB das MLPs) estão só na pasta local `modelos/`, que não vai para o git. O `best.pt` do YOLO (3 MB) está no repositório.
 - **Corrigir as quase-duplicatas** entre partições, se o grupo quiser: exigiria refazer as partições e retreinar tudo.
 - **Melhorar a busca do Optuna** (hoje a melhor tentativa da busca fica abaixo dos hiperparâmetros iniciais): enfileirar os valores iniciais, dar às tentativas o mesmo orçamento de épocas e usar mais tentativas (`docs/CNN.md` seção 7).
 - Inspeção visual dos erros do YOLO, e do modelo de maior F1 de validação, para o texto de análise de erros.
@@ -83,4 +84,4 @@ Pré-requisitos: conta Colab com A100 (saldo de compute units), o dataset RESISC
 
 ## 5. Custo até aqui
 
-Saldo de compute units: **375,06** no início, **250,57** agora (cerca de 124,5 unidades gastas): a primeira execução das CNNs, que se perdeu, custou cerca de 36; a reexecução das CNNs, cerca de 32; o YOLO, cerca de 1; e as MLPs mais as 64 variações de aumento (incluindo a refação de 5 treinos), cerca de 56 no total (302,96 para 250,57 só nas variações de aumento: cerca de 52). A A100 gasta 6,73 unidades por hora quando ocupada. A VM do Colab está **parada** (não há sessão ativa).
+Saldo de compute units: **375,06** no início, **224,85** agora (cerca de 150 unidades gastas): a primeira execução das CNNs, que se perdeu, custou cerca de 36; a reexecução das CNNs, cerca de 32; o YOLO, cerca de 1; as MLPs mais as 64 variações de aumento (incluindo a refação de 5 treinos), cerca de 56; e o Optuna refeito com aumento forte (4 buscas e 16 treinos, cerca de 3 horas), cerca de 26. A A100 gasta 6,73 a 8,16 unidades por hora quando ocupada. A VM do Colab está **parada** (não há sessão ativa).

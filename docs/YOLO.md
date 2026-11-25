@@ -44,7 +44,7 @@ As curvas estão em `resultados/figuras/yolo/yolo_2_curvas.png`. A acurácia de 
 
 ## 3. Comparação com a melhor CNN
 
-A CNN de referência é a de maior F1 macro de validação entre os **96 treinos de CNN** do projeto: **VGG16SE em 256 × 256 com aumento forte e hiperparâmetros do Optuna** (`docs/CNN.md`, seção 13). A melhor CNN com o aumento leve do notebook (VGG16SE em 256 com Optuna, F1 0,9645) fica 0,5 ponto abaixo dela.
+A CNN de referência é a de maior F1 macro de validação entre os **112 treinos de CNN** do projeto: **VGG16SE em 256 × 256 com aumento forte e hiperparâmetros do Optuna** (`docs/CNN.md`, seção 13). A melhor CNN com o aumento leve do notebook (VGG16SE em 256 com Optuna, F1 0,9645) fica 0,5 ponto abaixo dela.
 
 | | VGG16SE-256 (aumento forte, Optuna) | YOLO26n-cls-256 | Diferença |
 |---|---|---|---|
@@ -75,7 +75,7 @@ O YOLO ganha em desempenho **e** em custo, mas a comparação **não isola a arq
 | storage_tank | 0,962 | 0,991 |
 | **macro** | **0,9695** | **0,9895** |
 
-Os maiores ganhos do YOLO são em `mountain` (+4,7 pontos), `airport` (+4,0) e `river` (+3,8). O YOLO só não melhora em `dense_residential` (−0,5) e `harbor` (−0,5). `airport` é a pior classe em 79 dos 96 modelos de CNN, mas nesta CNN a pior é `mountain` (0,930).
+Os maiores ganhos do YOLO são em `mountain` (+4,7 pontos), `airport` (+4,0) e `river` (+3,8). O YOLO só não melhora em `dense_residential` (−0,5) e `harbor` (−0,5). `airport` é a pior classe em 89 dos 112 modelos de CNN, mas nesta CNN a pior é `mountain` (0,930).
 
 ---
 

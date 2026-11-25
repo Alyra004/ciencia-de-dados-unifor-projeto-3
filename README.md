@@ -119,7 +119,7 @@ Todas as classes têm `490 / 105 / 105`, exceto `airport`, que tem `489 / 105 / 
 | CNN (ResNet18) | ResNet18, 256 × 256, aumento forte, inicial | 0,9514 | 0,9514 | `docs/CNN.md` |
 | MLP | MLP-B, 128 × 128, aumento leve, Optuna | 0,7000 | 0,7067 | `docs/MLP.md` |
 
-MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. As CNNs foram treinadas em **96 combinações** (8 arquiteturas × 2 resoluções × 2 rodadas de hiperparâmetros × 3 receitas de aumento de dados); a tabela mostra o melhor de cada família. O estado detalhado, o que falta e como retomar estão em **`docs/PROGRESSO.md`**.
+MLPs, CNNs e YOLO foram treinados na **mesma GPU A100 do Colab**. As CNNs foram treinadas em **96 combinações** (8 arquiteturas × 2 resoluções × 2 rodadas de hiperparâmetros × 3 receitas de aumento de dados), mais 16 treinos com o Optuna refeito com aumento forte; a tabela mostra o melhor de cada família. O estado detalhado, o que falta e como retomar estão em **`docs/PROGRESSO.md`**.
 
 ## Ordem de execução
 
