@@ -210,16 +210,16 @@ A entrada com 49.152 números faz a **primeira camada concentrar quase todos os 
 | Aumento de dados (finais) | leve: espelhamentos horizontal e vertical e rotações de 90° | leve |
 | Regularização | Dropout (0,2 e 0,3 nas finais com Optuna) + BatchNorm | BatchNorm |
 
-Hiperparâmetros de cada execução final:
+Hiperparâmetros de cada execução final (as CNNs não usam dropout; a regularização delas é BatchNorm, weight decay e aumento):
 
-| Execução | lr | Weight decay | Lote | Hiperparâmetros | Aumento | Registro em `experimentos.csv` |
-|---|---|---|---|---|---|---|
-| **MLP-A-128** | 1,15e-03 | 7,1e-06 | 128 | Optuna | leve | `MLP-A-128_aug_opt_preliminar` |
-| **MLP-B-128** | 2,02e-04 | 2,0e-06 | 128 | Optuna | leve | `MLP-B-128_aug_opt_preliminar` |
-| **ResNet18-128** | 1,00e-04 | 1,0e-04 | 64 | iniciais | leve | `ResNet18-128_preliminar` |
-| **VGG16-128** | 1,00e-04 | 1,0e-04 | 64 | iniciais | leve | `VGG16-128_preliminar` |
-| **ResNet18-256** | 1,00e-04 | 1,0e-04 | 64 | iniciais | leve | `ResNet18-256_preliminar` |
-| **VGG16-256** | 1,00e-04 | 1,0e-04 | 64 | iniciais | leve | `VGG16-256_preliminar` |
+| Execução | lr | Weight decay | Dropout | Lote | Hiperparâmetros | Aumento | Registro em `experimentos.csv` |
+|---|---|---|---|---|---|---|---|
+| **MLP-A-128** | 1,15e-03 | 7,1e-06 | 0,3 | 128 | Optuna | leve | `MLP-A-128_aug_opt_preliminar` |
+| **MLP-B-128** | 2,02e-04 | 2,0e-06 | 0,2 | 128 | Optuna | leve | `MLP-B-128_aug_opt_preliminar` |
+| **ResNet18-128** | 1,00e-04 | 1,0e-04 | — | 64 | iniciais | leve | `ResNet18-128_preliminar` |
+| **VGG16-128** | 1,00e-04 | 1,0e-04 | — | 64 | iniciais | leve | `VGG16-128_preliminar` |
+| **ResNet18-256** | 1,00e-04 | 1,0e-04 | — | 64 | iniciais | leve | `ResNet18-256_preliminar` |
+| **VGG16-256** | 1,00e-04 | 1,0e-04 | — | 64 | iniciais | leve | `VGG16-256_preliminar` |
 
 ### 4.2 Épocas: treino geral × busca de hiperparâmetros
 
