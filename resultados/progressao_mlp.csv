@@ -1,0 +1,13 @@
+passo,descricao,mlp,execucao,aumento,hiperparametros,lr,weight_decay,dropout,lote,epocas,melhor_epoca,f1_macro_validacao,acuracia_validacao,ganho_vs_passo0_pontos
+0,"Ponto de partida: sem aumento, hiperparâmetros escolhidos por nós",MLP-A-128,MLP-A-128_preliminar,nenhum,iniciais,0.0001,0.0001,0.5,64,27,17,0.5461,0.5543,0.0
+0,"Ponto de partida: sem aumento, hiperparâmetros escolhidos por nós",MLP-B-128,MLP-B-128_preliminar,nenhum,iniciais,0.0001,0.0001,0.5,64,41,31,0.5305,0.5505,0.0
+1,+ aumento leve (espelhar e girar),MLP-A-128,MLP-A-128_aug_preliminar,leve,iniciais,0.0001,0.0001,0.5,64,75,65,0.6474,0.661,10.13
+1,+ aumento leve (espelhar e girar),MLP-B-128,MLP-B-128_aug_preliminar,leve,iniciais,0.0001,0.0001,0.5,64,92,82,0.602,0.6124,7.15
+2,"Alternativa: aumento forte (zoom, cor, apagamento)",MLP-A-128,MLP-A-128_aug2_preliminar,forte,iniciais,0.0001,0.0001,0.5,64,94,84,0.6316,0.6495,8.55
+2,"Alternativa: aumento forte (zoom, cor, apagamento)",MLP-B-128,MLP-B-128_aug2_preliminar,forte,iniciais,0.0001,0.0001,0.5,64,50,40,0.5414,0.5695,1.09
+3,"Optuna, sem aumento",MLP-A-128,MLP-A-128_opt_preliminar,nenhum,Optuna,0.0011536162338241,7.068974950624607e-06,0.3,128,26,16,0.5657,0.5686,1.96
+3,"Optuna, sem aumento",MLP-B-128,MLP-B-128_opt_preliminar,nenhum,Optuna,0.0002022950998091,2.0050219515319434e-06,0.2,128,21,11,0.5447,0.5524,1.42
+4,Optuna + aumento leve  (ESCOLHIDA para as finais),MLP-A-128,MLP-A-128_aug_opt_preliminar,leve,Optuna,0.0011536162338241,7.068974950624607e-06,0.3,128,65,55,0.6818,0.6857,13.57
+4,Optuna + aumento leve  (ESCOLHIDA para as finais),MLP-B-128,MLP-B-128_aug_opt_preliminar,leve,Optuna,0.0002022950998091,2.0050219515319434e-06,0.2,128,94,84,0.7,0.7067,16.95
+5,Optuna + aumento forte,MLP-A-128,MLP-A-128_aug2_opt_preliminar,forte,Optuna,0.0011536162338241,7.068974950624607e-06,0.3,128,101,91,0.6994,0.7105,15.33
+5,Optuna + aumento forte,MLP-B-128,MLP-B-128_aug2_opt_preliminar,forte,Optuna,0.00020229509980917732,2.0050219515319434e-06,0.2,128,105,95,0.6959,0.7076,16.54
